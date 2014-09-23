@@ -1,0 +1,44 @@
+.container {
+  section {
+    .jumbotron {
+      border-radius: 0px;
+    }
+  }
+}
+
+.highlight {
+  .details {
+    height: 100%;
+    position: relative;
+
+    .brand, .city {
+      font-size: 1.5em;
+      text-transform: uppercase;
+    }
+
+    .city {
+      color: $brand-primary;
+    }
+
+    .register {
+
+      .btn {
+        font-size: 1.5em;
+        padding: 0.5em;
+        position: absolute;
+
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+          top: 120px;
+        }
+
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+          top: 192px;
+        }
+
+        @media (min-width: $screen-lg-min) {
+          top: 257px;
+        }
+      }
+    }
+  }
+}
