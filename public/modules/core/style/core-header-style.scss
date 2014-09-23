@@ -14,4 +14,12 @@ header {
       color: $white;
     }
   }
+
+  .navbar-toggle {
+    border-color: $brand-primary;
+
+    .icon-bar {
+      background-color: $brand-primary;
+    }
+  }
 }

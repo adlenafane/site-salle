@@ -5304,16 +5304,20 @@ button.close {
     color: #DA4453; }
   .highlight .details .register .btn {
     font-size: 1.5em;
+    margin-top: 1em;
     padding: 0.5em;
     position: absolute; }
     @media (min-width: 768px) and (max-width: 991px) {
       .highlight .details .register .btn {
+        margin-top: 0;
         top: 120px; } }
     @media (min-width: 992px) and (max-width: 1199px) {
       .highlight .details .register .btn {
+        margin-top: 0;
         top: 192px; } }
     @media (min-width: 1200px) {
       .highlight .details .register .btn {
+        margin-top: 0;
         top: 257px; } }
 
 header.navbar {
@@ -5324,5 +5328,9 @@ header.navbar {
 header .nav > li > a:hover, header .nav > li > a:active, header .nav > li > a:focus {
   background-color: #DA4453;
   color: #FFF; }
+header .navbar-toggle {
+  border-color: #DA4453; }
+  header .navbar-toggle .icon-bar {
+    background-color: #DA4453; }
 
 /*# sourceMappingURL=style.css.map */
