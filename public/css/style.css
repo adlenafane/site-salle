@@ -5291,9 +5291,6 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.container section .jumbotron {
-  border-radius: 0px; }
-
 .highlight .details {
   height: 100%;
   position: relative; }
@@ -5302,32 +5299,26 @@ button.close {
     text-transform: uppercase; }
   .highlight .details .city {
     color: #DA4453; }
-  .highlight .details .register .btn {
-    font-size: 1.5em;
-    margin-top: 1em;
-    padding: 0.5em;
-    position: absolute; }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .highlight .details .register .btn {
-        margin-top: 0;
-        top: 120px; } }
-    @media (min-width: 992px) and (max-width: 1199px) {
-      .highlight .details .register .btn {
-        margin-top: 0;
-        top: 192px; } }
-    @media (min-width: 1200px) {
-      .highlight .details .register .btn {
-        margin-top: 0;
-        top: 257px; } }
+.highlight .address, .highlight .contact {
+  border: 1px solid #DA4453;
+  margin-top: 2em;
+  padding: 1em; }
+  .highlight .address h3, .highlight .contact h3 {
+    margin-top: 0; }
+.highlight .address span {
+  display: block; }
+.highlight .contact a {
+  display: block; }
 
 header.navbar {
-  border-bottom: 3px solid #DA4453;
-  font-size: 1.5em; }
+  border-bottom: 3px solid #DA4453; }
   header.navbar .navbar-brand {
     font-size: 1.5em; }
-header .nav > li > a:hover, header .nav > li > a:active, header .nav > li > a:focus {
-  background-color: #DA4453;
-  color: #FFF; }
+header .nav > li > a {
+  color: #303030; }
+  header .nav > li > a:hover, header .nav > li > a:active, header .nav > li > a:focus {
+    background-color: #DA4453;
+    color: #FFF; }
 header .navbar-toggle {
   border-color: #DA4453; }
   header .navbar-toggle .icon-bar {
