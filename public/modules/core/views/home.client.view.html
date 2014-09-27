@@ -32,4 +32,43 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <h3>Horaires</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8 schedule">
+            <div class="day" ng-class="{active: currentDay === 1}">
+                <div class="day-name">Lundi</div>
+                <div class="hour">9h-21h</div>
+            </div>
+            <div class="day" ng-class="{active: currentDay === 2}">
+                <div class="day-name">Mardi</div>
+                <div class="hour">9h-21h</div>
+            </div>
+            <div class="day" ng-class="{active: currentDay === 3}">
+                <div class="day-name">Mercredi</div>
+                <div class="hour">9h-21h</div>
+            </div>
+            <div class="day" ng-class="{active: currentDay === 4}">
+                <div class="day-name">Jeudi</div>
+                <div class="hour">9h-21h</div>
+            </div>
+            <div class="day" ng-class="{active: currentDay === 5}">
+                <div class="day-name">Vendredi</div>
+                <div class="hour">9h-21h</div>
+            </div>
+            <div class="day" ng-class="{active: currentDay === 6}">
+                <div class="day-name">Samedi</div>
+                <div class="hour">9h-21h</div>
+            </div>
+            <div class="day" ng-class="{'active': currentDay === 0 || currentDay === 7}">
+                <div class="day-name">Dimanche</div>
+                <div class="hour">9h-21h</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 download-planning">
+            <button class="btn btn-primary btn-block btn-lg">Télécharger le planning</button>
+        </div>
+    </div>
 </section>

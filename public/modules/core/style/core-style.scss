@@ -35,3 +35,31 @@
     }
   }
 }
+
+.schedule {
+  text-align: center;
+  .day {
+    background-color: $brand-gray;
+    color: $brand-gray-dark;
+    display: inline-block;
+    margin-top: 1em;
+    min-width: 60px;
+    padding: 0.5em 0;
+    text-align: center;
+    width: 13.3%;
+
+    &.active {
+      background-color: $brand-gray-dark;
+      color: $white;
+    }
+  }
+
+  .day + .day {
+    margin-left: 0.5%;
+  }
+}
+
+.download-planning {
+  height: 100%;
+  margin-top: 1em;
+}
