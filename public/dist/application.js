@@ -84,6 +84,7 @@ angular.module('core').controller('HomeController', [
   function ($scope, Authentication) {
     // This provides Authentication context.
     $scope.authentication = Authentication;
+    $scope.currentDay = new Date().getDay();
   }
 ]);'use strict';
 //Menu service used for managing  menus
