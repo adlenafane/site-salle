@@ -42,24 +42,30 @@
     background-color: $brand-gray;
     color: $brand-gray-dark;
     display: inline-block;
+    height: 4em;
     margin-top: 1em;
-    min-width: 60px;
+    min-width: 70px;
     padding: 0.5em 0;
     text-align: center;
-    width: 13.3%;
+    width: 13.2%;
 
     &.active {
       background-color: $brand-gray-dark;
       color: $white;
     }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      font-size: 0.8em;
+      min-width: 60px;
+    }
   }
 
   .day + .day {
-    margin-left: 0.5%;
+    margin-left: 0.2%;
   }
 }
 
 .download-planning {
-  height: 100%;
+  height: 4em;
   margin-top: 1em;
 }
