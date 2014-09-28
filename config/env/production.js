@@ -16,7 +16,9 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
 				'public/lib/angular-ui-utils/ui-utils.min.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+				'public/lib/angular-translate/angular-translate.min.js',
+				'public/lib/angular-translate-loader-url/angular-translate-loader-url.min.js'
 			]
 		},
 		css: 'public/dist/application.min.css',
