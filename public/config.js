@@ -4,7 +4,17 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'site-salle';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils'];
+	var applicationModuleVendorDependencies = [
+		'ngResource',
+		'ngCookies',
+		'ngAnimate',
+		'ngTouch',
+		'ngSanitize',
+		'pascalprecht.translate',
+		'ui.router',
+		'ui.bootstrap',
+		'ui.utils'
+	];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {

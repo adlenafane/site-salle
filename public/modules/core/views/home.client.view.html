@@ -7,24 +7,24 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
                     <div class="row">
-                        <div class="col-xs-12 brand">Magic Form</div>
-                        <div class="col-xs-12 city">Thorigny sur Marne</div>
+                        <div class="col-xs-12 brand" translate="brand"></div>
+                        <div class="col-xs-12 city" translate="address.city"></div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 practical">
                     <div class="row">
                         <div class="col-xs-12 address-block">
                             <div class="address">
-                                <h3>Adresse :</h3>
-                                <span>2 Rue des Salvatres</span>
-                                <span>77400 Thorigny sur Marne</span>
+                                <h3 translate="address.header"></h3>
+                                <span translate="address.line1"></span>
+                                <span translate="address.line2"></span>
                             </div>
                         </div>
                         <div class="col-xs-12 contact-block">
                             <div class="contact">
-                                <h3>Contact :</h3>
-                                <a class="phone" ng-href="tel:0130405060">01 30 40 50 60</a>
-                                <a class="mail" ng-href="mailto:bonheur@magic-form-tsm.com">bonheur@magic-form-tsm.com</a>
+                                <h3 translate="contact.header"></h3>
+                                <a class="phone" ng-href="{{ 'tel:' + phone }}" translate="contact.phone"></a>
+                                <a class="mail" ng-href="{{ 'mailto:' + email }}" translate="contact.email"></a>
                             </div>
                         </div>
                     </div>
@@ -34,41 +34,41 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <h3>Horaires</h3>
+            <h3 translate="schedule.header"></h3>
         </div>
         <div class="col-xs-12 col-sm-8 schedule">
             <div class="day" ng-class="{active: currentDay === 1}">
-                <div class="day-name">Lundi</div>
-                <div class="hour">9h-21h</div>
+                <div class="day-name" translate="schedule.1.name"></div>
+                <div class="hour" translate="schedule.1.hour"></div>
             </div>
             <div class="day" ng-class="{active: currentDay === 2}">
-                <div class="day-name">Mardi</div>
-                <div class="hour">9h-21h</div>
+                <div class="day-name" translate="schedule.2.name"></div>
+                <div class="hour" translate="schedule.2.hour"></div>
             </div>
             <div class="day" ng-class="{active: currentDay === 3}">
-                <div class="day-name">Mercredi</div>
-                <div class="hour">9h-21h</div>
+                <div class="day-name" translate="schedule.3.name"></div>
+                <div class="hour" translate="schedule.3.hour"></div>
             </div>
             <div class="day" ng-class="{active: currentDay === 4}">
-                <div class="day-name">Jeudi</div>
-                <div class="hour">9h-21h</div>
+                <div class="day-name" translate="schedule.4.name"></div>
+                <div class="hour" translate="schedule.4.hour"></div>
             </div>
             <div class="day" ng-class="{active: currentDay === 5}">
-                <div class="day-name">Vendredi</div>
-                <div class="hour">9h-21h</div>
+                <div class="day-name" translate="schedule.5.name"></div>
+                <div class="hour" translate="schedule.5.hour"></div>
             </div>
             <div class="day" ng-class="{active: currentDay === 6}">
-                <div class="day-name">Samedi</div>
-                <div class="hour">9h-17h</div>
+                <div class="day-name" translate="schedule.6.name"></div>
+                <div class="hour" translate="schedule.6.hour"></div>
             </div>
             <div class="day" ng-class="{'active': currentDay === 0 || currentDay === 7}">
-                <div class="day-name">Dimanche</div>
-                <div class="hour">9h-14h</div>
+                <div class="day-name" translate="schedule.7.name"></div>
+                <div class="hour" translate="schedule.7.hour"></div>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-4 download-planning">
-            <button class="btn btn-primary btn-block btn-lg">Télécharger le planning</button>
+            <button class="btn btn-primary btn-block btn-lg" translate="planning.download"></button>
         </div>
     </div>
 </section>

@@ -10,6 +10,14 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 	}
 ]);
 
+// Setting translate options
+angular.module(ApplicationConfiguration.applicationModuleName).config(['$translateProvider',
+	function($translateProvider) {
+		$translateProvider.useUrlLoader('api/translation');
+		$translateProvider.preferredLanguage('fr');
+	}
+]);
+
 //Then define the init function for starting up the application
 angular.element(document).ready(function() {
 	//Fixing facebook bug with redirect
