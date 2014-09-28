@@ -12,7 +12,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         });
 
         $translate('contact.email').then(function(email) {
-            $scope.email = email
+            $scope.email = email;
         });
     }
 ]);

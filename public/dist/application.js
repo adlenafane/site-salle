@@ -9,6 +9,7 @@ var ApplicationConfiguration = function () {
         'ngAnimate',
         'ngTouch',
         'ngSanitize',
+        'pascalprecht.translate',
         'ui.router',
         'ui.bootstrap',
         'ui.utils'
@@ -33,6 +34,14 @@ angular.module(ApplicationConfiguration.applicationModuleName).config([
   '$locationProvider',
   function ($locationProvider) {
     $locationProvider.hashPrefix('!');
+  }
+]);
+// Setting translate options
+angular.module(ApplicationConfiguration.applicationModuleName).config([
+  '$translateProvider',
+  function ($translateProvider) {
+    $translateProvider.useUrlLoader('api/translation');
+    $translateProvider.preferredLanguage('fr');
   }
 ]);
 //Then define the init function for starting up the application
@@ -81,10 +90,17 @@ angular.module('core').controller('HeaderController', [
 angular.module('core').controller('HomeController', [
   '$scope',
   'Authentication',
-  function ($scope, Authentication) {
+  '$translate',
+  function ($scope, Authentication, $translate) {
     // This provides Authentication context.
     $scope.authentication = Authentication;
     $scope.currentDay = new Date().getDay();
+    $translate('contact.phone').then(function (phone) {
+      $scope.phone = phone;
+    });
+    $translate('contact.email').then(function (email) {
+      $scope.email = email;
+    });
   }
 ]);'use strict';
 //Menu service used for managing  menus
