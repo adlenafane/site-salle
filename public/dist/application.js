@@ -4,6 +4,7 @@ var ApplicationConfiguration = function () {
     // Init module configuration options
     var applicationModuleName = 'site-salle';
     var applicationModuleVendorDependencies = [
+        'google-maps',
         'ngResource',
         'ngCookies',
         'ngAnimate',
@@ -52,10 +53,42 @@ angular.element(document).ready(function () {
   //Then init the app
   angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
 });'use strict';
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('contact');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');'use strict';
+// Setting up route
+angular.module('contact').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Users state routing
+    $stateProvider.state('contact', {
+      url: '/contact',
+      templateUrl: 'modules/contact/views/contact.client.view.html'
+    });
+  }
+]);'use strict';
+angular.module('contact').controller('ContactController', [
+  '$scope',
+  function ($scope) {
+    $scope.map = {
+      center: {
+        latitude: 48.8960695,
+        longitude: 2.7227385
+      },
+      zoom: 15
+    };
+    $scope.marker = {
+      id: 1,
+      coords: {
+        latitude: 48.8960695,
+        longitude: 2.7227385
+      }
+    };
+  }
+]);'use strict';
 // Setting up route
 angular.module('core').config([
   '$stateProvider',

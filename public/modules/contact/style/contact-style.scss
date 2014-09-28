@@ -1,0 +1,17 @@
+.access {
+	margin-bottom: 2em;
+
+	.line {
+		display: inline-block;
+		height: 2em;
+	}
+}
+
+.map-container {
+  height: 480px;
+  width: 100%;
+
+  .angular-google-map-container {
+  	height: 400px;
+  }
+}
