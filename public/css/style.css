@@ -5377,7 +5377,13 @@ header .navbar-toggle {
     margin-top: 0;
     margin-bottom: 0; }
 .salle article img {
-  width: 100%; }
+  display: block;
+  height: 200px;
+  margin: auto; }
+  @media (min-width: 768px) {
+    .salle article img {
+      height: auto;
+      width: 100%; } }
 .salle article + article {
   margin-top: 3em; }
 
