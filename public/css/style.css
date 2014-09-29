@@ -2,7 +2,7 @@
 /** Colors **/
 /** Navbar **/
 /** Border Radius **/
-@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Lato:400);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5365,7 +5365,20 @@ header .navbar-toggle {
   header .navbar-toggle .icon-bar {
     background-color: #DA4453; }
 
+.salle article .title {
+  border-bottom: 2px solid #DA4453;
+  color: #DA4453;
+  height: 4em;
+  line-height: 4em;
+  margin-bottom: 1em;
+  padding: 1em 0;
+  vertical-align: middle; }
+  .salle article .title h3 {
+    margin-top: 0;
+    margin-bottom: 0; }
 .salle article img {
   width: 100%; }
+.salle article + article {
+  margin-top: 3em; }
 
 /*# sourceMappingURL=style.css.map */
