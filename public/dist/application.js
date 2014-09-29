@@ -57,6 +57,8 @@ angular.element(document).ready(function () {
 ApplicationConfiguration.registerModule('contact');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');'use strict';
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('salle');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');'use strict';
 // Setting up route
@@ -273,6 +275,23 @@ angular.module('core').service('Menus', [function () {
     //Adding the topbar menu
     this.addMenu('topbar');
   }]);'use strict';
+//Setting up route
+angular.module('salle').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Salle state routing
+    $stateProvider.state('salle', {
+      url: '/salle',
+      templateUrl: 'modules/salle/views/salle.client.view.html'
+    });
+  }
+]);'use strict';
+angular.module('salle').controller('SalleController', [
+  '$scope',
+  function ($scope) {
+    return;
+  }
+]);'use strict';
 // Config HTTP Error Handling
 angular.module('users').config([
   '$httpProvider',
