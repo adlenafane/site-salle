@@ -5291,6 +5291,18 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+.access {
+  margin-bottom: 2em; }
+  .access .line {
+    display: inline-block;
+    height: 2em; }
+
+.map-container {
+  height: 480px;
+  width: 100%; }
+  .map-container .angular-google-map-container {
+    height: 400px; }
+
 .highlight .details {
   height: 100%;
   position: relative; }
@@ -5353,16 +5365,7 @@ header .navbar-toggle {
   header .navbar-toggle .icon-bar {
     background-color: #DA4453; }
 
-.access {
-  margin-bottom: 2em; }
-  .access .line {
-    display: inline-block;
-    height: 2em; }
-
-.map-container {
-  height: 480px;
+.salle article img {
   width: 100%; }
-  .map-container .angular-google-map-container {
-    height: 400px; }
 
 /*# sourceMappingURL=style.css.map */
