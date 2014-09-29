@@ -5305,6 +5305,9 @@ button.close {
   padding: 1em; }
   .highlight .address h3, .highlight .contact h3 {
     margin-top: 0; }
+.highlight .address a {
+  color: #534e4b;
+  text-decoration: none; }
 .highlight .address span {
   display: block; }
 .highlight .contact a {

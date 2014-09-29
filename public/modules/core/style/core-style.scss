@@ -24,6 +24,11 @@
   }
 
   .address {
+    a {
+      color: $brand-gray-dark;
+      text-decoration: none;
+    }
+
     span {
       display: block;
     }
