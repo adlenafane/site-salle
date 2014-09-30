@@ -54,6 +54,8 @@ angular.element(document).ready(function () {
   angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
 });'use strict';
 // Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('coaching');'use strict';
+// Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('contact');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');'use strict';
@@ -61,6 +63,22 @@ ApplicationConfiguration.registerModule('core');'use strict';
 ApplicationConfiguration.registerModule('salle');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');'use strict';
+//Setting up route
+angular.module('coaching').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Coaching state routing
+    $stateProvider.state('coaching', {
+      url: '/coaching',
+      templateUrl: 'modules/coaching/views/coaching.client.view.html'
+    });
+  }
+]);'use strict';
+angular.module('coaching').controller('CoachingController', [
+  '$scope',
+  function ($scope) {
+  }
+]);'use strict';
 // Setting up route
 angular.module('contact').config([
   '$stateProvider',
