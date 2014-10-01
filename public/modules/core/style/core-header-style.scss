@@ -3,12 +3,13 @@ header {
     border-bottom: 3px solid $brand-primary;
 
     .navbar-brand {
-      font-size: 1.5em;
+      font-size: 1.8em;
     }
   }
 
   .nav > li > a {
     color: $brand-gray-dark;
+    font-size: 1.3em;
 
     &:hover, &:active, &:focus {
       background-color: $brand-primary;
