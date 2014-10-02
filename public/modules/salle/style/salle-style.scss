@@ -97,13 +97,13 @@
       $carousel-height: 300px;
       height: $carousel-height;
 
-//      carousel {
-//        height: $carousel-height;
-//
-//        .carousel-inner > .item > img {
-//          max-height: $carousel-height;
-//        }
-//      }
+      carousel {
+        height: $carousel-height;
+
+        .carousel-inner > .item > img {
+          max-height: $carousel-height;
+        }
+      }
     }
 
     .text.ng-hide, .image.ng-hide {

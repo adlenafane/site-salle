@@ -5442,6 +5442,10 @@ header .navbar-toggle {
   opacity: 1; }
 .salle article .text, .salle article .image {
   height: 300px; }
+  .salle article .text carousel, .salle article .image carousel {
+    height: 300px; }
+    .salle article .text carousel .carousel-inner > .item > img, .salle article .image carousel .carousel-inner > .item > img {
+      max-height: 300px; }
 .salle article .text.ng-hide, .salle article .image.ng-hide {
   opacity: 0;
   height: 0; }
