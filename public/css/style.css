@@ -5399,6 +5399,7 @@ header .navbar-toggle {
   background-position: 0px 71%;
   background-size: cover; }
 .salle article header {
+  cursor: pointer;
   height: 200px;
   margin-bottom: 1em;
   padding-right: 0;
