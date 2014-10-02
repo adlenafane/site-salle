@@ -16,8 +16,13 @@ $border-radius-large: 0;
 $border-radius-small: 0;
 $pager-border-radius: 0;
 
+/** Bootstrap issue **/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/** Fonts **/
 @import url(http://fonts.googleapis.com/css?family=Lato:400);
 $font-family-sans-serif: 'Lato', Helvetica, Arial, sans-serif !default;
+$icon-font-path: '../lib/bootstrap-sass-official/assets/fonts/bootstrap/';
 
 @import "../public/lib/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../public/modules/contact/style/contact-style";
