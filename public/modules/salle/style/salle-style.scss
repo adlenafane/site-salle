@@ -84,6 +84,19 @@
         width: 100%;
       }
     }
+
+    .text, .image {
+      -webkit-transition: all linear 0.5s;
+      transition: all linear 0.5s;
+
+      opacity: 1;
+      height: 500px;
+    }
+
+    .text.ng-hide, .image.ng-hide {
+      opacity: 0;
+      height: 0;
+    }
   }
 
   article + article {

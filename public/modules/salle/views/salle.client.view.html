@@ -4,13 +4,13 @@
     </div>
 
     <article class="row cardio">
-        <header class="col-xs-12 cardio-image">
+        <header class="col-xs-12 cardio-image" ng-click="displayCardio = !displayCardio">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Espace cardio</h2>
             </div>
         </header>
-        <div class="col-xs-12 col-sm-8 text">
+        <div class="col-xs-12 col-sm-8 text" ng-show="displayCardio">
             <p>
                 Efficace et indispensable pour la bonne forme physique, l’espace cardio repose sur un large choix de machines haut de gamme :
             </p>
@@ -28,22 +28,22 @@
                 Tous complémentaires et efficaces pour l’ensemble du corps. Indispensable dans un objectif de prévention santé pour améliorer la fréquence cardiaque à l’effort, la récupération, le souffle, l’espace CARDIO vous permettra aussi d’affiner votre silhouette en brulant un maximum de calories et d’améliorer votre condition physique.
             </p>
         </div>
-        <div class="col-xs-12 col-sm-4">
+        <div class=" col-xs-12 col-sm-4 image" ng-show="displayCardio">
             <img src="modules/salle/img/cardio.jpg">
         </div>
     </article>
 
 	<article class="row">
-        <header class="col-xs-12 libre-image">
+        <header class="col-xs-12 libre-image"  ng-click="displayLibre = !displayLibre">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Musculation Libre</h2>
             </div>
         </header>
-        <div class="col-xs-12 col-sm-4">
+        <div class=" col-xs-12 col-sm-4 image" ng-show="displayLibre">
             <img src="modules/salle/img/libre.jpg">
         </div>
-        <div class="col-xs-12 col-sm-8 text">
+        <div class="col-xs-12 col-sm-8 text" ng-show="displayLibre">
             <p>
                 Uniquement destinée au développement musculaire avec barres, haltères, bancs et machines de dernière génération, afin de développer chacun des muscles du corps. Les charges libres offrent aux habitués une intensité plus importante.
             </p>
@@ -51,33 +51,33 @@
 	</article>
 
 	<article class="row">
-        <header class="col-xs-12 guide-image">
+        <header class="col-xs-12 guide-image" ng-click="displayGuide = !displayGuide">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Renforcement musculaire</h2>
             </div>
         </header>
-        <div class="col-xs-12 col-sm-8 text">
+        <div class="col-xs-12 col-sm-8 text" ng-show="displayGuide">
             <p>
                 Les appareils guidés facilitent l’apprentissage des mouvements aux personnes débutantes qui souhaitent améliorer leur posture, raffermir, tonifier leur corps ou redessiner leur silhouette en toute sécurité.
             </p>
         </div>
-        <div class="col-xs-12 col-sm-4">
+        <div class=" col-xs-12 col-sm-4 image" ng-show="displayGuide">
             <img src="modules/salle/img/guide.jpg">
         </div>
 	</article>
 
 	<article class="row classes">
-        <header class="col-xs-12 classes-image">
+        <header class="col-xs-12 classes-image" ng-click="displayClasses = !displayClasses">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Cours collectifs</h2>
             </div>
         </header>
-        <div class="col-xs-12 col-sm-4">
+        <div class=" col-xs-12 col-sm-4 image" ng-show="displayClasses">
             <img src="modules/salle/img/classes.jpg">
         </div>
-        <div class="col-xs-12 col-sm-8 text">
+        <div class="col-xs-12 col-sm-8 text" ng-show="displayClasses">
             <p>
                 Photos.
             </p>
@@ -85,33 +85,33 @@
 	</article>
 
 	<article class="row biking">
-        <header class="col-xs-12 biking-image">
+        <header class="col-xs-12 biking-image" ng-click="displayBiking = !displayBiking">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Espace biking</h2>
             </div>
         </header>
-        <div class="col-xs-12 col-sm-8 text">
+        <div class="col-xs-12 col-sm-8 text" ng-show="displayBiking">
             <p>
                 Entrer dans l’espace biking c’est s’immerger dans un autre univers. Sous la direction d'un coach qui entraîne le groupe de participants, vous "roulez" au rythme d’une musique stimulante doublée d'effets de lumières et vous pédalez en accord avec le tempo, en contrôlant vous-même l’intensité de votre effort (par votre propre réglage de résistance) et la vitesse que vous donnez aux pédales. Les vélos sont spécialement conçus pour l’activité. Une expérience unique pour éliminer, s’évader ou oublier...
             </p>
         </div>
-        <div class="col-xs-12 col-sm-4">
+        <div class=" col-xs-12 col-sm-4 image" ng-show="displayBiking">
             <img src="modules/salle/img/biking.jpg">
         </div>
 	</article>
 
 	<article class="row freedom">
-        <header class="col-xs-12 freedom-image">
+        <header class="col-xs-12 freedom-image" ng-click="displayFreedom = !displayFreedom">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Espace liberté</h2>
             </div>
         </header>
-        <div class="col-xs-12 col-sm-4">
+        <div class=" col-xs-12 col-sm-4 image" ng-show="displayFreedom">
             <img src="modules/salle/img/freedom.jpg">
         </div>
-        <div class="col-xs-12 col-sm-8 text">
+        <div class="col-xs-12 col-sm-8 text" ng-show="displayFreedom">
             <p>
                 Le sur-mesure pour toutes vos idées, n'hésitez pas à nous en proposer de nouvelles !
             </p>
@@ -130,33 +130,33 @@
 	</article>
 
 	<article class="row trx">
-        <header class="col-xs-12 trx-image">
+        <header class="col-xs-12 trx-image" ng-click="displayTrx = !displayTrx">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>TRX</h2>
             </div>
         </header>
-        <div class="col-xs-12 col-sm-8 text">
+        <div class="col-xs-12 col-sm-8 text" ng-show="displayTrx">
             <p>
                 Le TRX est un système d’entrainement accessible à tous, quelque soit votre âge et votre condition physique ! Conçu à partir de sangle de parachute, il permet de travailler vos muscles profonds en utilisant le poids de votre corps. Une silhouette dessinée, une sangle abdominale renforcée, pour un corps ferme et tonique. Le TRX séduit aussi bien les sportifs chevronnés que les novices et fans de fitness.
             </p>
         </div>
-        <div class="col-xs-12 col-sm-4">
+        <div class=" col-xs-12 col-sm-4 image" ng-show="displayTrx">
             <img src="modules/salle/img/trx.jpg">
         </div>
 	</article>
 
-	<article class="row rest">
+	<article class="row rest" ng-click="displayRest = !displayRest">
         <header class="col-xs-12 rest-image">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Espace détente</h2>
             </div>
         </header>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4 image" ng-show="displayRest">
             <img src="modules/salle/img/rest.jpg">
         </div>
-        <div class="col-xs-12 col-sm-8 text">
+        <div class="col-xs-12 col-sm-8 text" ng-show="displayRest">
             <p>
                 Après le sport, le réconfort !
                 Avec le Wi-fi :)
