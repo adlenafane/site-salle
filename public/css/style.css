@@ -5367,21 +5367,37 @@ header .navbar-toggle {
     background-color: #DA4453; }
 
 .salle article .cardio-image {
-  background: url("../modules/salle/img/cardio.jpg"); }
+  background: url("../modules/salle/img/cardio-header.jpg");
+  background-position: 0px 18%;
+  background-size: cover; }
 .salle article .libre-image {
-  background: url("../modules/salle/img/libre.jpg"); }
+  background: url("../modules/salle/img/libre-header.jpg");
+  background-position: 0px 50%;
+  background-size: cover; }
 .salle article .guide-image {
-  background: url("../modules/salle/img/guide.jpg"); }
+  background: url("../modules/salle/img/guide-header.jpg");
+  background-position: 0px 60%;
+  background-size: cover; }
 .salle article .classes-image {
-  background: url("../modules/salle/img/classes.jpg"); }
+  background: url("../modules/salle/img/classes-header.jpg");
+  background-position: 0px 40%;
+  background-size: cover; }
 .salle article .biking-image {
-  background: url("../modules/salle/img/biking.jpg"); }
+  background: url("../modules/salle/img/biking-header.jpg");
+  background-position: 0px 31%;
+  background-size: cover; }
 .salle article .freedom-image {
-  background: url("../modules/salle/img/freedom.jpg"); }
+  background: url("../modules/salle/img/freedom.jpg");
+  background-position: 0px 18%;
+  background-size: cover; }
 .salle article .trx-image {
-  background: url("../modules/salle/img/trx.jpg"); }
+  background: url("../modules/salle/img/trx-header.jpg");
+  background-position: 0px 41%;
+  background-size: cover; }
 .salle article .rest-image {
-  background: url("../modules/salle/img/rest.jpg"); }
+  background: url("../modules/salle/img/rest-header.jpg");
+  background-position: 0px 71%;
+  background-size: cover; }
 .salle article header {
   height: 200px;
   margin-bottom: 1em;
@@ -5389,7 +5405,7 @@ header .navbar-toggle {
   .salle article header .overlay {
     background-color: #534e4b;
     height: 200px;
-    opacity: 0.4;
+    opacity: 0.6;
     width: 100%; }
   .salle article header .title {
     background-color: rgba(255, 255, 255, 0.8);

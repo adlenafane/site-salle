@@ -1,13 +1,45 @@
 .salle {
   article {
-    .cardio-image { background: url('../modules/salle/img/cardio.jpg'); }
-    .libre-image { background: url('../modules/salle/img/libre.jpg'); }
-    .guide-image { background: url('../modules/salle/img/guide.jpg'); }
-    .classes-image { background: url('../modules/salle/img/classes.jpg'); }
-    .biking-image { background: url('../modules/salle/img/biking.jpg'); }
-    .freedom-image { background: url('../modules/salle/img/freedom.jpg'); }
-    .trx-image { background: url('../modules/salle/img/trx.jpg'); }
-    .rest-image { background: url('../modules/salle/img/rest.jpg'); }
+    .cardio-image {
+      background: url('../modules/salle/img/cardio-header.jpg');
+      background-position: 0px 18%;
+      background-size: cover;
+    }
+    .libre-image {
+      background: url('../modules/salle/img/libre-header.jpg');
+      background-position: 0px 50%;
+      background-size: cover;
+    }
+    .guide-image {
+      background: url('../modules/salle/img/guide-header.jpg');
+      background-position: 0px 60%;
+      background-size: cover;
+    }
+    .classes-image {
+      background: url('../modules/salle/img/classes-header.jpg');
+      background-position: 0px 40%;
+      background-size: cover;
+    }
+    .biking-image {
+      background: url('../modules/salle/img/biking-header.jpg');
+      background-position: 0px 31%;
+      background-size: cover;
+    }
+    .freedom-image {
+      background: url('../modules/salle/img/freedom.jpg');
+      background-position: 0px 18%;
+      background-size: cover;
+    }
+    .trx-image {
+      background: url('../modules/salle/img/trx-header.jpg');
+      background-position: 0px 41%;
+      background-size: cover;
+    }
+    .rest-image {
+      background: url('../modules/salle/img/rest-header.jpg');
+      background-position: 0px 71%;
+      background-size: cover;
+    }
     
     header {
       height: 200px;
@@ -17,7 +49,7 @@
       .overlay {
         background-color: $brand-gray-dark;
         height: 200px;
-        opacity: 0.4;
+        opacity: 0.6;
         width: 100%;
       }
 
