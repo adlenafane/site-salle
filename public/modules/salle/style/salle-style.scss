@@ -1,17 +1,41 @@
 .salle {
   article {
-    .title {
-      border-bottom: 2px solid $brand-primary;
-      color: $brand-primary;
-      height: 4em;
-      line-height: 4em;
+    .cardio-image { background: url('../modules/salle/img/cardio.jpg'); }
+    .libre-image { background: url('../modules/salle/img/libre.jpg'); }
+    .guide-image { background: url('../modules/salle/img/guide.jpg'); }
+    .classes-image { background: url('../modules/salle/img/classes.jpg'); }
+    .biking-image { background: url('../modules/salle/img/biking.jpg'); }
+    .freedom-image { background: url('../modules/salle/img/freedom.jpg'); }
+    .trx-image { background: url('../modules/salle/img/trx.jpg'); }
+    .rest-image { background: url('../modules/salle/img/rest.jpg'); }
+    
+    header {
+      height: 200px;
       margin-bottom: 1em;
-      padding: 1em 0;
-      vertical-align: middle;
+      position: relative;
 
-      h2 {
-        margin-top: 0;
-        margin-bottom: 0;
+      .overlay {
+        background-color: $brand-gray-dark;
+        height: 200px;
+        opacity: 0.4;
+        width: 100%;
+      }
+
+      .title {
+        background-color: rgba(255,255,255, 0.8);
+        border-bottom: none;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h2 {
+          color: $brand-primary;
+          margin-top: 0;
+          margin-bottom: 0;
+          opacity: 1;
+        }
       }
     }
 

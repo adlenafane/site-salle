@@ -5366,17 +5366,44 @@ header .navbar-toggle {
   header .navbar-toggle .icon-bar {
     background-color: #DA4453; }
 
-.salle article .title {
-  border-bottom: 2px solid #DA4453;
-  color: #DA4453;
-  height: 4em;
-  line-height: 4em;
+.salle article .cardio-image {
+  background: url("../modules/salle/img/cardio.jpg"); }
+.salle article .libre-image {
+  background: url("../modules/salle/img/libre.jpg"); }
+.salle article .guide-image {
+  background: url("../modules/salle/img/guide.jpg"); }
+.salle article .classes-image {
+  background: url("../modules/salle/img/classes.jpg"); }
+.salle article .biking-image {
+  background: url("../modules/salle/img/biking.jpg"); }
+.salle article .freedom-image {
+  background: url("../modules/salle/img/freedom.jpg"); }
+.salle article .trx-image {
+  background: url("../modules/salle/img/trx.jpg"); }
+.salle article .rest-image {
+  background: url("../modules/salle/img/rest.jpg"); }
+.salle article header {
+  height: 200px;
   margin-bottom: 1em;
-  padding: 1em 0;
-  vertical-align: middle; }
-  .salle article .title h2 {
-    margin-top: 0;
-    margin-bottom: 0; }
+  position: relative; }
+  .salle article header .overlay {
+    background-color: #534e4b;
+    height: 200px;
+    opacity: 0.4;
+    width: 100%; }
+  .salle article header .title {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: none;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .salle article header .title h2 {
+      color: #DA4453;
+      margin-top: 0;
+      margin-bottom: 0;
+      opacity: 1; }
 .salle article img {
   display: block;
   height: 200px;
