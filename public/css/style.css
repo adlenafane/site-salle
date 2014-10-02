@@ -5401,6 +5401,8 @@ header .navbar-toggle {
 .salle article header {
   height: 200px;
   margin-bottom: 1em;
+  padding-right: 0;
+  padding-left: 0;
   position: relative; }
   .salle article header .overlay {
     background-color: #534e4b;

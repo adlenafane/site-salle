@@ -1,5 +1,6 @@
 .salle {
   article {
+
     .cardio-image {
       background: url('../modules/salle/img/cardio-header.jpg');
       background-position: 0px 18%;
@@ -44,6 +45,8 @@
     header {
       height: 200px;
       margin-bottom: 1em;
+      padding-right: 0;
+      padding-left: 0;
       position: relative;
 
       .overlay {
