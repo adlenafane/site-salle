@@ -75,17 +75,6 @@
       }
     }
 
-    img {
-      display: block;
-      height: 200px;
-      margin: auto;
-
-      @media (min-width: $screen-sm-min) {
-        height: auto;
-        width: 100%;
-      }
-    }
-
     .text, .image {
       -webkit-transition: all linear 0.5s;
       transition: all linear 0.5s;
@@ -97,11 +86,12 @@
       $carousel-height: 300px;
       height: $carousel-height;
 
-      carousel {
+      .carousel, .carousel .carousel-inner {
         height: $carousel-height;
 
-        .carousel-inner > .item > img {
+        .carousel-indicators .carousel-inner > .item > img {
           max-height: $carousel-height;
+          width: auto;
         }
       }
     }

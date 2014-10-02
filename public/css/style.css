@@ -5428,24 +5428,17 @@ header .navbar-toggle {
       margin-top: 0;
       margin-bottom: 0;
       opacity: 1; }
-.salle article img {
-  display: block;
-  height: 200px;
-  margin: auto; }
-  @media (min-width: 768px) {
-    .salle article img {
-      height: auto;
-      width: 100%; } }
 .salle article .text, .salle article .image {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
   opacity: 1; }
 .salle article .text, .salle article .image {
   height: 300px; }
-  .salle article .text carousel, .salle article .image carousel {
+  .salle article .text .carousel, .salle article .text .carousel .carousel-inner, .salle article .image .carousel, .salle article .image .carousel .carousel-inner {
     height: 300px; }
-    .salle article .text carousel .carousel-inner > .item > img, .salle article .image carousel .carousel-inner > .item > img {
-      max-height: 300px; }
+    .salle article .text .carousel .carousel-indicators .carousel-inner > .item > img, .salle article .text .carousel .carousel-inner .carousel-indicators .carousel-inner > .item > img, .salle article .image .carousel .carousel-indicators .carousel-inner > .item > img, .salle article .image .carousel .carousel-inner .carousel-indicators .carousel-inner > .item > img {
+      max-height: 300px;
+      width: auto; }
 .salle article .text.ng-hide, .salle article .image.ng-hide {
   opacity: 0;
   height: 0; }
