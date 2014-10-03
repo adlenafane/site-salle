@@ -78,7 +78,10 @@ $carousel-height: 300px;
     }
 
     .text {
-      min-height: $carousel-height;
+      @include transition(all 0.5s 0 ease);
+
+      height: $carousel-height;
+      opacity: 1;
     }
 
     .text.ng-hide {

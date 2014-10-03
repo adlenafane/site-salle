@@ -5429,7 +5429,11 @@ header .navbar-toggle {
       margin-bottom: 0;
       opacity: 1; }
 .salle article .text {
-  min-height: 300px; }
+  -webkit-transition: all 0.5s 0 ease;
+  -o-transition: all 0.5s 0 ease;
+  transition: all 0.5s 0 ease;
+  height: 300px;
+  opacity: 1; }
 .salle article .text.ng-hide {
   opacity: 0;
   height: 0; }

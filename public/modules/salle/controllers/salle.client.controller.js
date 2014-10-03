@@ -31,6 +31,6 @@ angular.module('salle').directive('disableAnimation', ['$animate',
           $animate.enabled(!value, $element);
         });
       }
-    }
+    };
   }
 ]);
