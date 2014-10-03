@@ -5428,22 +5428,20 @@ header .navbar-toggle {
       margin-top: 0;
       margin-bottom: 0;
       opacity: 1; }
-.salle article .text, .salle article .image {
-  -webkit-transition: all linear 0.5s;
-  transition: all linear 0.5s;
-  opacity: 1; }
-.salle article .text, .salle article .image {
-  height: 300px; }
-  .salle article .text .carousel, .salle article .text .carousel .carousel-inner, .salle article .image .carousel, .salle article .image .carousel .carousel-inner {
-    height: 300px; }
-    .salle article .text .carousel .carousel-indicators .carousel-inner > .item > img, .salle article .text .carousel .carousel-inner .carousel-indicators .carousel-inner > .item > img, .salle article .image .carousel .carousel-indicators .carousel-inner > .item > img, .salle article .image .carousel .carousel-inner .carousel-indicators .carousel-inner > .item > img {
-      max-height: 300px;
-      width: auto; }
-.salle article .text.ng-hide, .salle article .image.ng-hide {
+.salle article .text {
+  min-height: 300px; }
+.salle article .text.ng-hide {
   opacity: 0;
   height: 0; }
-  .salle article .text.ng-hide img, .salle article .text.ng-hide .carousel, .salle article .image.ng-hide img, .salle article .image.ng-hide .carousel {
-    height: 0; }
+.salle article .image {
+  height: 300px;
+  padding-right: 0;
+  padding-left: 0; }
+  .salle article .image .carousel, .salle article .image .carousel .carousel-inner {
+    height: 300px; }
+    .salle article .image .carousel .carousel-indicators .carousel-inner > .item > img, .salle article .image .carousel .carousel-inner .carousel-indicators .carousel-inner > .item > img {
+      height: 300px;
+      width: auto; }
 .salle article + article {
   margin-top: 3em; }
 

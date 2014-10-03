@@ -1,7 +1,14 @@
 <section data-ng-controller="SalleController" class="salle">
-    <div class="row">
+    <article class="row">
         <h1 class="col-xs-12">La salle</h1>
-    </div>
+        <div class="col-xs-12 image">
+            <carousel interval="carouselInterval" disable-animation="true">
+                <slide ng-repeat="slide in slides">
+                    <img ng-src="{{ slide.image }}" style="margin:auto;">
+                </slide>
+            </carousel>
+        </div>
+    </article>
 
     <article class="row cardio">
         <header class="col-xs-12 cardio-image" ng-click="displayCardio = !displayCardio">
@@ -28,16 +35,6 @@
                 Tous complémentaires et efficaces pour l’ensemble du corps. Indispensable dans un objectif de prévention santé pour améliorer la fréquence cardiaque à l’effort, la récupération, le souffle, l’espace CARDIO vous permettra aussi d’affiner votre silhouette en brulant un maximum de calories et d’améliorer votre condition physique.
             </p>
         </div>
-        <div class="col-xs-12 image" ng-show="displayCardio">
-            <carousel interval="carouselInterval">
-                <slide ng-repeat="slide in slidesCardio">
-                    <img ng-src="{{ slide.image }}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{ $index }}</h4>
-                    </div>
-                </slide>
-            </carousel>
-        </div>
     </article>
 
 	<article class="row">
@@ -51,16 +48,6 @@
             <p>
                 Uniquement destinée au développement musculaire avec barres, haltères, bancs et machines de dernière génération, afin de développer chacun des muscles du corps. Les charges libres offrent aux habitués une intensité plus importante.
             </p>
-        </div>
-        <div class="col-xs-12 image" ng-show="displayLibre">
-            <carousel interval="carouselInterval">
-                <slide ng-repeat="slide in slidesLibre">
-                    <img ng-src="{{ slide.image }}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{ $index }}</h4>
-                    </div>
-                </slide>
-            </carousel>
         </div>
 	</article>
 
@@ -76,16 +63,6 @@
                 Les appareils guidés facilitent l’apprentissage des mouvements aux personnes débutantes qui souhaitent améliorer leur posture, raffermir, tonifier leur corps ou redessiner leur silhouette en toute sécurité.
             </p>
         </div>
-        <div class="col-xs-12 image" ng-show="displayGuide">
-            <carousel interval="carouselInterval">
-                <slide ng-repeat="slide in slidesGuide">
-                    <img ng-src="{{ slide.image }}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{ $index }}</h4>
-                    </div>
-                </slide>
-            </carousel>
-        </div>
 	</article>
 
 	<article class="row classes">
@@ -100,16 +77,6 @@
                 Photos.
             </p>
         </div>
-        <div class="col-xs-12 image" ng-show="displayClasses">
-            <carousel interval="carouselInterval">
-                <slide ng-repeat="slide in slidesClasses">
-                    <img ng-src="{{ slide.image }}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{ $index }}</h4>
-                    </div>
-                </slide>
-            </carousel>
-        </div>
 	</article>
 
 	<article class="row biking">
@@ -123,16 +90,6 @@
             <p>
                 Entrer dans l’espace biking c’est s’immerger dans un autre univers. Sous la direction d'un coach qui entraîne le groupe de participants, vous "roulez" au rythme d’une musique stimulante doublée d'effets de lumières et vous pédalez en accord avec le tempo, en contrôlant vous-même l’intensité de votre effort (par votre propre réglage de résistance) et la vitesse que vous donnez aux pédales. Les vélos sont spécialement conçus pour l’activité. Une expérience unique pour éliminer, s’évader ou oublier...
             </p>
-        </div>
-        <div class="col-xs-12 image" ng-show="displayBiking">
-            <carousel interval="carouselInterval">
-                <slide ng-repeat="slide in slidesBiking">
-                    <img ng-src="{{ slide.image }}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{ $index }}</h4>
-                    </div>
-                </slide>
-            </carousel>
         </div>
 	</article>
 
@@ -159,16 +116,6 @@
                 <li>...</li>
             </ul>
         </div>
-        <div class="col-xs-12 image" ng-show="displayFreedom">
-            <carousel interval="carouselInterval">
-                <slide ng-repeat="slide in slidesFreedom">
-                    <img ng-src="{{ slide.image }}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{ $index }}</h4>
-                    </div>
-                </slide>
-            </carousel>
-        </div>
 	</article>
 
 	<article class="row trx">
@@ -182,16 +129,6 @@
             <p>
                 Le TRX est un système d’entrainement accessible à tous, quelque soit votre âge et votre condition physique ! Conçu à partir de sangle de parachute, il permet de travailler vos muscles profonds en utilisant le poids de votre corps. Une silhouette dessinée, une sangle abdominale renforcée, pour un corps ferme et tonique. Le TRX séduit aussi bien les sportifs chevronnés que les novices et fans de fitness.
             </p>
-        </div>
-        <div class="col-xs-12 image" ng-show="displayTrx">
-            <carousel interval="carouselInterval">
-                <slide ng-repeat="slide in slidesTrx">
-                    <img ng-src="{{ slide.image }}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{ $index }}</h4>
-                    </div>
-                </slide>
-            </carousel>
         </div>
 	</article>
 
@@ -207,16 +144,6 @@
                 Après le sport, le réconfort !
                 Avec le Wi-fi :)
             </p>
-        </div>
-        <div class="col-xs-12 image" ng-show="displayRest">
-            <carousel interval="carouselInterval">
-                <slide ng-repeat="slide in slidesRest">
-                    <img ng-src="{{ slide.image }}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{ $index }}</h4>
-                    </div>
-                </slide>
-            </carousel>
         </div>
 	</article>
 </section>
