@@ -5330,7 +5330,12 @@ button.close {
       float: left;
       width: 25%; } }
   .category .content {
-    background-color: #DA4453;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #967ADC;
+    cursor: pointer;
     height: 200px;
     margin: 1em;
     position: relative; }
@@ -5345,6 +5350,14 @@ button.close {
     .category .content span {
       bottom: 0;
       font-size: 1.5em; }
+  .category:nth-of-type(2) .content {
+    background-color: #DA4453; }
+  .category:nth-of-type(3) .content {
+    background-color: #D770AD; }
+  .category:nth-of-type(4) .content {
+    background-color: #37BC9B; }
+  .category:nth-of-type(5) .content {
+    background-color: #4A89DC; }
 
 .access {
   margin-bottom: 2em; }
