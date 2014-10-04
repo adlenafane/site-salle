@@ -1,5 +1,5 @@
 <section data-ng-controller="SalleController" class="salle">
-    <article class="row">
+    <article class="row" room-row="">
         <h1 class="col-xs-12">La salle</h1>
         <div class="col-xs-12 image">
             <carousel interval="carouselInterval" disable-animation="true">
@@ -10,8 +10,8 @@
         </div>
     </article>
 
-    <article class="row cardio">
-        <header class="col-xs-12 cardio-image" ng-click="displayCardio = !displayCardio">
+    <article class="row" room-row="" id="cardio" ng-click="displayCardio = !displayCardio">
+        <header class="col-xs-12 cardio-image">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Espace cardio</h2>
@@ -37,7 +37,7 @@
         </div>
     </article>
 
-	<article class="row">
+	<article class="row" room-row="" id="libre">
         <header class="col-xs-12 libre-image"  ng-click="displayLibre = !displayLibre">
             <div class="overlay"></div>
             <div class="text-center title">
@@ -51,7 +51,7 @@
         </div>
 	</article>
 
-	<article class="row">
+	<article class="row" room-row="" id="guide">
         <header class="col-xs-12 guide-image" ng-click="displayGuide = !displayGuide">
             <div class="overlay"></div>
             <div class="text-center title">
@@ -65,7 +65,7 @@
         </div>
 	</article>
 
-	<article class="row classes">
+	<article class="row" room-row="" id="classes">
         <header class="col-xs-12 classes-image" ng-click="displayClasses = !displayClasses">
             <div class="overlay"></div>
             <div class="text-center title">
@@ -79,7 +79,7 @@
         </div>
 	</article>
 
-	<article class="row biking">
+	<article class="row" room-row="" id="biking">
         <header class="col-xs-12 biking-image" ng-click="displayBiking = !displayBiking">
             <div class="overlay"></div>
             <div class="text-center title">
@@ -93,7 +93,7 @@
         </div>
 	</article>
 
-	<article class="row freedom">
+	<article class="row" room-row="" id="freedom">
         <header class="col-xs-12 freedom-image" ng-click="displayFreedom = !displayFreedom">
             <div class="overlay"></div>
             <div class="text-center title">
@@ -118,7 +118,7 @@
         </div>
 	</article>
 
-	<article class="row trx">
+	<article class="row" room-row="" id="trx">
         <header class="col-xs-12 trx-image" ng-click="displayTrx = !displayTrx">
             <div class="overlay"></div>
             <div class="text-center title">
@@ -132,8 +132,8 @@
         </div>
 	</article>
 
-	<article class="row rest" ng-click="displayRest = !displayRest">
-        <header class="col-xs-12 rest-image">
+	<article class="row" id="rest">
+        <header class="col-xs-12 rest-image"  ng-click="displayRest = !displayRest">
             <div class="overlay"></div>
             <div class="text-center title">
                 <h2>Espace détente</h2>

@@ -5432,19 +5432,20 @@ header .navbar-toggle {
   -webkit-transition: all 0.5s 0 ease;
   -o-transition: all 0.5s 0 ease;
   transition: all 0.5s 0 ease;
-  height: 300px;
+  font-size: 1.3em;
+  height: 350px;
   opacity: 1; }
 .salle article .text.ng-hide {
   opacity: 0;
   height: 0; }
 .salle article .image {
-  height: 300px;
+  height: 350px;
   padding-right: 0;
   padding-left: 0; }
   .salle article .image .carousel, .salle article .image .carousel .carousel-inner {
-    height: 300px; }
+    height: 350px; }
     .salle article .image .carousel .carousel-indicators .carousel-inner > .item > img, .salle article .image .carousel .carousel-inner .carousel-indicators .carousel-inner > .item > img {
-      height: 300px;
+      height: 350px;
       width: auto; }
 .salle article + article {
   margin-top: 3em; }
