@@ -54,6 +54,8 @@ angular.element(document).ready(function () {
   angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
 });'use strict';
 // Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('activity');'use strict';
+// Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('coaching');'use strict';
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('contact');'use strict';
@@ -63,6 +65,22 @@ ApplicationConfiguration.registerModule('core');'use strict';
 ApplicationConfiguration.registerModule('salle');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');'use strict';
+//Setting up route
+angular.module('activity').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Activity state routing
+    $stateProvider.state('activity', {
+      url: '/activites',
+      templateUrl: 'modules/activity/views/activity.client.view.html'
+    });
+  }
+]);'use strict';
+angular.module('activity').controller('ActivityController', [
+  '$scope',
+  function ($scope) {
+  }
+]);'use strict';
 //Setting up route
 angular.module('coaching').config([
   '$stateProvider',
@@ -323,7 +341,21 @@ angular.module('salle').controller('SalleController', [
       { image: '/modules/salle/img/rest.jpg' }
     ];
   }
-]);
+]);'use strict';
+/** Fix animation for UI Bootstrap Carousel **/
+angular.module('salle').directive('disableAnimation', [
+  '$animate',
+  function ($animate) {
+    return {
+      restrict: 'A',
+      link: function ($scope, $element, $attrs) {
+        $attrs.$observe('disableAnimation', function (value) {
+          $animate.enabled(!value, $element);
+        });
+      }
+    };
+  }
+]);'use strict';
 angular.module('salle').directive('roomRow', [
   '$window',
   function ($window) {
@@ -337,20 +369,6 @@ angular.module('salle').directive('roomRow', [
         $scope.toggle = function () {
           angular.element('html, body').animate({ scrollTop: $('#' + $scope.id).offset().top }, 1000);
         };
-      }
-    };
-  }
-]);
-/** Fix animation for UI Bootstrap Carousel **/
-angular.module('salle').directive('disableAnimation', [
-  '$animate',
-  function ($animate) {
-    return {
-      restrict: 'A',
-      link: function ($scope, $element, $attrs) {
-        $attrs.$observe('disableAnimation', function (value) {
-          $animate.enabled(!value, $element);
-        });
       }
     };
   }

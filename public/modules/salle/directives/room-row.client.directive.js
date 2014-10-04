@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('salle').directive('roomRow', [ '$window',
   function($window) {
     return {

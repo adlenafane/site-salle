@@ -1,3 +1,5 @@
+'use strict';
+
 /** Fix animation for UI Bootstrap Carousel **/
 angular.module('salle').directive('disableAnimation', ['$animate',
   function($animate){

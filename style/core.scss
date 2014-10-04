@@ -25,6 +25,7 @@ $font-family-sans-serif: 'Lato', Helvetica, Arial, sans-serif !default;
 $icon-font-path: '../lib/bootstrap-sass-official/assets/fonts/bootstrap/';
 
 @import "../public/lib/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../public/modules/activity/style/activity-style";
 @import "../public/modules/contact/style/contact-style";
 @import "../public/modules/core/style/core-style";
 @import "../public/modules/core/style/core-header-style";

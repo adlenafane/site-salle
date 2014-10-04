@@ -5296,6 +5296,56 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+.category {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 5;
+  padding-right: 5;
+  position: relative;
+  min-height: 1px;
+  padding-left: 5;
+  padding-right: 5;
+  position: relative;
+  min-height: 1px;
+  padding-left: 5;
+  padding-right: 5;
+  position: relative;
+  min-height: 1px;
+  padding-left: 5;
+  padding-right: 5;
+  color: #FFF;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .category {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .category {
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 1200px) {
+    .category {
+      float: left;
+      width: 25%; } }
+  .category .content {
+    background-color: #DA4453;
+    height: 200px;
+    margin: 1em;
+    position: relative; }
+    .category .content .glyphicon, .category .content span {
+      display: block;
+      height: 50%;
+      width: 100%;
+      position: absolute; }
+    .category .content .glyphicon {
+      top: 50px;
+      font-size: 3em; }
+    .category .content span {
+      bottom: 0;
+      font-size: 1.5em; }
+
 .access {
   margin-bottom: 2em; }
   .access .line {
