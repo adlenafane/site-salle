@@ -20,38 +20,3 @@ angular.module('salle').controller('SalleController', ['$scope',
     ];
 	}
 ]);
-
-angular.module('salle').directive('roomRow', [ '$window',
-  function($window) {
-    return {
-      restrict: 'EA',
-      transclude: true,
-      scope: {
-        id: '@'
-      },
-      template: '<div ng-transclude="" ng-click="toggle();"></div>',
-      link: function($scope) {
-        var $ = $window.$;
-        $scope.toggle = function() {
-          angular.element( 'html, body' ).animate( {
-            scrollTop: $('#' + $scope.id).offset().top
-          }, 1000 );
-        };
-      }
-    };
-  }
-]);
-
-/** Fix animation for UI Bootstrap Carousel **/
-angular.module('salle').directive('disableAnimation', ['$animate',
-  function($animate){
-    return {
-      restrict: 'A',
-      link: function($scope, $element, $attrs){
-        $attrs.$observe('disableAnimation', function(value){
-          $animate.enabled(!value, $element);
-        });
-      }
-    };
-  }
-]);
