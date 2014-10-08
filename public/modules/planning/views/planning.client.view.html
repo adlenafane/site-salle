@@ -1,0 +1,15 @@
+<section data-ng-controller="PlanningController">
+	<section class="planning-page">
+    <h1>Planning</h1>
+    <div class="filters"></div>
+    <div class="planning">
+      <div class="day" ng-repeat="day in planning">
+        <h3>{{ day.name }}</h3>
+        <div class="class" ng-repeat="class in day.classes">
+          <h4>{{ class.name }}</h4>
+          <p>{{ class.start }} ({{ class.duration }}')<p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
