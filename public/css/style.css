@@ -2,7 +2,12 @@
 /** Colors **/
 /** Navbar **/
 /** Border Radius **/
+/** Bootstrap issue **/
 @import url(http://fonts.googleapis.com/css?family=Lato:400);
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; }
+
+/** Fonts **/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -254,8 +259,8 @@ th {
     border: 1px solid #ddd !important; } }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("../lib/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../lib/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../lib/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../lib/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../lib/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -5291,6 +5296,69 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+.category {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 5;
+  padding-right: 5;
+  position: relative;
+  min-height: 1px;
+  padding-left: 5;
+  padding-right: 5;
+  position: relative;
+  min-height: 1px;
+  padding-left: 5;
+  padding-right: 5;
+  position: relative;
+  min-height: 1px;
+  padding-left: 5;
+  padding-right: 5;
+  color: #FFF;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .category {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .category {
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 1200px) {
+    .category {
+      float: left;
+      width: 25%; } }
+  .category .content {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #967ADC;
+    cursor: pointer;
+    height: 200px;
+    margin: 1em;
+    position: relative; }
+    .category .content .glyphicon, .category .content span {
+      display: block;
+      height: 50%;
+      width: 100%;
+      position: absolute; }
+    .category .content .glyphicon {
+      top: 50px;
+      font-size: 3em; }
+    .category .content span {
+      bottom: 0;
+      font-size: 1.5em; }
+  .category:nth-of-type(2) .content {
+    background-color: #DA4453; }
+  .category:nth-of-type(3) .content {
+    background-color: #D770AD; }
+  .category:nth-of-type(4) .content {
+    background-color: #37BC9B; }
+  .category:nth-of-type(5) .content {
+    background-color: #4A89DC; }
+
 .access {
   margin-bottom: 2em; }
   .access .line {
@@ -5357,7 +5425,7 @@ header.navbar {
     font-size: 1.8em; }
 header .nav > li > a {
   color: #534e4b;
-  font-size: 1.3em; }
+  font-size: 1.2em; }
   header .nav > li > a:hover, header .nav > li > a:active, header .nav > li > a:focus {
     background-color: #DA4453;
     color: #FFF; }
@@ -5366,25 +5434,82 @@ header .navbar-toggle {
   header .navbar-toggle .icon-bar {
     background-color: #DA4453; }
 
-.salle article .title {
-  border-bottom: 2px solid #DA4453;
-  color: #DA4453;
-  height: 4em;
-  line-height: 4em;
-  margin-bottom: 1em;
-  padding: 1em 0;
-  vertical-align: middle; }
-  .salle article .title h2 {
-    margin-top: 0;
-    margin-bottom: 0; }
-.salle article img {
-  display: block;
+.salle article .cardio-image {
+  background: url("../modules/salle/img/cardio-header.jpg");
+  background-position: 0px 18%;
+  background-size: cover; }
+.salle article .libre-image {
+  background: url("../modules/salle/img/libre-header.jpg");
+  background-position: 0px 50%;
+  background-size: cover; }
+.salle article .guide-image {
+  background: url("../modules/salle/img/guide-header.jpg");
+  background-position: 0px 60%;
+  background-size: cover; }
+.salle article .classes-image {
+  background: url("../modules/salle/img/classes-header.jpg");
+  background-position: 0px 40%;
+  background-size: cover; }
+.salle article .biking-image {
+  background: url("../modules/salle/img/biking-header.jpg");
+  background-position: 0px 31%;
+  background-size: cover; }
+.salle article .freedom-image {
+  background: url("../modules/salle/img/freedom.jpg");
+  background-position: 0px 18%;
+  background-size: cover; }
+.salle article .trx-image {
+  background: url("../modules/salle/img/trx-header.jpg");
+  background-position: 0px 41%;
+  background-size: cover; }
+.salle article .rest-image {
+  background: url("../modules/salle/img/rest-header.jpg");
+  background-position: 0px 71%;
+  background-size: cover; }
+.salle article header {
+  cursor: pointer;
   height: 200px;
-  margin: auto; }
-  @media (min-width: 768px) {
-    .salle article img {
-      height: auto;
-      width: 100%; } }
+  margin-bottom: 1em;
+  padding-right: 0;
+  padding-left: 0;
+  position: relative; }
+  .salle article header .overlay {
+    background-color: #534e4b;
+    height: 200px;
+    opacity: 0.6;
+    width: 100%; }
+  .salle article header .title {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: none;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .salle article header .title h2 {
+      color: #DA4453;
+      margin-top: 0;
+      margin-bottom: 0;
+      opacity: 1; }
+.salle article .text {
+  -webkit-transition: all 0.5s 0 ease;
+  -o-transition: all 0.5s 0 ease;
+  transition: all 0.5s 0 ease;
+  font-size: 1.3em;
+  height: 350px;
+  opacity: 1; }
+.salle article .text.ng-hide {
+  opacity: 0;
+  height: 0; }
+.salle article .image {
+  height: 350px;
+  padding-right: 0;
+  padding-left: 0; }
+  .salle article .image .carousel, .salle article .image .carousel .carousel-inner {
+    height: 350px; }
+    .salle article .image .carousel .carousel-indicators .carousel-inner > .item > img, .salle article .image .carousel .carousel-inner .carousel-indicators .carousel-inner > .item > img {
+      height: 350px;
+      width: auto; }
 .salle article + article {
   margin-top: 3em; }
 
