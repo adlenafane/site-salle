@@ -18,6 +18,6 @@ angular.module('planning').controller('PlanningController', ['$scope',
           }
         ]
       }
-    ]
+    ];
 	}
 ]);
