@@ -1,15 +1,37 @@
 <section data-ng-controller="PlanningController">
 	<section class="planning-page">
     <h1>Planning</h1>
-    <div class="filters"></div>
-    <div class="planning">
-      <div class="day" ng-repeat="day in planning">
-        <h3>{{ day.name }}</h3>
-        <div class="class" ng-repeat="class in day.classes">
-          <h4>{{ class.name }}</h4>
-          <p>{{ class.start }} ({{ class.duration }}')<p>
-        </div>
-      </div>
+    <div class="filters">
+
+    </div>
+    <div class="table-responsive">
+      <table class="planning table">
+        <thead>
+          <tr>
+            <th data-ng-repeat="day in planning track by $index">{{ day.name }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="slot in planning.0.slots track by $index">
+            <td data-rowspan="{{ slot.maxCount }}">
+              {{ slot.label }}
+            </td>
+            <td data-ng-repeat="day in planning" data-ng-if="!$first" data-rowspan="{{ slot.maxCount }}">
+              <table>
+                <tr data-ng-repeat="class in day.classes" data-ng-if="class.start === slot.label">
+                <td>
+                  <h4>{{ class.name }}</h4>
+                  <div class="details">
+                    <span>{{ class.start }}</span>
+                    <span>{{ class.duration }}'</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 </section>
