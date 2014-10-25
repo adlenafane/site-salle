@@ -2,33 +2,30 @@
 
 angular.module('planning').controller('PlanningController', ['$scope',
 	function($scope) {
-    // TODO: use table display, generate columns headers and row headers dynamically
-    // Filter through data to create the correct cells
-    $scope.startTimes = [
-      {
-        label: '9h30',
-        maxCount: [0, 0]
-      },
-      {
-        label: '10h30',
-        maxCount: [1]
-      },
-      {
-        label: '14h30',
-        maxCount: [1]
-      }
-    ];
-
 		$scope.planning = [
       {
         name: '',
         slots: [
+          {
+            label: 'Matin',
+            separator: true,
+            maxCount: 1
+          },
           {
             label: '9h30',
             maxCount: 2
           },
           {
             label: '10h30',
+            maxCount: 1
+          },
+          {
+            label: '11h30',
+            maxCount: 1
+          },
+          {
+            label: 'Après-midi',
+            separator: true,
             maxCount: 1
           },
           {
@@ -137,7 +134,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           },
           {
             name: 'Body Pump',
-            start: '14h30',
+            start: '11h30',
             duration: 45
           }
         ]

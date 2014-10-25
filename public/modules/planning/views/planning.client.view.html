@@ -12,7 +12,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr data-ng-repeat="slot in planning.0.slots track by $index">
+          <tr data-ng-repeat="slot in planning.0.slots track by $index" data-ng-class="{'separator': slot.separator}">
             <td data-rowspan="{{ slot.maxCount }}">
               {{ slot.label }}
             </td>

@@ -5434,6 +5434,14 @@ header .navbar-toggle {
   header .navbar-toggle .icon-bar {
     background-color: #DA4453; }
 
+table.planning.table {
+  border: none; }
+  table.planning.table .separator {
+    border-bottom: 2px solid #DA4453; }
+
+.table-responsive table {
+  border: none; }
+
 .salle article .cardio-image {
   background: url("../modules/salle/img/cardio-header.jpg");
   background-position: 0px 18%;
