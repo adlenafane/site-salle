@@ -5,7 +5,8 @@ module.exports = {
     assets: {
         lib: {
             css: [
-                'public/lib/bootstrap/dist/css/application.min.css'
+                'public/lib/bootstrap/dist/css/application.min.css',
+                'public/lib/famous-angular/dist/famous-angular.min.css'
             ],
             js: [
                 'public/lib/jquery/dist/jquery.min.js',
@@ -21,7 +22,9 @@ module.exports = {
                 'public/lib/angular-translate/angular-translate.min.js',
                 'public/lib/angular-translate-loader-url/angular-translate-loader-url.min.js',
                 'public/lib/lodash/dist/lodash.min.js',
-                'public/lib/angular-google-maps/dist/angular-google-maps.min.js'
+                'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
+                'public/lib/famous/dist/famous-global.min.js',
+                'public/lib/famous-angular/dist/famous-angular.min.js'
             ]
         },
         css: 'public/dist/application.min.css',

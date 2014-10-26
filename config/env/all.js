@@ -13,7 +13,8 @@ module.exports = {
     assets: {
         lib: {
             css: [
-                'public/dist/style.css'
+                'public/dist/style.css',
+                'public/lib/famous-angular/dist/famous-angular.css'
             ],
             js: [
                 'public/lib/jquery/dist/jquery.js',
@@ -29,7 +30,9 @@ module.exports = {
                 'public/lib/angular-translate/angular-translate.js',
                 'public/lib/angular-translate-loader-url/angular-translate-loader-url.js',
                 'public/lib/lodash/dist/lodash.js',
-                'public/lib/angular-google-maps/dist/angular-google-maps.js'
+                'public/lib/angular-google-maps/dist/angular-google-maps.js',
+                'public/lib/famous/dist/famous-global.js',
+                'public/lib/famous-angular/dist/famous-angular.js'
             ]
         },
         css: [

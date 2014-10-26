@@ -5429,10 +5429,21 @@ header .nav > li > a {
   header .nav > li > a:hover, header .nav > li > a:active, header .nav > li > a:focus {
     background-color: #DA4453;
     color: #FFF; }
+header .nav > li.active a {
+  background-color: #DA4453;
+  color: #FFF; }
 header .navbar-toggle {
   border-color: #DA4453; }
   header .navbar-toggle .icon-bar {
     background-color: #DA4453; }
+
+table.planning.table {
+  border: none; }
+  table.planning.table .separator {
+    border-bottom: 2px solid #DA4453; }
+
+.table-responsive table {
+  border: none; }
 
 .salle article .cardio-image {
   background: url("../modules/salle/img/cardio-header.jpg");
