@@ -17,6 +17,13 @@ header {
     }
   }
 
+  .nav > li.active {
+    a {
+      background-color: $brand-primary;
+      color: $white;
+    }
+  }
+
   .navbar-toggle {
     border-color: $brand-primary;
 

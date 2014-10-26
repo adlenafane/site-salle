@@ -4,6 +4,7 @@ var ApplicationConfiguration = function () {
     // Init module configuration options
     var applicationModuleName = 'site-salle';
     var applicationModuleVendorDependencies = [
+        'famous.angular',
         'google-maps',
         'ngResource',
         'ngCookies',
@@ -62,6 +63,8 @@ ApplicationConfiguration.registerModule('contact');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');'use strict';
 // Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('planning');'use strict';
+// Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('salle');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');'use strict';
@@ -73,6 +76,9 @@ angular.module('activity').config([
     $stateProvider.state('activity', {
       url: '/activites',
       templateUrl: 'modules/activity/views/activity.client.view.html'
+    }).state('activity-details', {
+      url: '/activites/:category',
+      templateUrl: 'modules/activity/views/activity-details.client.view.html'
     });
   }
 ]);'use strict';
@@ -311,6 +317,160 @@ angular.module('core').service('Menus', [function () {
     //Adding the topbar menu
     this.addMenu('topbar');
   }]);'use strict';
+//Setting up route
+angular.module('planning').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Planning state routing
+    $stateProvider.state('planning', {
+      url: '/planning',
+      templateUrl: 'modules/planning/views/planning.client.view.html'
+    });
+  }
+]);'use strict';
+angular.module('planning').controller('PlanningController', [
+  '$scope',
+  function ($scope) {
+    $scope.planning = [
+      {
+        name: '',
+        slots: [
+          {
+            label: 'Matin',
+            separator: true,
+            maxCount: 1
+          },
+          {
+            label: '9h30',
+            maxCount: 2
+          },
+          {
+            label: '10h30',
+            maxCount: 1
+          },
+          {
+            label: '11h30',
+            maxCount: 1
+          },
+          {
+            label: 'Apr\xe8s-midi',
+            separator: true,
+            maxCount: 1
+          },
+          {
+            label: '14h30',
+            maxCount: 1
+          }
+        ]
+      },
+      {
+        name: 'Lundi',
+        classes: [
+          {
+            name: 'Zumba',
+            start: '9h30',
+            duration: 60
+          },
+          {
+            name: 'Body step',
+            start: '10h30',
+            duration: 45
+          }
+        ]
+      },
+      {
+        name: 'Mardi',
+        classes: [
+          {
+            name: 'Body Attack',
+            start: '9h30',
+            duration: 90
+          },
+          {
+            name: 'Body Pump',
+            start: '14h30',
+            duration: 45
+          }
+        ]
+      },
+      {
+        name: 'Mercredi',
+        classes: [
+          {
+            name: 'Body Attack',
+            start: '9h30',
+            duration: 90
+          },
+          {
+            name: 'Body Pump',
+            start: '14h30',
+            duration: 45
+          }
+        ]
+      },
+      {
+        name: 'Jeudi',
+        classes: [
+          {
+            name: 'Body Attack',
+            start: '9h30',
+            duration: 90
+          },
+          {
+            name: 'Body Pump',
+            start: '9h30',
+            duration: 45
+          }
+        ]
+      },
+      {
+        name: 'Vendredi',
+        classes: [
+          {
+            name: 'Body Attack',
+            start: '9h30',
+            duration: 90
+          },
+          {
+            name: 'Body Pump',
+            start: '14h30',
+            duration: 45
+          }
+        ]
+      },
+      {
+        name: 'Samedi',
+        classes: [
+          {
+            name: 'Body Attack',
+            start: '9h30',
+            duration: 90
+          },
+          {
+            name: 'Body Pump',
+            start: '14h30',
+            duration: 45
+          }
+        ]
+      },
+      {
+        name: 'Dimanche',
+        classes: [
+          {
+            name: 'Body Attack',
+            start: '9h30',
+            duration: 90
+          },
+          {
+            name: 'Body Pump',
+            start: '11h30',
+            duration: 45
+          }
+        ]
+      }
+    ];
+  }
+]);'use strict';
 //Setting up route
 angular.module('salle').config([
   '$stateProvider',
