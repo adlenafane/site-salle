@@ -1,9 +1,16 @@
-.category {
-  @include make-xs-column(12, 10);
-  @include make-sm-column(6, 10);
-  @include make-md-column(4, 10);
-  @include make-lg-column(3, 10);
+#categories {
+  height: 500px;
+}
 
+#activities {
+  height: 500px;
+
+  .activity {
+    background-color: $brand-primary;
+  }
+}
+
+.category {
   color: $white;
   text-align: center;
 
@@ -11,7 +18,7 @@
     @include user-select(none);
     background-color: #967ADC;
     cursor: pointer;
-    height: 200px;
+    height: 220px;
     margin: 1em;
     position: relative;
 

@@ -1,6 +1,7 @@
 header {
   &.navbar {
     border-bottom: 3px solid $brand-primary;
+    border-top: none;
 
     .navbar-brand {
       font-size: 1.8em;

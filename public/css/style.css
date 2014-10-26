@@ -5296,39 +5296,17 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+#categories {
+  height: 500px; }
+
+#activities {
+  height: 500px; }
+  #activities .activity {
+    background-color: #DA4453; }
+
 .category {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 5;
-  padding-right: 5;
-  position: relative;
-  min-height: 1px;
-  padding-left: 5;
-  padding-right: 5;
-  position: relative;
-  min-height: 1px;
-  padding-left: 5;
-  padding-right: 5;
-  position: relative;
-  min-height: 1px;
-  padding-left: 5;
-  padding-right: 5;
   color: #FFF;
   text-align: center; }
-  @media (min-width: 768px) {
-    .category {
-      float: left;
-      width: 50%; } }
-  @media (min-width: 992px) {
-    .category {
-      float: left;
-      width: 33.33333%; } }
-  @media (min-width: 1200px) {
-    .category {
-      float: left;
-      width: 25%; } }
   .category .content {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -5336,7 +5314,7 @@ button.close {
     user-select: none;
     background-color: #967ADC;
     cursor: pointer;
-    height: 200px;
+    height: 220px;
     margin: 1em;
     position: relative; }
     .category .content .glyphicon, .category .content span {
@@ -5420,7 +5398,8 @@ button.close {
   margin-top: 1em; }
 
 header.navbar {
-  border-bottom: 3px solid #DA4453; }
+  border-bottom: 3px solid #DA4453;
+  border-top: none; }
   header.navbar .navbar-brand {
     font-size: 1.8em; }
 header .nav > li > a {

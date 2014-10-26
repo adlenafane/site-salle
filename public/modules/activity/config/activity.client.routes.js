@@ -9,9 +9,10 @@ angular.module('activity').config(['$stateProvider',
       url: '/activites',
       templateUrl: 'modules/activity/views/activity.client.view.html'
     })
-    .state('activity-details', {
+    .state('activity.details', {
 			url: '/activites/:category',
-			templateUrl: 'modules/activity/views/activity-details.client.view.html'
+			templateUrl: 'modules/activity/views/activity.client.view.html',
+      controller: 'ActivityController'
 		});
 	}
 ]);
