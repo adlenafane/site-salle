@@ -5505,7 +5505,12 @@ table.planning.table {
       background-image: none;
       opacity: 1; }
       .salle article .image .carousel .carousel-control .glyphicon, .salle article .image .carousel .carousel-inner .carousel-control .glyphicon {
+        -webkit-transition: transform ease-out 0.3s;
+        -o-transition: transform ease-out 0.3s;
+        transition: transform ease-out 0.3s;
         color: #DA4453; }
+        .salle article .image .carousel .carousel-control .glyphicon:hover, .salle article .image .carousel .carousel-control .glyphicon:active, .salle article .image .carousel .carousel-control .glyphicon:focus, .salle article .image .carousel .carousel-inner .carousel-control .glyphicon:hover, .salle article .image .carousel .carousel-inner .carousel-control .glyphicon:active, .salle article .image .carousel .carousel-inner .carousel-control .glyphicon:focus {
+          transform: scale(1.2); }
 .salle article + article {
   margin-top: 3em; }
 

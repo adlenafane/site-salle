@@ -112,7 +112,12 @@ $carousel-height: 350px;
           opacity: 1;
 
           .glyphicon {
+            @include transition(transform ease-out 0.3s);
             color: $brand-primary;
+
+            &:hover, &:active, &:focus {
+              transform: scale(1.2);
+            }
           }
         }
       }
