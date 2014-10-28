@@ -44,6 +44,6 @@ angular.module('contact').controller('ContactController', [
         },
         icon: 'modules/contact/img/394genRVB_small.png'
       }
-    ]
+    ];
 	}
 ]);

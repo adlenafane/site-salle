@@ -5396,6 +5396,9 @@ button.close {
 .download-planning {
   height: 4em;
   margin-top: 1em; }
+  .download-planning a {
+    font-size: 1.8em;
+    height: 100%; }
 
 header.navbar {
   border-bottom: 3px solid #DA4453;

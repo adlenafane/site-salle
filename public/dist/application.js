@@ -247,18 +247,44 @@ angular.module('contact').controller('ContactController', [
   function ($scope) {
     $scope.map = {
       center: {
-        latitude: 48.8960695,
-        longitude: 2.7227385
+        latitude: 48.7897294,
+        longitude: 2.2859919
       },
-      zoom: 15
+      zoom: 16
     };
-    $scope.marker = {
+    $scope.salle = {
       id: 1,
       coords: {
-        latitude: 48.8960695,
-        longitude: 2.7227385
+        latitude: 48.7905062,
+        longitude: 2.2846781
       }
     };
+    $scope.transports = [
+      {
+        id: 2,
+        coords: {
+          latitude: 48.78728,
+          longitude: 2.293427
+        },
+        icon: 'modules/contact/img/RER_B_small.png'
+      },
+      {
+        id: 3,
+        coords: {
+          latitude: 48.79068,
+          longitude: 2.284141
+        },
+        icon: 'modules/contact/img/194genRVB_small.png'
+      },
+      {
+        id: 4,
+        coords: {
+          latitude: 48.791125,
+          longitude: 2.284769
+        },
+        icon: 'modules/contact/img/394genRVB_small.png'
+      }
+    ];
   }
 ]);'use strict';
 // Setting up route
