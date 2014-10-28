@@ -3,7 +3,6 @@
 /** Navbar **/
 /** Border Radius **/
 /** Bootstrap issue **/
-@import url(http://fonts.googleapis.com/css?family=Lato:400);
 .nav, .pagination, .carousel, .panel-title a {
   cursor: pointer; }
 
@@ -888,7 +887,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #534e4b;
@@ -5497,9 +5496,16 @@ table.planning.table {
   padding-left: 0; }
   .salle article .image .carousel, .salle article .image .carousel .carousel-inner {
     height: 350px; }
-    .salle article .image .carousel .carousel-indicators .carousel-inner > .item > img, .salle article .image .carousel .carousel-inner .carousel-indicators .carousel-inner > .item > img {
+    .salle article .image .carousel > .item > img, .salle article .image .carousel .carousel-inner > .item > img {
       height: 350px;
       width: auto; }
+    .salle article .image .carousel .carousel-indicators, .salle article .image .carousel .carousel-inner .carousel-indicators {
+      display: none; }
+    .salle article .image .carousel .carousel-control, .salle article .image .carousel .carousel-inner .carousel-control {
+      background-image: none;
+      opacity: 1; }
+      .salle article .image .carousel .carousel-control .glyphicon, .salle article .image .carousel .carousel-inner .carousel-control .glyphicon {
+        color: #DA4453; }
 .salle article + article {
   margin-top: 3em; }
 

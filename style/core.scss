@@ -20,8 +20,9 @@ $pager-border-radius: 0;
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 /** Fonts **/
-@import url(http://fonts.googleapis.com/css?family=Lato:400);
-$font-family-sans-serif: 'Lato', Helvetica, Arial, sans-serif !default;
+// @import url(http://fonts.googleapis.com/css?family=Lato:400);
+// $font-family-sans-serif: 'Lato', Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
 $icon-font-path: '../lib/bootstrap-sass-official/assets/fonts/bootstrap/';
 
 @import "../public/lib/bootstrap-sass-official/assets/stylesheets/bootstrap";

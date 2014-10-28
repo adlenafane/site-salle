@@ -98,9 +98,22 @@ $carousel-height: 350px;
       .carousel, .carousel .carousel-inner {
         height: $carousel-height;
 
-        .carousel-indicators .carousel-inner > .item > img {
+        > .item > img {
           height: $carousel-height;
           width: auto;
+        }
+
+        .carousel-indicators {
+          display: none;
+        }
+
+        .carousel-control {
+          background-image: none;
+          opacity: 1;
+
+          .glyphicon {
+            color: $brand-primary;
+          }
         }
       }
     }

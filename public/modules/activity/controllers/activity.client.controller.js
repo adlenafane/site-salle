@@ -111,7 +111,7 @@ angular.module('activity').controller('ActivityController', ['$scope', '$famous'
 
     $scope.opacity = $timeline([
       [0.4, 0, Easing.inOutQuart],
-      [0.8, 1]
+      [0.8, 1, Easing.inOutQuart]
     ]);
 
     $scope.enterAnimation = function(t, $done) {
