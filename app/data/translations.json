@@ -1,15 +1,15 @@
 {
 	"address": {
 		"header": "Adresse :",
-		"city": "Thorigny sur Marne",
-		"line1": "2 Rue des Salvatres",
-		"line2": "77400 Thorigny sur Marne"
+		"city": "Fontenay aux Roses",
+		"line1": "5 rue d'Estienne d'Orves",
+		"line2": "92260 Fontenay aux Roses"
 	},
 	"brand": "Magic Form",
 	"contact": {
 		"header": "Contact :",
-		"phone": "01 30 40 50 60",
-		"email": "bonheur@magic-form-tsm.com"
+		"phone": "",
+		"email": "contact@magicform-far.fr"
 	},
 	"header": {
 		"salle": "La Salle",
@@ -19,8 +19,8 @@
 		"osteopathy": "Ostéopathie",
 		"contact": "Accès"
 	},
-	"planning": {
-		"download": "Télécharger le planning"
+	"home": {
+		"callToAction": "Je m'inscris !"
 	},
 	"schedule": {
 		"header": "Horaires",

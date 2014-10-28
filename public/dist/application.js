@@ -72,15 +72,6 @@ ApplicationConfiguration.registerModule('users');'use strict';
 angular.module('activity').config([
   '$stateProvider',
   function ($stateProvider) {
-    // Activity state routing
-    $stateProvider.state('activity', {
-      url: '/activites',
-      templateUrl: 'modules/activity/views/activity.client.view.html'
-    }).state('activity.details', {
-      url: '/activites/:category',
-      templateUrl: 'modules/activity/views/activity.client.view.html',
-      controller: 'ActivityController'
-    });
   }
 ]);'use strict';
 angular.module('activity').controller('ActivityController', [
@@ -219,11 +210,6 @@ angular.module('activity').controller('ActivityController', [
 angular.module('coaching').config([
   '$stateProvider',
   function ($stateProvider) {
-    // Coaching state routing
-    $stateProvider.state('coaching', {
-      url: '/coaching',
-      templateUrl: 'modules/coaching/views/coaching.client.view.html'
-    });
   }
 ]);'use strict';
 angular.module('coaching').controller('CoachingController', [
@@ -247,18 +233,44 @@ angular.module('contact').controller('ContactController', [
   function ($scope) {
     $scope.map = {
       center: {
-        latitude: 48.8960695,
-        longitude: 2.7227385
+        latitude: 48.7897294,
+        longitude: 2.2859919
       },
-      zoom: 15
+      zoom: 16
     };
-    $scope.marker = {
+    $scope.salle = {
       id: 1,
       coords: {
-        latitude: 48.8960695,
-        longitude: 2.7227385
+        latitude: 48.7905062,
+        longitude: 2.2846781
       }
     };
+    $scope.transports = [
+      {
+        id: 2,
+        coords: {
+          latitude: 48.78728,
+          longitude: 2.293427
+        },
+        icon: 'modules/contact/img/RER_B_small.png'
+      },
+      {
+        id: 3,
+        coords: {
+          latitude: 48.79068,
+          longitude: 2.284141
+        },
+        icon: 'modules/contact/img/194genRVB_small.png'
+      },
+      {
+        id: 4,
+        coords: {
+          latitude: 48.791125,
+          longitude: 2.284769
+        },
+        icon: 'modules/contact/img/394genRVB_small.png'
+      }
+    ];
   }
 ]);'use strict';
 // Setting up route
@@ -449,11 +461,6 @@ angular.module('core').service('Menus', [function () {
 angular.module('planning').config([
   '$stateProvider',
   function ($stateProvider) {
-    // Planning state routing
-    $stateProvider.state('planning', {
-      url: '/planning',
-      templateUrl: 'modules/planning/views/planning.client.view.html'
-    });
   }
 ]);'use strict';
 angular.module('planning').controller('PlanningController', [
@@ -603,11 +610,6 @@ angular.module('planning').controller('PlanningController', [
 angular.module('salle').config([
   '$stateProvider',
   function ($stateProvider) {
-    // Salle state routing
-    $stateProvider.state('salle', {
-      url: '/salle',
-      templateUrl: 'modules/salle/views/salle.client.view.html'
-    });
   }
 ]);'use strict';
 angular.module('salle').controller('SalleController', [
@@ -695,35 +697,6 @@ angular.module('users').config([
 angular.module('users').config([
   '$stateProvider',
   function ($stateProvider) {
-    // Users state routing
-    $stateProvider.state('profile', {
-      url: '/settings/profile',
-      templateUrl: 'modules/users/views/settings/edit-profile.client.view.html'
-    }).state('password', {
-      url: '/settings/password',
-      templateUrl: 'modules/users/views/settings/change-password.client.view.html'
-    }).state('accounts', {
-      url: '/settings/accounts',
-      templateUrl: 'modules/users/views/settings/social-accounts.client.view.html'
-    }).state('signup', {
-      url: '/signup',
-      templateUrl: 'modules/users/views/authentication/signup.client.view.html'
-    }).state('signin', {
-      url: '/signin',
-      templateUrl: 'modules/users/views/authentication/signin.client.view.html'
-    }).state('forgot', {
-      url: '/password/forgot',
-      templateUrl: 'modules/users/views/password/forgot-password.client.view.html'
-    }).state('reset-invlaid', {
-      url: '/password/reset/invalid',
-      templateUrl: 'modules/users/views/password/reset-password-invalid.client.view.html'
-    }).state('reset-success', {
-      url: '/password/reset/success',
-      templateUrl: 'modules/users/views/password/reset-password-success.client.view.html'
-    }).state('reset', {
-      url: '/password/reset/:token',
-      templateUrl: 'modules/users/views/password/reset-password.client.view.html'
-    });
   }
 ]);'use strict';
 angular.module('users').controller('AuthenticationController', [
