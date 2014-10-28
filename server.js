@@ -4,8 +4,9 @@
  */
 var init = require('./config/init')(),
 	config = require('./config/config'),
-	mongoose = require('mongoose'),
-  newrelic = require('./config/newrelic');
+	mongoose = require('mongoose');
+
+require('./config/newrelic');
 
 /**
  * Main application entry file.
