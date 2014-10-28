@@ -5,15 +5,17 @@
             <h3>En voiture</h3>
             <p>Description du meilleur moyen d'accès</p>
             <h3>En bus</h3>
-            <img alt="Ligne 20" class="img-responsive line" src="modules/contact/img/20genRVB.png" />
-            <img alt="Ligne 21" class="img-responsive line" src="modules/contact/img/21genRVB.png" />
-            <img alt="Ligne 22" class="img-responsive line" src="modules/contact/img/22genRVB.png" />
+            <img alt="Ligne 20" class="img-responsive line" src="modules/contact/img/194genRVB.png" />
+            <img alt="Ligne 21" class="img-responsive line" src="modules/contact/img/394genRVB.png" />
+            <img alt="Ligne 22" class="img-responsive line" src="modules/contact/img/594genRVB.png" />
             <h3>En train</h3>
-            <img alt="RER A" class="img-responsive line" src="modules/contact/img/RER_A.png" />
+            <img alt="RER A" class="img-responsive line" src="modules/contact/img/RER_B.png" />
         </div>
         <div class="col-xs-12 map-container">
-            <div google-map="google-map" id="adlen" center="map.center" zoom="map.zoom">
-                <marker coords="marker.coords" idkey="marker.id" >
+            <div google-map="google-map" id="adlen" data-center="map.center" data-zoom="map.zoom">
+                <div data-marker="marker" data-coords="salle.coords" data-idkey="salle.id"></div>
+                <div data-markers="markers" data-models="transports" data-coords="'coords'" data-icon="'icon'"></div>
+                </div>
             </div>
         </div>
     </div>
