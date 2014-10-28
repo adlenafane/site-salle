@@ -203,7 +203,8 @@ angular.module('activity').controller('ActivityController', [
       ],
       [
         0.8,
-        1
+        1,
+        Easing.inOutQuart
       ]
     ]);
     $scope.enterAnimation = function (t, $done) {

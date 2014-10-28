@@ -3,6 +3,7 @@
 /** Navbar **/
 /** Border Radius **/
 /** Bootstrap issue **/
+@import url(http://fonts.googleapis.com/css?family=Lato:400);
 .nav, .pagination, .carousel, .panel-title a {
   cursor: pointer; }
 
@@ -887,7 +888,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #534e4b;
