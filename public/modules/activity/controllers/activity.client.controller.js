@@ -2,13 +2,12 @@
 
 angular.module('activity').controller('ActivityController', ['$scope', '$famous', '$timeline',
   function($scope, $famous, $timeline) {
-    var Transitionable = $famous['famous/transitions/Transitionable'];
-    var Easing = $famous['famous/transitions/Easing'];
+    var DURATION = 500;
     var defaultsLayoutOptions = {
       dimensions: [2, 2],
       transition: {
         curve: 'easeInOut',
-        duration: 500
+        duration: DURATION
       }
     };
     $scope.categoriesLayoutOptions = defaultsLayoutOptions;
@@ -22,7 +21,7 @@ angular.module('activity').controller('ActivityController', ['$scope', '$famous'
         };
 
         $scope.activitiesLayoutOptions = {
-          dimensions: [1, $scope.activities[category].length]
+          dimensions: [$scope.activities.length, 1]
         };
 
       } else {
@@ -31,99 +30,72 @@ angular.module('activity').controller('ActivityController', ['$scope', '$famous'
       }
     };
 
-    $scope.activities = {
-      cardio: [
-        {
-          name: 'Step',
-          id: 0,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Biking',
-          id: 1,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Magic Combat',
-          id: 2,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Cardio Attack',
-          id: 3,
-          t: new Transitionable(0)
-        }
-      ],
-      renforcement: [
-        {
-          name: 'Abdos Fessiers',
-          id: 4,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Body Sculpt',
-          id: 5,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'C.A.F.',
-          id: 6,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Abdos Flash',
-          id: 7,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Pump',
-          id: 8,
-          t: new Transitionable(0)
-        }
-      ],
-      danse: [
-        {
-          name: 'Zumba',
-          id: 9,
-          t: new Transitionable(0)
-        }
-      ],
-      zen: [
-        {
-          name: 'Pilates',
-          id: 10,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Stretching',
-          id: 11,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Gym douce',
-          id: 12,
-          t: new Transitionable(0)
-        }
-      ]
-    };
-
-    $scope.t = new Transitionable(0);
-
-    $scope.opacity = $timeline([
-      [0.4, 0, Easing.inOutQuart],
-      [0.8, 1, Easing.inOutQuart]
-    ]);
-
-    $scope.enterAnimation = function(t, $done) {
-      t.set(1, {
-        duration: 1500
-      }, $done);
-    };
-
-    $scope.leaveAnimation = function(t, $done) {
-      t.set(0, {
-        duration: 1500
-      }, $done);
-    };
+    $scope.activities = [
+      {
+        name: 'Step',
+        id: 0,
+        category: 'cardio'
+      },
+      {
+        name: 'Biking',
+        id: 1,
+        category: 'cardio'
+      },
+      {
+        name: 'Magic Combat',
+        id: 2,
+        category: 'cardio'
+      },
+      {
+        name: 'Cardio Attack',
+        id: 3,
+        category: 'cardio'
+      },
+      {
+        name: 'Abdos Fessiers',
+        id: 4,
+        category: 'cardio'
+      },
+      {
+        name: 'Body Sculpt',
+        id: 5,
+        category: 'renforcement'
+      },
+      {
+        name: 'C.A.F.',
+        id: 6,
+        category: 'renforcement'
+      },
+      {
+        name: 'Abdos Flash',
+        id: 7,
+        category: 'renforcement'
+      },
+      {
+        name: 'Pump',
+        id: 8,
+        category: 'renforcement'
+      },
+      {
+        name: 'Zumba',
+        id: 9,
+        category: 'danse'
+      },
+      {
+        name: 'Pilates',
+        id: 10,
+        category: 'zen'
+      },
+      {
+        name: 'Stretching',
+        id: 11,
+        category: 'zen'
+      },
+      {
+        name: 'Gym douce',
+        id: 12,
+        category: 'zen'
+      }
+    ];
   }
 ]);

@@ -1,49 +1,50 @@
 <section data-ng-controller="ActivityController">
 	<div class="row">
-        <div data-fa-app="fa-app" id="categories">
+        <div data-fa-app="fa-app" id="categories" data-ng-class="currentCategory">
             <fa-grid-layout fa-options="categoriesLayoutOptions">
-                <div data-fa-surface="fa-surface" class="category" data-fa-click="zoomOn('cardio')">
+                <div data-fa-surface="fa-surface" class="category cardio" data-fa-click="zoomOn('cardio')">
                     <div class="content">
-                        <i class="glyphicon glyphicon-heart"></i>
-                        <span>Cardio</span>
+                        <div class="icon">
+                            <i class="glyphicon glyphicon-heart"></i>
+                            <div>Cardio</div>
+                        </div>
                     </div>
                 </div>
-                <div fa-surface="fa-surface" class="category" data-fa-click="zoomOn('renforcement')">
+                <div fa-surface="fa-surface" class="category renforcement" data-fa-click="zoomOn('renforcement')">
                     <div class="content">
-                        <i class="glyphicon glyphicon-fire"></i>
-                        <span>Renforcement</span>
+                        <div class="icon">
+                            <i class="glyphicon glyphicon-fire"></i>
+                            <div>Renforcement</div>
+                        </div>
                     </div>
                 </div>
-                <div fa-surface="fa-surface" class="category" data-fa-click="zoomOn('danse')">
+                <div fa-surface="fa-surface" class="category danse" data-fa-click="zoomOn('danse')">
                     <div class="content">
-                        <i class="glyphicon glyphicon-leaf"></i>
-                        <span>Danse</span>
+                        <div class="icon">
+                            <i class="glyphicon glyphicon-leaf"></i>
+                            <div>Danse</div>
+                        </div>
                     </div>
                 </div>
-                <div fa-surface="fa-surface" class="category" data-fa-click="zoomOn('zen')">
+                <div fa-surface="fa-surface" class="category zen" data-fa-click="zoomOn('zen')">
                     <div class="content">
-                        <i class="glyphicon glyphicon-send"></i>
-                        <span>Zen</span>
+                        <div class="icon">
+                            <i class="glyphicon glyphicon-send"></i>
+                            <div>Zen</div>
+                        </div>
                     </div>
                 </div>
             </fa-grid-layout>
         </div>
 	</div>
     <div class="row">
-        <div data-fa-app="fa-app" id="activities">
-            <fa-grid-layout data-fa-options="activitiesLayoutOptions">
-                <fa-modifier data-ng-repeat="activity in activities[currentCategory] track by activity.id"
-                             fa-animate-enter="enterAnimation(activity.t, $done)"
-                             fa-animate-leave="leaveAnimation(activity.t, $done)"
-                             fa-size="[undefined, 100]"
-                             fa-origin="[0.5, 0.5]"
-                             fa-align="[0.5, 0.5]"
-                             fa-opacity="opacity(activity.t.get())">
-                    <div data-fa-surface="fa-surface" class="activity">
-                        {{ activity.name }}
-                    </div>
-                </fa-modifier>
-            </fa-grid-layout>
+        <h2 class="col-xs-12" data-ng-if="!currentCategory">Toutes les activités</h2>
+    </div>
+    <div class="row activities">
+        <div data-ng-repeat="activity in activities | filter:currentCategory" class="activity">
+            <div class="activity-content" ng-class="activity.category">
+                <h3>{{ activity.name }}</h3>
+            </div>
         </div>
     </div>
 </section>

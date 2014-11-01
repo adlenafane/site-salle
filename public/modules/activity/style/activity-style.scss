@@ -1,66 +1,236 @@
-#categories {
-  height: 500px;
-}
+$cardio-color: #967ADC;
+$renforcement-color: $brand-primary;
+$danse-color: #D770AD;
+$zen-color: #37BC9B;
 
-#activities {
-  height: 500px;
-
+.activities {
   .activity {
-    background-color: $brand-primary;
+    @include make-xs-column(12, 0);
+    @include make-sm-column(6, 20);
+    padding: 1em;
+
+    .activity-content {
+      border-left: 3px solid; 
+      padding: 1em;
+
+      &.cardio {
+        border-color: $cardio-color;
+      }
+
+      &.renforcement {
+        border-color: $renforcement-color;
+      }
+
+      &.danse {
+        border-color: $danse-color;
+      }
+
+      &.zen {
+        border-color: $zen-color;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+    }
   }
 }
 
+#categories {
+  @include transition(height ease-out 0.5s);
+  height: 200px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 300px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    height: 400px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    height: 500px;
+  }
+
+  &.cardio, &.renforcement, &.danse, &.zen {
+    @include transition(height ease-in 0.5s);
+    height: 100px;
+
+    @media (min-width: $screen-sm-min) {
+      height: 150px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      height: 200px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      height: 250px;
+    }
+
+    .category {
+      &.cardio {
+        .content {
+          background-color: $white;
+          color: $cardio-color;
+
+          &:hover, &:active, &:focus {
+            color: $white;
+          }
+        }
+      }
+
+      &.renforcement {
+        .content {
+          background-color: $white;
+          color: $renforcement-color;
+
+          &:hover, &:active, &:focus {
+            background-color: $renforcement-color;
+            color: $white;
+          }
+        }
+      }
+
+      &.danse {
+        .content {
+          background-color: $white;
+          color: $danse-color;
+
+          &:hover, &:active, &:focus {
+            background-color: $danse-color;
+            color: $white;
+          }
+        }
+      }
+
+      &.zen {
+        .content {
+          background-color: $white;
+          color: $zen-color;
+
+          &:hover, &:active, &:focus {
+            background-color: $zen-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &.cardio {
+    .cardio {
+      .content {
+        background-color: $cardio-color !important;
+        color: $white !important;
+      }
+    }
+  }
+
+  &.renforcement {
+    .renforcement {
+      .content {
+        background-color: $renforcement-color !important;
+        color: $white !important;
+      }
+    }
+  }
+
+  &.danse {
+    .danse {
+      .content {
+        background-color: $danse-color !important;
+        color: $white !important;
+      }
+    }
+  }
+
+  &.zen {
+    .zen {
+      .content {
+        background-color: $zen-color !important;
+        color: $white !important;
+      }
+    }
+  }
+}
+
+
+// Default category style
 .category {
-  color: $white;
   text-align: center;
 
   .content {
     @include user-select(none);
-    background-color: #967ADC;
+    @include transition(background-color ease-in 0.1s);
+    border: 3px solid;
     cursor: pointer;
-    height: 220px;
+    height: 90px;
     margin: 1em;
     position: relative;
 
-    .glyphicon, span {
-      display: block;
-      height: 50%;
-      width: 100%;
+    @media (min-width: $screen-sm-min) {
+      height: 130px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      height: 180px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      height: 220px;
+    }
+
+    &:hover, &:active, &:focus {
+      @include transition(background-color ease-in 0.3s);
+    }
+
+    .icon {
       position: absolute;
-    }
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
 
-    .glyphicon {
-      top: 50px;
-      font-size: 3em;
-    }
+      .glyphicon {
+        font-size: 3em;
+      }
 
-    span {
-      bottom: 0;
-      font-size: 1.5em;
-    }
-  }
-
-  &:nth-of-type(2) {
-    .content {
-      background-color: $brand-primary;
+      div {
+        font-size: 1.5em;
+      }
     }
   }
 
-  &:nth-of-type(3) {
+  &.cardio {
     .content {
-      background-color: #D770AD;
+      background-color: $cardio-color;
+      border-color: $cardio-color;
+      color: $white;
     }
   }
 
-  &:nth-of-type(4) {
+  &.renforcement {
     .content {
-      background-color: #37BC9B;
+      background-color: $renforcement-color;
+      border-color: $renforcement-color;
+      color: $white;
     }
   }
 
-  &:nth-of-type(5) {
+  &.danse {
     .content {
-      background-color: #4A89DC;
+      background-color: $danse-color;
+      border-color: $danse-color;
+      color: $white;
+    }
+  }
+
+  &.zen {
+    .content {
+      background-color: $zen-color;
+      border-color: $zen-color;
+      color: $white;
     }
   }
 }
