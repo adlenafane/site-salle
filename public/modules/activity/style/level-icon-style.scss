@@ -1,0 +1,35 @@
+.level-icon {
+
+  svg {
+    height: 2em;
+    width: 2em;
+  }
+
+  &.easy {
+    svg {
+      rect {
+        &:nth-of-type(1) {
+          fill: #A0D468;
+        }
+      }
+    }
+  }
+  &.medium {
+    svg {
+      rect {
+        &:nth-of-type(2) {
+          fill: #FFCE54;
+        }
+      }
+    }
+  }
+  &.hard {
+    svg {
+      rect {
+        &:nth-of-type(3) {
+          fill: #FC6E51;
+        }
+      }
+    }
+  }
+}

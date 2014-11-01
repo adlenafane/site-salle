@@ -75,6 +75,7 @@ $zen-color: #37BC9B;
           color: $cardio-color;
 
           &:hover, &:active, &:focus {
+            background-color: $cardio-color;
             color: $white;
           }
         }

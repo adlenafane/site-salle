@@ -72,15 +72,21 @@ ApplicationConfiguration.registerModule('users');'use strict';
 angular.module('activity').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Activity state routing
+    $stateProvider.state('activity', {
+      url: '/activites',
+      templateUrl: 'modules/activity/views/activity.client.view.html'
+    }).state('activity.details', {
+      url: '/activites/:category',
+      templateUrl: 'modules/activity/views/activity.client.view.html',
+      controller: 'ActivityController'
+    });
   }
 ]);'use strict';
 angular.module('activity').controller('ActivityController', [
   '$scope',
-  '$famous',
-  '$timeline',
-  function ($scope, $famous, $timeline) {
-    var Transitionable = $famous['famous/transitions/Transitionable'];
-    var Easing = $famous['famous/transitions/Easing'];
+  function ($scope) {
+    var DURATION = 500;
     var defaultsLayoutOptions = {
         dimensions: [
           2,
@@ -88,7 +94,7 @@ angular.module('activity').controller('ActivityController', [
         ],
         transition: {
           curve: 'easeInOut',
-          duration: 500
+          duration: DURATION
         }
       };
     $scope.categoriesLayoutOptions = defaultsLayoutOptions;
@@ -103,8 +109,8 @@ angular.module('activity').controller('ActivityController', [
         };
         $scope.activitiesLayoutOptions = {
           dimensions: [
-            1,
-            $scope.activities[category].length
+            $scope.activities.length,
+            1
           ]
         };
       } else {
@@ -112,97 +118,113 @@ angular.module('activity').controller('ActivityController', [
         $scope.categoriesLayoutOptions = defaultsLayoutOptions;
       }
     };
-    $scope.activities = {
-      cardio: [
-        {
-          name: 'Step',
-          id: 0,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Biking',
-          id: 1,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Magic Combat',
-          id: 2,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Cardio Attack',
-          id: 3,
-          t: new Transitionable(0)
-        }
-      ],
-      renforcement: [
-        {
-          name: 'Abdos Fessiers',
-          id: 4,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Body Sculpt',
-          id: 5,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'C.A.F.',
-          id: 6,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Abdos Flash',
-          id: 7,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Pump',
-          id: 8,
-          t: new Transitionable(0)
-        }
-      ],
-      danse: [{
-          name: 'Zumba',
-          id: 9,
-          t: new Transitionable(0)
-        }],
-      zen: [
-        {
-          name: 'Pilates',
-          id: 10,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Stretching',
-          id: 11,
-          t: new Transitionable(0)
-        },
-        {
-          name: 'Gym douce',
-          id: 12,
-          t: new Transitionable(0)
-        }
-      ]
-    };
-    $scope.t = new Transitionable(0);
-    $scope.opacity = $timeline([
-      [
-        0.4,
-        0,
-        Easing.inOutQuart
-      ],
-      [
-        0.8,
-        1,
-        Easing.inOutQuart
-      ]
-    ]);
-    $scope.enterAnimation = function (t, $done) {
-      t.set(1, { duration: 1500 }, $done);
-    };
-    $scope.leaveAnimation = function (t, $done) {
-      t.set(0, { duration: 1500 }, $done);
+    $scope.activities = [
+      {
+        name: 'Step',
+        id: 0,
+        duration: '45\'',
+        level: 'easy',
+        category: 'cardio'
+      },
+      {
+        name: 'Biking',
+        id: 1,
+        duration: '45\'',
+        level: 'medium',
+        category: 'cardio'
+      },
+      {
+        name: 'Magic Combat',
+        id: 2,
+        duration: '45\'',
+        level: 'hard',
+        category: 'cardio'
+      },
+      {
+        name: 'Cardio Attack',
+        id: 3,
+        duration: '45\'',
+        level: 'easy',
+        category: 'cardio'
+      },
+      {
+        name: 'Abdos Fessiers',
+        id: 4,
+        duration: '45\'',
+        level: 'medium',
+        category: 'cardio'
+      },
+      {
+        name: 'Body Sculpt',
+        id: 5,
+        duration: '45\'',
+        level: 'hard',
+        category: 'renforcement'
+      },
+      {
+        name: 'C.A.F.',
+        id: 6,
+        duration: '45\'',
+        level: 'easy',
+        category: 'renforcement'
+      },
+      {
+        name: 'Abdos Flash',
+        id: 7,
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement'
+      },
+      {
+        name: 'Pump',
+        id: 8,
+        duration: '45\'',
+        level: 'hard',
+        category: 'renforcement'
+      },
+      {
+        name: 'Zumba',
+        id: 9,
+        duration: '45\'',
+        level: 'easy',
+        category: 'danse'
+      },
+      {
+        name: 'Pilates',
+        id: 10,
+        duration: '45\'',
+        level: 'medium',
+        category: 'zen'
+      },
+      {
+        name: 'Stretching',
+        id: 11,
+        duration: '45\'',
+        level: 'hard',
+        category: 'zen'
+      },
+      {
+        name: 'Gym douce',
+        id: 12,
+        duration: '45\'',
+        level: 'easy',
+        category: 'zen'
+      }
+    ];
+  }
+]);'use strict';
+angular.module('activity').directive('levelIcon', [
+  '$window',
+  function ($window) {
+    return {
+      restrict: 'EA',
+      scope: {
+        size: '@',
+        level: '@'
+      },
+      template: '<div data-ng-include="\'modules/activity/views/level-icon.view.svg\'" class="level-icon" data-ng-class="level"></div>',
+      link: function ($scope, $element, $attr) {
+      }
     };
   }
 ]);'use strict';
@@ -210,6 +232,11 @@ angular.module('activity').controller('ActivityController', [
 angular.module('coaching').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Coaching state routing
+    $stateProvider.state('coaching', {
+      url: '/coaching',
+      templateUrl: 'modules/coaching/views/coaching.client.view.html'
+    });
   }
 ]);'use strict';
 angular.module('coaching').controller('CoachingController', [
@@ -461,6 +488,11 @@ angular.module('core').service('Menus', [function () {
 angular.module('planning').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Planning state routing
+    $stateProvider.state('planning', {
+      url: '/planning',
+      templateUrl: 'modules/planning/views/planning.client.view.html'
+    });
   }
 ]);'use strict';
 angular.module('planning').controller('PlanningController', [
@@ -610,6 +642,11 @@ angular.module('planning').controller('PlanningController', [
 angular.module('salle').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Salle state routing
+    $stateProvider.state('salle', {
+      url: '/salle',
+      templateUrl: 'modules/salle/views/salle.client.view.html'
+    });
   }
 ]);'use strict';
 angular.module('salle').controller('SalleController', [

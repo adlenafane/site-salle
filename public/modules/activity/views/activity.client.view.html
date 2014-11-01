@@ -43,7 +43,8 @@
     <div class="row activities">
         <div data-ng-repeat="activity in activities | filter:currentCategory" class="activity">
             <div class="activity-content" ng-class="activity.category">
-                <h3>{{ activity.name }}</h3>
+                <h3>{{ activity.name }} - {{ activity.duration }}</h3>
+                <div data-level-icon="level-icon" data-level="{{ activity.level }}" data-size="activity.id * 10"></div>
             </div>
         </div>
     </div>

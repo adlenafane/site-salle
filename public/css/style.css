@@ -5358,6 +5358,7 @@ button.close {
       background-color: #FFF;
       color: #967ADC; }
       #categories.cardio .category.cardio .content:hover, #categories.cardio .category.cardio .content:active, #categories.cardio .category.cardio .content:focus, #categories.renforcement .category.cardio .content:hover, #categories.renforcement .category.cardio .content:active, #categories.renforcement .category.cardio .content:focus, #categories.danse .category.cardio .content:hover, #categories.danse .category.cardio .content:active, #categories.danse .category.cardio .content:focus, #categories.zen .category.cardio .content:hover, #categories.zen .category.cardio .content:active, #categories.zen .category.cardio .content:focus {
+        background-color: #967ADC;
         color: #FFF; }
     #categories.cardio .category.renforcement .content, #categories.renforcement .category.renforcement .content, #categories.danse .category.renforcement .content, #categories.zen .category.renforcement .content {
       background-color: #FFF;
@@ -5444,6 +5445,16 @@ button.close {
     background-color: #37BC9B;
     border-color: #37BC9B;
     color: #FFF; }
+
+.level-icon svg {
+  height: 2em;
+  width: 2em; }
+.level-icon.easy svg rect:nth-of-type(1) {
+  fill: #A0D468; }
+.level-icon.medium svg rect:nth-of-type(2) {
+  fill: #FFCE54; }
+.level-icon.hard svg rect:nth-of-type(3) {
+  fill: #FC6E51; }
 
 .access {
   margin-bottom: 2em; }
