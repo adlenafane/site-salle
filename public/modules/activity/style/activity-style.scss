@@ -68,6 +68,20 @@ $zen-color: #37BC9B;
       height: 250px;
     }
 
+    .content {
+      .icon {
+        font-size: 0.9em;
+
+        @media (min-width: $screen-sm-min) {
+          font-size: 1.5em;
+        }
+
+        .glyphicon {
+          font-size: 2em
+        }
+      }
+    }
+
     .category {
       &.cardio {
         .content {
@@ -187,18 +201,23 @@ $zen-color: #37BC9B;
     }
 
     .icon {
+      font-size: 1.2em;
       position: absolute;
       top: 50%;
       left: 50%;
       text-align: center;
       transform: translate(-50%, -50%);
 
-      .glyphicon {
-        font-size: 3em;
+      @media (min-width: $screen-sm-min) {
+        font-size: 1.5em;
       }
 
-      div {
-        font-size: 1.5em;
+      .glyphicon {
+        font-size: 2em;
+
+        @media (min-width: $screen-sm-min) {
+          font-size: 2em;
+        }
       }
     }
   }

@@ -5354,6 +5354,13 @@ button.close {
     @media (min-width: 1200px) {
       #categories.cardio, #categories.renforcement, #categories.danse, #categories.zen {
         height: 250px; } }
+    #categories.cardio .content .icon, #categories.renforcement .content .icon, #categories.danse .content .icon, #categories.zen .content .icon {
+      font-size: 0.9em; }
+      @media (min-width: 768px) {
+        #categories.cardio .content .icon, #categories.renforcement .content .icon, #categories.danse .content .icon, #categories.zen .content .icon {
+          font-size: 1.5em; } }
+      #categories.cardio .content .icon .glyphicon, #categories.renforcement .content .icon .glyphicon, #categories.danse .content .icon .glyphicon, #categories.zen .content .icon .glyphicon {
+        font-size: 2em; }
     #categories.cardio .category.cardio .content, #categories.renforcement .category.cardio .content, #categories.danse .category.cardio .content, #categories.zen .category.cardio .content {
       background-color: #FFF;
       color: #967ADC; }
@@ -5420,15 +5427,20 @@ button.close {
       -o-transition: background-color ease-in 0.3s;
       transition: background-color ease-in 0.3s; }
     .category .content .icon {
+      font-size: 1.2em;
       position: absolute;
       top: 50%;
       left: 50%;
       text-align: center;
       transform: translate(-50%, -50%); }
+      @media (min-width: 768px) {
+        .category .content .icon {
+          font-size: 1.5em; } }
       .category .content .icon .glyphicon {
-        font-size: 3em; }
-      .category .content .icon div {
-        font-size: 1.5em; }
+        font-size: 2em; }
+        @media (min-width: 768px) {
+          .category .content .icon .glyphicon {
+            font-size: 2em; } }
   .category.cardio .content {
     background-color: #967ADC;
     border-color: #967ADC;
