@@ -480,27 +480,33 @@ angular.module('planning').controller('PlanningController', [
           {
             label: 'Matin',
             separator: true,
+            category: 'Matin',
             maxCount: 1
           },
           {
             label: '9h30',
+            category: 'Matin',
             maxCount: 2
           },
           {
             label: '10h30',
+            category: 'Matin',
             maxCount: 1
           },
           {
             label: '11h30',
+            category: 'Matin',
             maxCount: 1
           },
           {
             label: 'Apr\xe8s-midi',
             separator: true,
+            category: 'Apr\xe8s-midi',
             maxCount: 1
           },
           {
             label: '14h30',
+            category: 'Apr\xe8s-midi',
             maxCount: 1
           }
         ]

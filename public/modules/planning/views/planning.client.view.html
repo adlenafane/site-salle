@@ -2,27 +2,42 @@
 	<section class="planning-page">
     <h1>Planning</h1>
     <div class="filters">
-
+      <h2>Filtrer par</h2>
+      <form role="form">
+        <div class="form-group">
+          <label for="class-name">Nom du cours</label>
+          <input type="text" class="form-control" id="class-name" placeholder="Nom du cours"  data-ng-model="search.name">
+        </div>
+        <div class="form-group">
+          <label for="class-time">Horaires</label>
+          <select class="form-control" data-ng-model="hour.category">
+            <option value="">Tous les horaires</option>
+            <option value="Matin">Matin</option>
+            <option value="Midi">Midi</option>
+            <option value="Après-midi">Après-midi</option>
+            <option value="Soir">Soir</option>
+          </select>
+        </div>
+      </form>
     </div>
     <div class="table-responsive">
       <table class="planning table">
         <thead>
-          <tr>
+          <tr class="separator">
             <th data-ng-repeat="day in planning track by $index">{{ day.name }}</th>
           </tr>
         </thead>
         <tbody>
-          <tr data-ng-repeat="slot in planning.0.slots track by $index" data-ng-class="{'separator': slot.separator}">
+          <tr data-ng-repeat="slot in planning.0.slots | filter:hour track by $index" data-ng-class="{'separator': slot.separator}">
             <td data-rowspan="{{ slot.maxCount }}">
               {{ slot.label }}
             </td>
             <td data-ng-repeat="day in planning" data-ng-if="!$first" data-rowspan="{{ slot.maxCount }}">
               <table>
-                <tr data-ng-repeat="class in day.classes" data-ng-if="class.start === slot.label">
+                <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.start === slot.label">
                 <td>
                   <h4>{{ class.name }}</h4>
                   <div class="details">
-                    <span>{{ class.start }}</span>
                     <span>{{ class.duration }}'</span>
                   </div>
                 </td>

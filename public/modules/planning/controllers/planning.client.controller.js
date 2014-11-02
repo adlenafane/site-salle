@@ -9,27 +9,33 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             label: 'Matin',
             separator: true,
+            category: 'Matin',
             maxCount: 1
           },
           {
             label: '9h30',
+            category: 'Matin',
             maxCount: 2
           },
           {
             label: '10h30',
+            category: 'Matin',
             maxCount: 1
           },
           {
             label: '11h30',
+            category: 'Matin',
             maxCount: 1
           },
           {
             label: 'Après-midi',
             separator: true,
+            category: 'Après-midi',
             maxCount: 1
           },
           {
             label: '14h30',
+            category: 'Après-midi',
             maxCount: 1
           }
         ]
