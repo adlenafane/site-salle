@@ -83,12 +83,35 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Zumba',
             start: '9h30',
-            duration: 60
+            duration: 60,
+            time: '9h30- 10h30'
           },
           {
             name: 'Body step',
             start: '10h30',
+            duration: 45,
+            time: '10h30-11h15'
+          },
+          {
+            name: 'Body Pump',
+            start: '17h30',
+            duration: 45,
+            time: '17h30-18h15'
+          },
+          {
+            name: 'Zumba',
+            start: '18h15',
             duration: 45
+          },
+          {
+            name: 'Body Attack',
+            start: '19h00',
+            duration: 60
+          },
+          {
+            name: 'Stretching',
+            start: '20h00',
+            duration: 30
           }
         ]
       },
