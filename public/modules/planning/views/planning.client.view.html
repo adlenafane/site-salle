@@ -10,7 +10,7 @@
         </div>
         <div class="form-group">
           <label for="class-time">Horaires</label>
-          <select class="form-control" data-ng-model="hour.category">
+          <select class="form-control" data-ng-model="hour.category" id="class-time">
             <option value="">Tous les horaires</option>
             <option value="Matin">Matin</option>
             <option value="Midi">Midi</option>
@@ -23,8 +23,8 @@
     <div class="table-responsive">
       <table class="planning table">
         <thead>
-          <tr class="separator">
-            <th data-ng-repeat="day in planning track by $index">{{ day.name }}</th>
+          <tr class="header">
+            <th data-ng-repeat="day in planning track by $index" class="day">{{ day.name }}</th>
           </tr>
         </thead>
         <tbody>

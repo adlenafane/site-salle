@@ -499,6 +499,17 @@ angular.module('planning').controller('PlanningController', [
             maxCount: 1
           },
           {
+            label: 'Midi',
+            separator: true,
+            category: 'Midi',
+            maxCount: 1
+          },
+          {
+            label: '12h15',
+            category: 'Midi',
+            maxCount: 1
+          },
+          {
             label: 'Apr\xe8s-midi',
             separator: true,
             category: 'Apr\xe8s-midi',
@@ -507,6 +518,32 @@ angular.module('planning').controller('PlanningController', [
           {
             label: '14h30',
             category: 'Apr\xe8s-midi',
+            maxCount: 1
+          },
+          {
+            label: 'Soir',
+            separator: true,
+            category: 'Soir',
+            maxCount: 1
+          },
+          {
+            label: '17h30',
+            category: 'Soir',
+            maxCount: 1
+          },
+          {
+            label: '18h15',
+            category: 'Soir',
+            maxCount: 1
+          },
+          {
+            label: '19h00',
+            category: 'Soir',
+            maxCount: 1
+          },
+          {
+            label: '20h00',
+            category: 'Soir',
             maxCount: 1
           }
         ]

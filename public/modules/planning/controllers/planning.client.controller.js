@@ -28,6 +28,17 @@ angular.module('planning').controller('PlanningController', ['$scope',
             maxCount: 1
           },
           {
+            label: 'Midi',
+            separator: true,
+            category: 'Midi',
+            maxCount: 1
+          },
+          {
+            label: '12h15',
+            category: 'Midi',
+            maxCount: 1
+          },
+          {
             label: 'Après-midi',
             separator: true,
             category: 'Après-midi',
@@ -36,6 +47,32 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             label: '14h30',
             category: 'Après-midi',
+            maxCount: 1
+          },
+          {
+            label: 'Soir',
+            separator: true,
+            category: 'Soir',
+            maxCount: 1
+          },
+          {
+            label: '17h30',
+            category: 'Soir',
+            maxCount: 1
+          },
+          {
+            label: '18h15',
+            category: 'Soir',
+            maxCount: 1
+          },
+          {
+            label: '19h00',
+            category: 'Soir',
+            maxCount: 1
+          },
+          {
+            label: '20h00',
+            category: 'Soir',
             maxCount: 1
           }
         ]

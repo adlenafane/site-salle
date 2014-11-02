@@ -1,7 +1,15 @@
 table.planning.table {
   border: none;
+
+  .header {
+    border-color: transparent;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
   .separator {
     border-bottom: 3px solid $brand-primary;
+    color: $brand-primary;
   }
 }
 
