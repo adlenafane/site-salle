@@ -83,6 +83,8 @@ $zen-color: #37BC9B;
     }
 
     .category {
+      @include make-xs-column(3);
+      @include transition(width ease-in 0.5s);
       &.cardio {
         .content {
           background-color: $white;
@@ -173,6 +175,8 @@ $zen-color: #37BC9B;
 
 // Default category style
 .category {
+  @include make-xs-column(6);
+  @include transition(width ease-out 0.5s);
   text-align: center;
 
   .content {

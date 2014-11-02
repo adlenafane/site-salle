@@ -5361,30 +5361,40 @@ button.close {
           font-size: 1.5em; } }
       #categories.cardio .content .icon .glyphicon, #categories.renforcement .content .icon .glyphicon, #categories.danse .content .icon .glyphicon, #categories.zen .content .icon .glyphicon {
         font-size: 2em; }
-    #categories.cardio .category.cardio .content, #categories.renforcement .category.cardio .content, #categories.danse .category.cardio .content, #categories.zen .category.cardio .content {
-      background-color: #FFF;
-      color: #967ADC; }
-      #categories.cardio .category.cardio .content:hover, #categories.cardio .category.cardio .content:active, #categories.cardio .category.cardio .content:focus, #categories.renforcement .category.cardio .content:hover, #categories.renforcement .category.cardio .content:active, #categories.renforcement .category.cardio .content:focus, #categories.danse .category.cardio .content:hover, #categories.danse .category.cardio .content:active, #categories.danse .category.cardio .content:focus, #categories.zen .category.cardio .content:hover, #categories.zen .category.cardio .content:active, #categories.zen .category.cardio .content:focus {
-        background-color: #967ADC;
-        color: #FFF; }
-    #categories.cardio .category.renforcement .content, #categories.renforcement .category.renforcement .content, #categories.danse .category.renforcement .content, #categories.zen .category.renforcement .content {
-      background-color: #FFF;
-      color: #DA4453; }
-      #categories.cardio .category.renforcement .content:hover, #categories.cardio .category.renforcement .content:active, #categories.cardio .category.renforcement .content:focus, #categories.renforcement .category.renforcement .content:hover, #categories.renforcement .category.renforcement .content:active, #categories.renforcement .category.renforcement .content:focus, #categories.danse .category.renforcement .content:hover, #categories.danse .category.renforcement .content:active, #categories.danse .category.renforcement .content:focus, #categories.zen .category.renforcement .content:hover, #categories.zen .category.renforcement .content:active, #categories.zen .category.renforcement .content:focus {
-        background-color: #DA4453;
-        color: #FFF; }
-    #categories.cardio .category.danse .content, #categories.renforcement .category.danse .content, #categories.danse .category.danse .content, #categories.zen .category.danse .content {
-      background-color: #FFF;
-      color: #D770AD; }
-      #categories.cardio .category.danse .content:hover, #categories.cardio .category.danse .content:active, #categories.cardio .category.danse .content:focus, #categories.renforcement .category.danse .content:hover, #categories.renforcement .category.danse .content:active, #categories.renforcement .category.danse .content:focus, #categories.danse .category.danse .content:hover, #categories.danse .category.danse .content:active, #categories.danse .category.danse .content:focus, #categories.zen .category.danse .content:hover, #categories.zen .category.danse .content:active, #categories.zen .category.danse .content:focus {
-        background-color: #D770AD;
-        color: #FFF; }
-    #categories.cardio .category.zen .content, #categories.renforcement .category.zen .content, #categories.danse .category.zen .content, #categories.zen .category.zen .content {
-      background-color: #FFF;
-      color: #37BC9B; }
-      #categories.cardio .category.zen .content:hover, #categories.cardio .category.zen .content:active, #categories.cardio .category.zen .content:focus, #categories.renforcement .category.zen .content:hover, #categories.renforcement .category.zen .content:active, #categories.renforcement .category.zen .content:focus, #categories.danse .category.zen .content:hover, #categories.danse .category.zen .content:active, #categories.danse .category.zen .content:focus, #categories.zen .category.zen .content:hover, #categories.zen .category.zen .content:active, #categories.zen .category.zen .content:focus {
-        background-color: #37BC9B;
-        color: #FFF; }
+    #categories.cardio .category, #categories.renforcement .category, #categories.danse .category, #categories.zen .category {
+      position: relative;
+      float: left;
+      width: 25%;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      -webkit-transition: width ease-in 0.5s;
+      -o-transition: width ease-in 0.5s;
+      transition: width ease-in 0.5s; }
+      #categories.cardio .category.cardio .content, #categories.renforcement .category.cardio .content, #categories.danse .category.cardio .content, #categories.zen .category.cardio .content {
+        background-color: #FFF;
+        color: #967ADC; }
+        #categories.cardio .category.cardio .content:hover, #categories.cardio .category.cardio .content:active, #categories.cardio .category.cardio .content:focus, #categories.renforcement .category.cardio .content:hover, #categories.renforcement .category.cardio .content:active, #categories.renforcement .category.cardio .content:focus, #categories.danse .category.cardio .content:hover, #categories.danse .category.cardio .content:active, #categories.danse .category.cardio .content:focus, #categories.zen .category.cardio .content:hover, #categories.zen .category.cardio .content:active, #categories.zen .category.cardio .content:focus {
+          background-color: #967ADC;
+          color: #FFF; }
+      #categories.cardio .category.renforcement .content, #categories.renforcement .category.renforcement .content, #categories.danse .category.renforcement .content, #categories.zen .category.renforcement .content {
+        background-color: #FFF;
+        color: #DA4453; }
+        #categories.cardio .category.renforcement .content:hover, #categories.cardio .category.renforcement .content:active, #categories.cardio .category.renforcement .content:focus, #categories.renforcement .category.renforcement .content:hover, #categories.renforcement .category.renforcement .content:active, #categories.renforcement .category.renforcement .content:focus, #categories.danse .category.renforcement .content:hover, #categories.danse .category.renforcement .content:active, #categories.danse .category.renforcement .content:focus, #categories.zen .category.renforcement .content:hover, #categories.zen .category.renforcement .content:active, #categories.zen .category.renforcement .content:focus {
+          background-color: #DA4453;
+          color: #FFF; }
+      #categories.cardio .category.danse .content, #categories.renforcement .category.danse .content, #categories.danse .category.danse .content, #categories.zen .category.danse .content {
+        background-color: #FFF;
+        color: #D770AD; }
+        #categories.cardio .category.danse .content:hover, #categories.cardio .category.danse .content:active, #categories.cardio .category.danse .content:focus, #categories.renforcement .category.danse .content:hover, #categories.renforcement .category.danse .content:active, #categories.renforcement .category.danse .content:focus, #categories.danse .category.danse .content:hover, #categories.danse .category.danse .content:active, #categories.danse .category.danse .content:focus, #categories.zen .category.danse .content:hover, #categories.zen .category.danse .content:active, #categories.zen .category.danse .content:focus {
+          background-color: #D770AD;
+          color: #FFF; }
+      #categories.cardio .category.zen .content, #categories.renforcement .category.zen .content, #categories.danse .category.zen .content, #categories.zen .category.zen .content {
+        background-color: #FFF;
+        color: #37BC9B; }
+        #categories.cardio .category.zen .content:hover, #categories.cardio .category.zen .content:active, #categories.cardio .category.zen .content:focus, #categories.renforcement .category.zen .content:hover, #categories.renforcement .category.zen .content:active, #categories.renforcement .category.zen .content:focus, #categories.danse .category.zen .content:hover, #categories.danse .category.zen .content:active, #categories.danse .category.zen .content:focus, #categories.zen .category.zen .content:hover, #categories.zen .category.zen .content:active, #categories.zen .category.zen .content:focus {
+          background-color: #37BC9B;
+          color: #FFF; }
   #categories.cardio .cardio .content {
     background-color: #967ADC !important;
     color: #FFF !important; }
@@ -5399,6 +5409,15 @@ button.close {
     color: #FFF !important; }
 
 .category {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-transition: width ease-out 0.5s;
+  -o-transition: width ease-out 0.5s;
+  transition: width ease-out 0.5s;
   text-align: center; }
   .category .content {
     -webkit-user-select: none;
