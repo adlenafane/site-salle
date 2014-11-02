@@ -2,31 +2,14 @@
 
 angular.module('activity').controller('ActivityController', ['$scope',
   function($scope) {
-    var DURATION = 500;
-    var defaultsLayoutOptions = {
-      dimensions: [2, 2],
-      transition: {
-        curve: 'easeInOut',
-        duration: DURATION
-      }
-    };
-    $scope.categoriesLayoutOptions = defaultsLayoutOptions;
+    $scope.currentCategory = null;
 
     $scope.zoomOn = function(category) {
-
       if ($scope.currentCategory !== category) {
         $scope.currentCategory = category;
-        $scope.categoriesLayoutOptions = {
-          dimensions: [4, 1]
-        };
-
-        $scope.activitiesLayoutOptions = {
-          dimensions: [$scope.activities.length, 1]
-        };
 
       } else {
         $scope.currentCategory = null;
-        $scope.categoriesLayoutOptions = defaultsLayoutOptions;
       }
     };
 

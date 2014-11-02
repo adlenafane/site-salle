@@ -5,7 +5,6 @@ var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'site-salle';
 	var applicationModuleVendorDependencies = [
-    'famous.angular',
 		'google-maps',
 		'ngResource',
 		'ngCookies',
