@@ -4,7 +4,6 @@ var ApplicationConfiguration = function () {
     // Init module configuration options
     var applicationModuleName = 'site-salle';
     var applicationModuleVendorDependencies = [
-        'google-maps',
         'ngResource',
         'ngCookies',
         'ngAnimate',
@@ -484,9 +483,19 @@ angular.module('planning').controller('PlanningController', [
             maxCount: 1
           },
           {
+            label: '9h00',
+            category: 'Matin',
+            maxCount: 1
+          },
+          {
             label: '9h30',
             category: 'Matin',
             maxCount: 2
+          },
+          {
+            label: '9h45',
+            category: 'Matin',
+            maxCount: 1
           },
           {
             label: '10h30',
@@ -510,14 +519,8 @@ angular.module('planning').controller('PlanningController', [
             maxCount: 1
           },
           {
-            label: 'Apr\xe8s-midi',
-            separator: true,
-            category: 'Apr\xe8s-midi',
-            maxCount: 1
-          },
-          {
-            label: '14h30',
-            category: 'Apr\xe8s-midi',
+            label: '12h45',
+            category: 'Midi',
             maxCount: 1
           },
           {
@@ -554,12 +557,44 @@ angular.module('planning').controller('PlanningController', [
           {
             name: 'Zumba',
             start: '9h30',
-            duration: 60
+            duration: 60,
+            category: 'danse',
+            time: '9h30- 10h30'
           },
           {
             name: 'Body step',
             start: '10h30',
-            duration: 45
+            duration: 45,
+            category: 'cardio',
+            time: '10h30-11h15'
+          },
+          {
+            name: 'Body Pump',
+            start: '17h30',
+            duration: 45,
+            category: 'renforcement',
+            time: '17h30-18h15'
+          },
+          {
+            name: 'Zumba',
+            start: '18h15',
+            duration: 45,
+            category: 'danse',
+            time: '18h15-19h00'
+          },
+          {
+            name: 'Body Attack',
+            start: '19h00',
+            duration: 60,
+            category: 'cardio',
+            time: '19h00-20h00'
+          },
+          {
+            name: 'Stretching',
+            start: '20h00',
+            duration: 30,
+            category: 'zen',
+            time: '20h00-20h30'
           }
         ]
       },
@@ -567,61 +602,61 @@ angular.module('planning').controller('PlanningController', [
         name: 'Mardi',
         classes: [
           {
-            name: 'Body Attack',
-            start: '9h30',
-            duration: 90
+            name: 'Body Balance',
+            start: '9h00',
+            duration: 30,
+            category: 'cardio',
+            time: '9h00-9h30'
           },
           {
             name: 'Body Pump',
-            start: '14h30',
-            duration: 45
+            start: '9h45',
+            duration: 45,
+            category: 'renforcement',
+            time: '9h45-10h30'
+          },
+          {
+            name: 'Body Attack',
+            start: '12h15',
+            duration: 30,
+            category: 'cardio',
+            time: '12h15-12h45'
+          },
+          {
+            name: 'Core',
+            start: '12h45',
+            duration: 30,
+            category: 'renforcement',
+            time: '12h45-13h15'
           }
         ]
       },
       {
         name: 'Mercredi',
-        classes: [
-          {
+        classes: [{
             name: 'Body Attack',
             start: '9h30',
+            category: 'danse',
             duration: 90
-          },
-          {
-            name: 'Body Pump',
-            start: '14h30',
-            duration: 45
-          }
-        ]
+          }]
       },
       {
         name: 'Jeudi',
-        classes: [
-          {
+        classes: [{
             name: 'Body Attack',
             start: '9h30',
+            category: 'danse',
             duration: 90
-          },
-          {
-            name: 'Body Pump',
-            start: '9h30',
-            duration: 45
-          }
-        ]
+          }]
       },
       {
         name: 'Vendredi',
-        classes: [
-          {
+        classes: [{
             name: 'Body Attack',
             start: '9h30',
+            category: 'danse',
             duration: 90
-          },
-          {
-            name: 'Body Pump',
-            start: '14h30',
-            duration: 45
-          }
-        ]
+          }]
       },
       {
         name: 'Samedi',
@@ -629,11 +664,13 @@ angular.module('planning').controller('PlanningController', [
           {
             name: 'Body Attack',
             start: '9h30',
+            category: 'danse',
             duration: 90
           },
           {
             name: 'Body Pump',
             start: '14h30',
+            category: 'danse',
             duration: 45
           }
         ]
@@ -644,11 +681,13 @@ angular.module('planning').controller('PlanningController', [
           {
             name: 'Body Attack',
             start: '9h30',
+            category: 'danse',
             duration: 90
           },
           {
             name: 'Body Pump',
             start: '11h30',
+            category: 'danse',
             duration: 45
           }
         ]
