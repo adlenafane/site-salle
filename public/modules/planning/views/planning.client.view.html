@@ -29,13 +29,13 @@
         </thead>
         <tbody>
           <tr data-ng-repeat="slot in planning.0.slots | filter:hour track by $index" data-ng-class="{'separator': slot.separator}">
-            <td data-rowspan="{{ slot.maxCount }}">
+            <td data-rowspan="{{ slot.maxCount }}" data-ng-class="{day: slot.separator}">
               {{ slot.label }}
             </td>
             <td data-ng-repeat="day in planning" data-ng-if="!$first" data-rowspan="{{ slot.maxCount }}">
               <table>
                 <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.start === slot.label">
-                <td>
+                <td class="class-content" data-ng-class="class.category">
                   <h4>{{ class.name }}</h4>
                   <div class="details">
                     <span></span>

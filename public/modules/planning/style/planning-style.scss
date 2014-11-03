@@ -4,12 +4,49 @@ table.planning.table {
   .header {
     border-color: transparent;
     font-size: 1.3em;
-    text-align: center;
+
+    th {
+      text-align: center;
+    }
   }
 
   .separator {
     border-bottom: 3px solid $brand-primary;
     color: $brand-primary;
+  }
+
+  td.day {
+    font-size: 1.5em;
+  }
+
+  td.class-content {
+    // color: $white;
+    border-left: 3px solid;
+    padding: 0.5em;
+
+    &.cardio {
+      // background-color: lighten($cardio-color, 20%);
+      // color: darken($cardio-color, 50%);
+      border-color: $cardio-color; 
+    }
+
+    &.renforcement {
+      // background-color: lighten($renforcement-color, 20%);
+      // color: darken($renforcement-color, 50%);
+      border-color: $renforcement-color;
+    }
+
+    &.danse {
+      // background-color: lighten($danse-color, 20%);
+      // color: darken($danse-color, 50%);
+      border-color: $danse-color;
+    }
+
+    &.zen {
+      // background-color: lighten($zen-color, 20%);
+      // color: darken($zen-color, 50%);
+      border-color: $zen-color;
+    }
   }
 }
 

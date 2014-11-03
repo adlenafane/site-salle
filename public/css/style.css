@@ -4190,7 +4190,8 @@ a.list-group-item {
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
   background-color: #eeeeee;
-  color: #777777; }
+  color: #777777;
+  cursor: not-allowed; }
   .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading {
     color: inherit; }
   .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text {
@@ -5573,11 +5574,25 @@ table.planning.table {
   border: none; }
   table.planning.table .header {
     border-color: transparent;
-    font-size: 1.3em;
-    text-align: center; }
+    font-size: 1.3em; }
+    table.planning.table .header th {
+      text-align: center; }
   table.planning.table .separator {
     border-bottom: 3px solid #DA4453;
     color: #DA4453; }
+  table.planning.table td.day {
+    font-size: 1.5em; }
+  table.planning.table td.class-content {
+    border-left: 3px solid;
+    padding: 0.5em; }
+    table.planning.table td.class-content.cardio {
+      border-color: #967ADC; }
+    table.planning.table td.class-content.renforcement {
+      border-color: #DA4453; }
+    table.planning.table td.class-content.danse {
+      border-color: #D770AD; }
+    table.planning.table td.class-content.zen {
+      border-color: #37BC9B; }
 
 .table-responsive table {
   border: none; }
