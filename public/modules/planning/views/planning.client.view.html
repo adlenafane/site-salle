@@ -38,8 +38,8 @@
                 <td class="class-content" data-ng-class="class.category">
                   <h4>{{ class.name }}</h4>
                   <div class="details">
-                    <span></span>
-                    <span>{{ class.time }} ({{ class.duration }}')</span>
+                    <div>{{ class.time }} ({{ class.duration }}')</div>
+                    <div>{{ class.coach }}</div>
                   </div>
                 </td>
               </tr>
@@ -49,5 +49,10 @@
         </tbody>
       </table>
     </div>
+    <!--<div class="custom-planning" style="position: relative; width: 420px">-->
+        <!--<div class="day" data-ng-repeat="day in planning track by $index" data-ng-if="$index !== 0">-->
+            <!--<div class="class" style="position: absolute;margin: 0.5em 1em; padding: 0.5em;background-color: #00b3ee;height: 25px;width: 100px;" ng-style="class.positionStyle" data-ng-repeat="class in day.classes track by $index">{{ class.name }}</div>-->
+        <!--</div>-->
+    <!--</div>-->
   </section>
 </section>

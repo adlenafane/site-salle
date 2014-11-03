@@ -4190,8 +4190,7 @@ a.list-group-item {
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
   background-color: #eeeeee;
-  color: #777777;
-  cursor: not-allowed; }
+  color: #777777; }
   .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading {
     color: inherit; }
   .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text {
@@ -5578,6 +5577,7 @@ table.planning.table {
     table.planning.table .header th {
       text-align: center; }
   table.planning.table .separator {
+    border-top: 3px solid #FFF;
     border-bottom: 3px solid #DA4453;
     color: #DA4453; }
   table.planning.table td.day {

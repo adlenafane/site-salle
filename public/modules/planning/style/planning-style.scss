@@ -11,6 +11,7 @@ table.planning.table {
   }
 
   .separator {
+    border-top: 3px solid $white;
     border-bottom: 3px solid $brand-primary;
     color: $brand-primary;
   }
