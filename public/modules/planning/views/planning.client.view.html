@@ -4,19 +4,25 @@
     <div class="filters">
       <h2>Filtrer par</h2>
       <form role="form">
-        <div class="form-group">
-          <label for="class-name">Nom du cours</label>
-          <input type="text" class="form-control" id="class-name" placeholder="Nom du cours"  data-ng-model="search.name">
-        </div>
-        <div class="form-group">
-          <label for="class-time">Horaires</label>
-          <select class="form-control" data-ng-model="hour.category" id="class-time">
-            <option value="">Tous les horaires</option>
-            <option value="Matin">Matin</option>
-            <option value="Midi">Midi</option>
-            <option value="Après-midi">Après-midi</option>
-            <option value="Soir">Soir</option>
-          </select>
+        <div class="row">
+          <div class="form-group filter-name">
+            <label for="class-name">Nom du cours</label>
+            <input type="text" class="form-control" id="class-name" placeholder="Nom du cours"  data-ng-model="search.name">
+          </div>
+          <div class="form-group filter-time">
+            <label for="class-time">Horaires</label>
+            <select class="form-control" data-ng-model="hour.category" id="class-time">
+              <option value="">Tous les horaires</option>
+              <option value="Matin">Matin</option>
+              <option value="Midi">Midi</option>
+              <option value="Après-midi">Après-midi</option>
+              <option value="Soir">Soir</option>
+            </select>
+          </div>
+          <div class="form-group filter-coach">
+            <label for="class-coach">Coaches</label>
+            <select id="class-coach" class="form-control" data-ng-model="search.coach" data-ng-options="coach for coach in coaches"></select>
+          </div>
         </div>
       </form>
     </div>
@@ -49,10 +55,5 @@
         </tbody>
       </table>
     </div>
-    <!--<div class="custom-planning" style="position: relative; width: 420px">-->
-        <!--<div class="day" data-ng-repeat="day in planning track by $index" data-ng-if="$index !== 0">-->
-            <!--<div class="class" style="position: absolute;margin: 0.5em 1em; padding: 0.5em;background-color: #00b3ee;height: 25px;width: 100px;" ng-style="class.positionStyle" data-ng-repeat="class in day.classes track by $index">{{ class.name }}</div>-->
-        <!--</div>-->
-    <!--</div>-->
   </section>
 </section>

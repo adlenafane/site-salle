@@ -5569,6 +5569,22 @@ header .navbar-toggle {
   header .navbar-toggle .icon-bar {
     background-color: #DA4453; }
 
+.filters .filter-name, .filters .filter-time, .filters .filter-coach {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    .filters .filter-name, .filters .filter-time, .filters .filter-coach {
+      float: left;
+      width: 25%; } }
+
 table.planning.table {
   border: none; }
   table.planning.table .header {

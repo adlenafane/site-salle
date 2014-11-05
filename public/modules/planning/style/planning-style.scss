@@ -1,3 +1,10 @@
+.filters {
+   .filter-name, .filter-time, .filter-coach {
+    @include make-xs-column(6);
+    @include make-sm-column(3);
+   }
+}
+
 table.planning.table {
   border: none;
 
@@ -28,7 +35,7 @@ table.planning.table {
     &.cardio {
       // background-color: lighten($cardio-color, 20%);
       // color: darken($cardio-color, 50%);
-      border-color: $cardio-color; 
+      border-color: $cardio-color;
     }
 
     &.renforcement {
