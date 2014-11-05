@@ -4,7 +4,6 @@ var ApplicationConfiguration = function () {
     // Init module configuration options
     var applicationModuleName = 'site-salle';
     var applicationModuleVendorDependencies = [
-        'google-maps',
         'ngResource',
         'ngCookies',
         'ngAnimate',
@@ -919,7 +918,7 @@ angular.module('planning').controller('PlanningController', [
             name: 'Sh\'Bam',
             start: '20h00',
             duration: 60,
-            category: 'cardio',
+            category: 'danse',
             coach: 'Nolwen',
             time: '20h00-21h00'
           }
@@ -991,17 +990,22 @@ angular.module('planning').controller('PlanningController', [
           }
         ]
       }
-    ];  //for(var i = 1; i < $scope.planning.length; i++) {
-        //  for(var j = 0; j < $scope.planning[i].classes.length; j++) {
-        //    var momentDate = moment($scope.planning[i].classes[j].start, 'H[h]m');
-        //    $scope.planning[i].classes[j].indexLeft = i - 1;
-        //    $scope.planning[i].classes[j].indexTop = (4 * momentDate.hour() + momentDate.minute() / 15) - 36;
-        //    $scope.planning[i].classes[j].positionStyle = {
-        //      'left': 100 * $scope.planning[i].classes[j].indexLeft + 'px',
-        //      'top': 25 * $scope.planning[i].classes[j].indexTop +'px'
-        //    };
-        //  }
-        //}
+    ];
+    $scope.coaches = [];
+    $scope.categories = [];
+    for (var i = 1; i < $scope.planning.length; i++) {
+      for (var classIndex = 0; classIndex < $scope.planning[i].classes.length; classIndex++) {
+        var coach = $scope.planning[i].classes[classIndex].coach;
+        var category = $scope.planning[i].classes[classIndex].category;
+        if ($scope.coaches.indexOf(coach) === -1) {
+          $scope.coaches.push(coach);
+        }
+        if ($scope.categories.indexOf(category) === -1) {
+          $scope.categories.push(category);
+        }
+      }
+    }
+    $scope.coaches.sort();
   }
 ]);'use strict';
 //Setting up route

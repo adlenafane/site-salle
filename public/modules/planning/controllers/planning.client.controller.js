@@ -448,7 +448,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
             name: 'Sh\'Bam',
             start: '20h00',
             duration: 60,
-            category: 'cardio',
+            category: 'danse',
             coach: 'Nolwen',
             time: '20h00-21h00'
           }
@@ -523,11 +523,16 @@ angular.module('planning').controller('PlanningController', ['$scope',
     ];
 
     $scope.coaches = [];
+    $scope.categories = [];
     for (var i = 1; i < $scope.planning.length; i++) {
       for (var classIndex = 0; classIndex < $scope.planning[i].classes.length; classIndex++) {
         var coach = $scope.planning[i].classes[classIndex].coach;
+        var category = $scope.planning[i].classes[classIndex].category;
         if ($scope.coaches.indexOf(coach) === -1) {
           $scope.coaches.push(coach);
+        }
+        if ($scope.categories.indexOf(category) === -1) {
+          $scope.categories.push(category);
         }
       }
     }
