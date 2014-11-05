@@ -2,9 +2,9 @@
 
 module.exports = {
     app: {
-        title: 'site-salle',
+        title: 'Magicform FAR - Fontenay aux Roses',
         description: 'Website for an awesome sport place',
-        keywords: 'Sport, Gym, Fitness, Muscu, Cardio, LesMills'
+        keywords: 'Magid form, Sport, Gym, Fitness, Muscu, Cardio, LesMills'
     },
     port: process.env.PORT || 3000,
     templateEngine: 'swig',

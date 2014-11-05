@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://localhost/site-salle-dev',
 	app: {
-		title: 'site-salle - Development Environment'
+		title: 'Magicform FAR - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
