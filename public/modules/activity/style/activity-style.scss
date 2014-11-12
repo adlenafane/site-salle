@@ -5,7 +5,7 @@
     padding: 1em;
 
     .activity-content {
-      border-left: 3px solid; 
+      border-left: 3px solid;
       padding: 1em;
 
       &.cardio {
@@ -33,19 +33,6 @@
 
 #categories {
   @include transition(height ease-out 0.5s);
-  height: 200px;
-
-  @media (min-width: $screen-sm-min) {
-    height: 300px;
-  }
-
-  @media (min-width: $screen-md-min) {
-    height: 400px;
-  }
-
-  @media (min-width: $screen-lg-min) {
-    height: 500px;
-  }
 
   &.cardio, &.renforcement, &.danse, &.zen {
     @include transition(height ease-in 0.5s);
@@ -63,23 +50,9 @@
       height: 250px;
     }
 
-    .content {
-      .icon {
-        font-size: 0.9em;
-
-        @media (min-width: $screen-sm-min) {
-          font-size: 1.5em;
-        }
-
-        .glyphicon {
-          font-size: 2em
-        }
-      }
-    }
-
     .category {
       @include make-xs-column(3);
-      @include transition(width ease-in 0.5s);
+
       &.cardio {
         .content {
           background-color: $white;
@@ -170,9 +143,13 @@
 
 // Default category style
 .category {
-  @include make-xs-column(6);
-  @include transition(width ease-out 0.5s);
+  @include make-xs-column(3);
   text-align: center;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 
   .content {
     @include user-select(none);
@@ -180,8 +157,11 @@
     border: 3px solid;
     cursor: pointer;
     height: 90px;
-    margin: 1em;
     position: relative;
+
+    @media (max-width: $screen-xs-max) {
+      border: 1px solid;
+    }
 
     @media (min-width: $screen-sm-min) {
       height: 130px;
@@ -200,7 +180,7 @@
     }
 
     .icon {
-      font-size: 1.2em;
+      font-size: 0.9em;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -213,10 +193,6 @@
 
       .glyphicon {
         font-size: 2em;
-
-        @media (min-width: $screen-sm-min) {
-          font-size: 2em;
-        }
       }
     }
   }

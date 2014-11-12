@@ -4190,7 +4190,8 @@ a.list-group-item {
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
   background-color: #eeeeee;
-  color: #777777; }
+  color: #777777;
+  cursor: not-allowed; }
   .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading {
     color: inherit; }
   .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text {
@@ -5329,17 +5330,7 @@ button.close {
 #categories {
   -webkit-transition: height ease-out 0.5s;
   -o-transition: height ease-out 0.5s;
-  transition: height ease-out 0.5s;
-  height: 200px; }
-  @media (min-width: 768px) {
-    #categories {
-      height: 300px; } }
-  @media (min-width: 992px) {
-    #categories {
-      height: 400px; } }
-  @media (min-width: 1200px) {
-    #categories {
-      height: 500px; } }
+  transition: height ease-out 0.5s; }
   #categories.cardio, #categories.renforcement, #categories.danse, #categories.zen {
     -webkit-transition: height ease-in 0.5s;
     -o-transition: height ease-in 0.5s;
@@ -5354,23 +5345,13 @@ button.close {
     @media (min-width: 1200px) {
       #categories.cardio, #categories.renforcement, #categories.danse, #categories.zen {
         height: 250px; } }
-    #categories.cardio .content .icon, #categories.renforcement .content .icon, #categories.danse .content .icon, #categories.zen .content .icon {
-      font-size: 0.9em; }
-      @media (min-width: 768px) {
-        #categories.cardio .content .icon, #categories.renforcement .content .icon, #categories.danse .content .icon, #categories.zen .content .icon {
-          font-size: 1.5em; } }
-      #categories.cardio .content .icon .glyphicon, #categories.renforcement .content .icon .glyphicon, #categories.danse .content .icon .glyphicon, #categories.zen .content .icon .glyphicon {
-        font-size: 2em; }
     #categories.cardio .category, #categories.renforcement .category, #categories.danse .category, #categories.zen .category {
       position: relative;
       float: left;
       width: 25%;
       min-height: 1px;
       padding-left: 15px;
-      padding-right: 15px;
-      -webkit-transition: width ease-in 0.5s;
-      -o-transition: width ease-in 0.5s;
-      transition: width ease-in 0.5s; }
+      padding-right: 15px; }
       #categories.cardio .category.cardio .content, #categories.renforcement .category.cardio .content, #categories.danse .category.cardio .content, #categories.zen .category.cardio .content {
         background-color: #FFF;
         color: #967ADC; }
@@ -5411,14 +5392,15 @@ button.close {
 .category {
   position: relative;
   float: left;
-  width: 50%;
+  width: 25%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  -webkit-transition: width ease-out 0.5s;
-  -o-transition: width ease-out 0.5s;
-  transition: width ease-out 0.5s;
   text-align: center; }
+  @media (max-width: 767px) {
+    .category {
+      padding-left: 5px;
+      padding-right: 5px; } }
   .category .content {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -5430,8 +5412,10 @@ button.close {
     border: 3px solid;
     cursor: pointer;
     height: 90px;
-    margin: 1em;
     position: relative; }
+    @media (max-width: 767px) {
+      .category .content {
+        border: 1px solid; } }
     @media (min-width: 768px) {
       .category .content {
         height: 130px; } }
@@ -5446,7 +5430,7 @@ button.close {
       -o-transition: background-color ease-in 0.3s;
       transition: background-color ease-in 0.3s; }
     .category .content .icon {
-      font-size: 1.2em;
+      font-size: 0.9em;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -5457,9 +5441,6 @@ button.close {
           font-size: 1.5em; } }
       .category .content .icon .glyphicon {
         font-size: 2em; }
-        @media (min-width: 768px) {
-          .category .content .icon .glyphicon {
-            font-size: 2em; } }
   .category.cardio .content {
     background-color: #967ADC;
     border-color: #967ADC;
