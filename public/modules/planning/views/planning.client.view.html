@@ -43,13 +43,17 @@
               {{ slot.label }}
             </td>
             <td data-ng-repeat="day in planning" data-ng-if="!$first" data-rowspan="{{ slot.maxCount }}">
-              <table>
+              <table class="classes">
                 <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.start === slot.label">
                 <td class="class-content" data-ng-class="class.category">
-                  <h4>{{ class.name }}</h4>
-                  <div class="details">
-                    <div>{{ class.time }} ({{ class.duration }}')</div>
-                    <div>{{ class.coach }}</div>
+                  <div class="col-xs-4 class-time">
+                    <div>{{ class.time }}</div>
+                  </div>
+                  <div class="col-xs-8 class-details">
+                    <h4>{{ class.name }}</h4>
+                    <div class="details">
+                      <div>{{ class.coach }}</div>
+                    </div>
                   </div>
                 </td>
               </tr>

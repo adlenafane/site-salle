@@ -5,6 +5,10 @@
    }
 }
 
+.table > tbody > tr > td {
+  min-width: 150px;
+}
+
 table.planning.table {
   border: none;
 
@@ -27,7 +31,13 @@ table.planning.table {
     font-size: 1.5em;
   }
 
+  table.classes {
+    height: 70px;
+  }
+
   td.class-content {
+    @include box-shadow(0 0px 2px rgba(0,0,0,.12));
+    @include box-shadow(0 2px 4px rgba(0,0,0,.24));
     // color: $white;
     border-left: 3px solid;
     padding: 0.5em;
@@ -54,6 +64,40 @@ table.planning.table {
       // background-color: lighten($zen-color, 20%);
       // color: darken($zen-color, 50%);
       border-color: $zen-color;
+    }
+
+    .class-time {
+      &.cardio {
+      background-color: $cardio-color;
+      color: white;
+    }
+
+    &.renforcement {
+      background-color: $renforcement-color;
+      color: white;
+    }
+
+    &.danse {
+      background-color: $danse-color;
+      color: white;
+    }
+
+    &.zen {
+      background-color: $zen-color;
+      color: white;
+    }
+    }
+
+    .class-time, .class-details {
+      font-size: 0.8em;
+      padding: 0;
+    }
+
+    .class-details {
+      padding-left: 0.5em;
+      h4 {
+        margin: 0;
+      }
     }
   }
 }

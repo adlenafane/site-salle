@@ -5566,6 +5566,9 @@ header .navbar-toggle {
       float: left;
       width: 25%; } }
 
+.table > tbody > tr > td {
+  min-width: 150px; }
+
 table.planning.table {
   border: none; }
   table.planning.table .header {
@@ -5579,7 +5582,13 @@ table.planning.table {
     color: #DA4453; }
   table.planning.table td.day {
     font-size: 1.5em; }
+  table.planning.table table.classes {
+    height: 70px; }
   table.planning.table td.class-content {
+    -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
     border-left: 3px solid;
     padding: 0.5em; }
     table.planning.table td.class-content.cardio {
@@ -5590,6 +5599,25 @@ table.planning.table {
       border-color: #D770AD; }
     table.planning.table td.class-content.zen {
       border-color: #37BC9B; }
+    table.planning.table td.class-content .class-time.cardio {
+      background-color: #967ADC;
+      color: white; }
+    table.planning.table td.class-content .class-time.renforcement {
+      background-color: #DA4453;
+      color: white; }
+    table.planning.table td.class-content .class-time.danse {
+      background-color: #D770AD;
+      color: white; }
+    table.planning.table td.class-content .class-time.zen {
+      background-color: #37BC9B;
+      color: white; }
+    table.planning.table td.class-content .class-time, table.planning.table td.class-content .class-details {
+      font-size: 0.8em;
+      padding: 0; }
+    table.planning.table td.class-content .class-details {
+      padding-left: 0.5em; }
+      table.planning.table td.class-content .class-details h4 {
+        margin: 0; }
 
 .table-responsive table {
   border: none; }
