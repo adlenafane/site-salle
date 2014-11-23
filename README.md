@@ -1,5 +1,3 @@
-[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
-
 ## Prerequisites
 Make sure you have installed all these prerequisites on your development machine.
 * Node.js
