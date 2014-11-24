@@ -1,9 +1,13 @@
 'use strict';
 
+var description = 'Magicform Fontenay aux roses, salle de sport et de fitness pour 29,90€ par mois.' +
+        'Notre équipe et nos coachs diplômés sont à votre disposition tous les jours (7/7) pour vous aider à atteindre vos objectifs.' +
+        'Remise en forme, perte de poids, musculation, rééducation, nous vous aideront à y arriver !';
+
 module.exports = {
     app: {
         title: 'Magicform FAR - Fontenay aux Roses',
-        description: 'Website for an awesome sport place',
+        description: description,
         keywords: 'Sport, Gym, Fitness, Muscu, Cardio, LesMills'
     },
     port: process.env.PORT || 3000,
