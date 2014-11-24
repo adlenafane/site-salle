@@ -29,7 +29,9 @@ module.exports = {
                 'public/lib/angular-translate/angular-translate.js',
                 'public/lib/angular-translate-loader-url/angular-translate-loader-url.js',
                 'public/lib/lodash/dist/lodash.js',
-                'public/lib/angular-google-maps/dist/angular-google-maps.js'
+                'public/lib/angular-google-maps/dist/angular-google-maps.js',
+                'public/lib/angulartics/src/angulartics.js',
+                'public/lib/angulartics/src/angulartics-ga.js'
             ]
         },
         css: [

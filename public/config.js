@@ -5,6 +5,8 @@ var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'site-salle';
 	var applicationModuleVendorDependencies = [
+		'angulartics',
+		'angulartics.google.analytics',
 		'google-maps',
 		'ngResource',
 		'ngCookies',

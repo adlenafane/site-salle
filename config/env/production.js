@@ -21,7 +21,9 @@ module.exports = {
                 'public/lib/angular-translate/angular-translate.min.js',
                 'public/lib/angular-translate-loader-url/angular-translate-loader-url.min.js',
                 'public/lib/lodash/dist/lodash.min.js',
-                'public/lib/angular-google-maps/dist/angular-google-maps.min.js'
+                'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
+                'public/lib/angulartics/dist/angulartics.min.js',
+                'public/lib/angulartics/dist/angulartics-ga.min.js'
             ]
         },
         css: 'public/dist/application.min.css',
