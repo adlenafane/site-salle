@@ -228,6 +228,11 @@ angular.module('core').config([
     });
   }
 ]);'use strict';
+angular.module('core').controller('FooterController', [
+  '$scope',
+  function ($scope) {
+  }
+]);'use strict';
 angular.module('core').controller('HeaderController', [
   '$scope',
   'Authentication',
