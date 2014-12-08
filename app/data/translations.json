@@ -26,39 +26,39 @@
 		"header": "Renseignements et pré-inscription sur place aux horaires suivants :",
 		"1": {
 			"name": "Lundi",
-			"start": 10,
+			"start": 12,
 			"end": 20,
-			"hour": "10h-20h"
+			"hour": "12h-20h"
 		},
 		"2": {
 			"name": "Mardi",
-			"start": 10,
+			"start": 12,
 			"end": 20,
-			"hour": "10h-20h"
+			"hour": "12h-20h"
 		},
 		"3": {
 			"name": "Mercredi",
-			"start": 10,
+			"start": 12,
 			"end": 20,
-			"hour": "10h-20h"
+			"hour": "12h-20h"
 		},
 		"4": {
 			"name": "Jeudi",
-			"start": 10,
+			"start": 12,
 			"end": 20,
-			"hour": "10h-20h"
+			"hour": "12h-20h"
 		},
 		"5": {
 			"name": "Vendredi",
-			"start": 10,
+			"start": 12,
 			"end": 20,
-			"hour": "10h-20h"
+			"hour": "12h-20h"
 		},
 		"6": {
 			"name": "Samedi",
-			"start": 10,
+			"start": 12,
 			"end": 17,
-			"hour": "10h-17h"
+			"hour": "12h-17h"
 		}
 	}
 }
