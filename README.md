@@ -1,3 +1,5 @@
+# Website for Magicform FAR
+
 ## Prerequisites
 Make sure you have installed all these prerequisites on your development machine.
 * Node.js
