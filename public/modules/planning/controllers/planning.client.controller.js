@@ -10,58 +10,13 @@ angular.module('planning').controller('PlanningController', ['$scope',
             label: 'Matin',
             separator: true,
             category: 'Matin',
-            maxCount: 1
-          },
-          {
-            label: '9h00',
-            category: 'Matin',
-            maxCount: 1
-          },
-          {
-            label: '9h30',
-            category: 'Matin',
             maxCount: 2
-          },
-          {
-            label: '9h45',
-            category: 'Matin',
-            maxCount: 1
-          },
-          {
-            label: '10h00',
-            category: 'Matin',
-            maxCount: 1
-          },
-          {
-            label: '10h30',
-            category: 'Matin',
-            maxCount: 1
-          },
-          {
-            label: '11h15',
-            category: 'Matin',
-            maxCount: 1
           },
           {
             label: 'Midi',
             separator: true,
             category: 'Midi',
-            maxCount: 1
-          },
-          {
-            label: '12h15',
-            category: 'Midi',
-            maxCount: 1
-          },
-          {
-            label: '12h45',
-            category: 'Midi',
-            maxCount: 1
-          },
-          {
-            label: '13h00',
-            category: 'Midi',
-            maxCount: 1
+            maxCount: 2
           },
           {
             label: 'Après-midi',
@@ -70,48 +25,8 @@ angular.module('planning').controller('PlanningController', ['$scope',
             maxCount: 1
           },
           {
-            label: '14h00',
-            category: 'Après-midi',
-            maxCount: 1
-          },
-          {
-            label: '15h00',
-            category: 'Après-midi',
-            maxCount: 1
-          },
-          {
-            label: '16h00',
-            category: 'Après-midi',
-            maxCount: 1
-          },
-          {
             label: 'Soir',
             separator: true,
-            category: 'Soir',
-            maxCount: 1
-          },
-          {
-            label: '17h30',
-            category: 'Soir',
-            maxCount: 1
-          },
-          {
-            label: '17h45',
-            category: 'Soir',
-            maxCount: 1
-          },
-          {
-            label: '18h15',
-            category: 'Soir',
-            maxCount: 1
-          },
-          {
-            label: '19h00',
-            category: 'Soir',
-            maxCount: 1
-          },
-          {
-            label: '20h00',
             category: 'Soir',
             maxCount: 1
           }
@@ -123,6 +38,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Zumba',
             start: '9h30',
+            timeGroup: 'Matin',
             duration: 60,
             category: 'danse',
             coach: 'Nolwen',
@@ -131,6 +47,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body step',
             start: '10h30',
+            timeGroup: 'Matin',
             duration: 45,
             category: 'cardio',
             coach: 'Nolwen',
@@ -139,6 +56,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Pump',
             start: '12h15',
+            timeGroup: 'Midi',
             duration: 45,
             category: 'renforcement',
             coach: 'Julie',
@@ -147,42 +65,11 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Step',
             start: '13h00',
+            timeGroup: 'Midi',
             duration: 30,
             category: 'cardio',
             coach: 'Nolwen',
             time: '13h00-13h30'
-          },
-          {
-            name: 'Body Pump',
-            start: '17h30',
-            duration: 45,
-            category: 'renforcement',
-            coach: 'Chrystel',
-            time: '17h30-18h15'
-          },
-          {
-            name: 'Zumba',
-            start: '18h15',
-            duration: 45,
-            category: 'danse',
-            coach: 'Chrystel',
-            time: '18h15-19h00'
-          },
-          {
-            name: 'Body Attack',
-            start: '19h00',
-            duration: 60,
-            category: 'cardio',
-            coach: 'Chrystel',
-            time: '19h00-20h00'
-          },
-          {
-            name: 'Stretching',
-            start: '20h00',
-            duration: 30,
-            category: 'zen',
-            coach: 'Chrystel',
-            time: '20h00-20h30'
           }
         ]
       },
@@ -192,6 +79,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Balance',
             start: '9h00',
+            timeGroup: 'Matin',
             duration: 30,
             category: 'cardio',
             coach: 'Chrystel',
@@ -200,6 +88,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Pump',
             start: '9h45',
+            timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
             coach: 'Chrystel',
@@ -208,6 +97,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Attack',
             start: '12h15',
+            timeGroup: 'Midi',
             duration: 30,
             category: 'cardio',
             coach: 'Nolwen',
@@ -216,42 +106,11 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Core',
             start: '12h45',
+            timeGroup: 'Midi',
             duration: 30,
             category: 'renforcement',
             coach: 'Nolwen',
             time: '12h45-13h15'
-          },
-          {
-            name: 'Body Vive',
-            start: '17h45',
-            duration: 30,
-            category: 'cardio',
-            coach: 'Nolwen',
-            time: '17h45-18h15'
-          },
-          {
-            name: 'Body Combat',
-            start: '18h15',
-            duration: 45,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '18h15-19h00'
-          },
-          {
-            name: 'Body Pump',
-            start: '19h00',
-            duration: 60,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '19h00-20h00'
-          },
-          {
-            name: 'Body Step',
-            start: '20h00',
-            duration: 60,
-            category: 'cardio',
-            coach: 'Julie',
-            time: '20h00-21h00'
           }
         ]
       },
@@ -261,6 +120,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Pilates',
             start: '9h00',
+            timeGroup: 'Matin',
             duration: 45,
             category: 'zen',
             coach: 'Nolwen',
@@ -269,6 +129,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Pump',
             start: '12h15',
+            timeGroup: 'Matin',
             duration: 30,
             category: 'renforcement',
             coach: 'Julie',
@@ -277,42 +138,11 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Vive',
             start: '12h45',
+            timeGroup: 'Midi',
             duration: 45,
             category: 'cardio',
             coach: 'Julie',
             time: '12h45-13h30'
-          },
-          {
-            name: 'Core',
-            start: '17h45',
-            duration: 30,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '17h45-18h15'
-          },
-          {
-            name: 'Body Pump',
-            start: '18h15',
-            duration: 45,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '18h15-19h00'
-          },
-          {
-            name: 'Body Djam',
-            start: '19h00',
-            duration: 60,
-            category: 'danse',
-            coach: 'Chrystel',
-            time: '19h00-20h00'
-          },
-          {
-            name: 'Body Balance',
-            start: '20h00',
-            duration: 60,
-            category: 'zen',
-            coach: 'Chrystel',
-            time: '20h00-21h00'
           }
         ]
       },
@@ -322,6 +152,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Vive',
             start: '9h30',
+            timeGroup: 'Matin',
             duration: 30,
             category: 'cardio',
             coach: 'Chrystel',
@@ -330,6 +161,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Stretching',
             start: '10h00',
+            timeGroup: 'Matin',
             duration: 30,
             category: 'zen',
             coach: 'Chrystel',
@@ -338,6 +170,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Combat',
             start: '12h15',
+            timeGroup: 'Midi',
             duration: 30,
             category: 'renforcement',
             coach: 'Nolwen',
@@ -346,42 +179,11 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Pump',
             start: '13h00',
+            timeGroup: 'Midi',
             duration: 30,
             category: 'renforcement',
             coach: 'Nolwen',
             time: '13h00-13h00'
-          },
-          {
-            name: 'Body Vive',
-            start: '17h45',
-            duration: 30,
-            category: 'cardio',
-            coach: 'Nolwen',
-            time: '17h45-18h15'
-          },
-          {
-            name: 'Body Attack',
-            start: '18h15',
-            duration: 45,
-            category: 'cardio',
-            coach: 'Julie',
-            time: '18h15-19h00'
-          },
-          {
-            name: 'Body Combat',
-            start: '19h00',
-            duration: 60,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '19h00-20h00'
-          },
-          {
-            name: 'Body Pump',
-            start: '20h00',
-            duration: 60,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '20h00-21h00'
           }
         ]
       },
@@ -391,6 +193,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Pump',
             start: '9h00',
+            timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
             coach: 'Chrystel',
@@ -399,6 +202,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Blance',
             start: '10h00',
+            timeGroup: 'Matin',
             duration: 30,
             category: 'zen',
             coach: 'Chrystel',
@@ -407,6 +211,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Step',
             start: '12h15',
+            timeGroup: 'Midi',
             duration: 30,
             category: 'cardio',
             coach: 'Nolwen',
@@ -415,42 +220,11 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Core',
             start: '12h45',
+            timeGroup: 'Midi',
             duration: 30,
             category: 'renforcement',
             coach: 'Chrystel',
             time: '12h45-13h15'
-          },
-          {
-            name: 'Core',
-            start: '17h45',
-            duration: 30,
-            category: 'renforcement',
-            coach: 'Nolwen',
-            time: '17h45-18h15'
-          },
-          {
-            name: 'Body Step',
-            start: '18h15',
-            duration: 45,
-            category: 'cardio',
-            coach: 'Nolwen',
-            time: '18h15-19h00'
-          },
-          {
-            name: 'Body Pump',
-            start: '19h00',
-            duration: 60,
-            category: 'renforcement',
-            coach: 'Nolwen',
-            time: '19h00-20h00'
-          },
-          {
-            name: 'Sh\'Bam',
-            start: '20h00',
-            duration: 60,
-            category: 'danse',
-            coach: 'Nolwen',
-            time: '20h00-21h00'
           }
         ]
       },
@@ -460,6 +234,7 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Attack',
             start: '10h30',
+            timeGroup: 'Matin',
             duration: 45,
             category: 'cardio',
             coach: 'Julie',
@@ -468,34 +243,11 @@ angular.module('planning').controller('PlanningController', ['$scope',
           {
             name: 'Body Balance',
             start: '11h15',
+            timeGroup: 'Matin',
             duration: 45,
             category: 'zen',
             coach: 'Chrystel',
             time: '11h15-12h00'
-          },
-          {
-            name: 'Body Djam',
-            start: '14h00',
-            duration: 60,
-            category: 'danse',
-            coach: 'Nolwen',
-            time: '14h00-15h00'
-          },
-          {
-            name: 'Body Pump',
-            start: '15h00',
-            duration: 60,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '15h00-16h00'
-          },
-          {
-            name: 'Body Combat',
-            start: '16h00',
-            duration: 60,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '16h00-17h00'
           }
         ]
       },
@@ -537,5 +289,13 @@ angular.module('planning').controller('PlanningController', ['$scope',
       }
     }
     $scope.coaches.sort();
+
+    $scope.$watch('search', function() {
+      for (var key in $scope.search) {
+        if (!$scope.search[key]) {
+          delete $scope.search[key];
+        }
+      }
+    }, true);
 	}
 ]);

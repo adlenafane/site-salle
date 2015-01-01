@@ -22,9 +22,11 @@ table.planning.table {
   }
 
   .separator {
-    border-top: 3px solid $white;
-    border-bottom: 3px solid $brand-primary;
-    color: $brand-primary;
+    border-top: 3px solid $brand-primary;
+
+    .day {
+      color: $brand-primary;
+    }
   }
 
   td.day {
@@ -32,37 +34,42 @@ table.planning.table {
   }
 
   table.classes {
-    height: 70px;
+    border-collapse:separate;
+    border-spacing: 0.5em;
+    color: inherit;
+
+    tr + tr {
+      padding-top: 1em;
+    }
+
+    td {
+      height: 70px;
+    }
+
+    .white-separator {
+      height: 0.5em;
+    }
   }
 
   td.class-content {
-    @include box-shadow(0 0px 2px rgba(0,0,0,.12));
-    @include box-shadow(0 2px 4px rgba(0,0,0,.24));
-    // color: $white;
+    @include box-shadow(0 0px 2px rgba(0,0,0,.24));
+    @include box-shadow(0 2px 4px rgba(0,0,0,.36));
     border-left: 3px solid;
     padding: 0.5em;
 
     &.cardio {
-      // background-color: lighten($cardio-color, 20%);
-      // color: darken($cardio-color, 50%);
       border-color: $cardio-color;
     }
 
     &.renforcement {
-      // background-color: lighten($renforcement-color, 20%);
-      // color: darken($renforcement-color, 50%);
       border-color: $renforcement-color;
     }
 
     &.danse {
-      // background-color: lighten($danse-color, 20%);
-      // color: darken($danse-color, 50%);
       border-color: $danse-color;
     }
 
     &.zen {
-      // background-color: lighten($zen-color, 20%);
-      // color: darken($zen-color, 50%);
       border-color: $zen-color;
     }
 

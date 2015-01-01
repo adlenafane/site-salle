@@ -5584,18 +5584,26 @@ table.planning.table {
     table.planning.table .header th {
       text-align: center; }
   table.planning.table .separator {
-    border-top: 3px solid #FFF;
-    border-bottom: 3px solid #DA4453;
-    color: #DA4453; }
+    border-top: 3px solid #DA4453; }
+    table.planning.table .separator .day {
+      color: #DA4453; }
   table.planning.table td.day {
     font-size: 1.5em; }
   table.planning.table table.classes {
-    height: 70px; }
+    border-collapse: separate;
+    border-spacing: 0.5em;
+    color: inherit; }
+    table.planning.table table.classes tr + tr {
+      padding-top: 1em; }
+    table.planning.table table.classes td {
+      height: 70px; }
+    table.planning.table table.classes .white-separator {
+      height: 0.5em; }
   table.planning.table td.class-content {
-    -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.12);
-    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.12);
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
     border-left: 3px solid;
     padding: 0.5em; }
     table.planning.table td.class-content.cardio {

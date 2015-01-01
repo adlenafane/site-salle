@@ -21,11 +21,15 @@
           </div>
           <div class="form-group filter-coach">
             <label for="class-coach">Coaches</label>
-            <select id="class-coach" class="form-control" data-ng-model="search.coach" data-ng-options="coach for coach in coaches"></select>
+            <select id="class-coach" class="form-control" data-ng-model="search.coach" data-ng-options="coach for coach in coaches">
+              <option value="">Tous</option>
+            </select>
           </div>
           <div class="form-group filter-category">
             <label for="class-category">Catégories</label>
-            <select id="class-category" class="form-control" data-ng-model="search.category" data-ng-options="category for category in categories"></select>
+            <select id="class-category" class="form-control" data-ng-model="search.category" data-ng-options="category for category in categories">
+              <option value="">Toutes</option>
+            </select>
           </div>
         </div>
       </form>
@@ -44,20 +48,20 @@
             </td>
             <td data-ng-repeat="day in planning" data-ng-if="!$first" data-rowspan="{{ slot.maxCount }}">
               <table class="classes">
-                <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.start === slot.label">
-                <td class="class-content" data-ng-class="class.category">
-                  <div class="col-xs-4 class-time">
-                    <div>{{ class.time }}</div>
-                  </div>
-                  <div class="col-xs-8 class-details">
-                    <h4>{{ class.name }}</h4>
-                    <div class="details">
-                      <div>{{ class.coach }}</div>
+                <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.timeGroup === slot.category">
+                  <td class="class-content" data-ng-class="class.category">
+                    <div class="col-xs-4 class-time">
+                      <div>{{ class.time }}</div>
                     </div>
-                  </div>
-                </td>
-              </tr>
-            </table>
+                    <div class="col-xs-8 class-details">
+                      <h4>{{ class.name }}</h4>
+                      <div class="details">
+                        <div>{{ class.coach }}</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
         </tbody>
