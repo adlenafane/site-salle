@@ -4,5 +4,9 @@ footer {
     margin-bottom: 0;
     margin-top: 20px;
     padding-top: 20px;
+
+    a + a {
+      padding-right: 1em; // Pull right on those items
+    }
   }
 }
