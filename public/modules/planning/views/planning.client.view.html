@@ -50,10 +50,10 @@
               <table class="classes">
                 <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.timeGroup === slot.category">
                   <td class="class-content" data-ng-class="class.category">
-                    <div class="col-xs-4 class-time">
+                    <div class="col-xs-12 col-sm-4 class-time">
                       <div>{{ class.time }}</div>
                     </div>
-                    <div class="col-xs-8 class-details">
+                    <div class="col-xs-12 col-sm-8 class-details">
                       <h4>{{ class.name }}</h4>
                       <div class="details">
                         <div>{{ class.coach }}</div>

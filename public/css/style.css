@@ -5629,10 +5629,11 @@ table.planning.table {
     table.planning.table td.class-content .class-time, table.planning.table td.class-content .class-details {
       font-size: 0.8em;
       padding: 0; }
-    table.planning.table td.class-content .class-details {
-      padding-left: 0.5em; }
-      table.planning.table td.class-content .class-details h4 {
-        margin: 0; }
+    @media (min-width: 768px) {
+      table.planning.table td.class-content .class-details {
+        padding-left: 0.5em; } }
+    table.planning.table td.class-content .class-details h4 {
+      margin: 0; }
 
 .table-responsive table {
   border: none; }
