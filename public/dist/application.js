@@ -511,7 +511,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'cardio',
-            coach: '',
+            coach: 'C\xe9dric',
             time: '10h00- 10h45'
           },
           {
@@ -520,7 +520,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: '',
+            coach: 'C\xe9dric',
             time: '10h45-11h30'
           },
           {
@@ -529,7 +529,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 15,
             category: 'renforcement',
-            coach: '',
+            coach: 'C\xe9dric',
             time: '12h15-12h30'
           },
           {
@@ -538,7 +538,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 45,
             category: 'cardio',
-            coach: '',
+            coach: 'C\xe9dric',
             time: '12h30-13h15'
           },
           {
@@ -588,7 +588,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'zen',
-            coach: '',
+            coach: 'Christian',
             time: '9h30-10h15'
           },
           {
@@ -597,7 +597,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: '',
+            coach: 'Christian',
             time: '10h15-11h00'
           },
           {
@@ -606,7 +606,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 45,
             category: 'cardio',
-            coach: '',
+            coach: 'Christian',
             time: '12h15-13h00'
           },
           {
@@ -615,7 +615,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 15,
             category: 'renforcement',
-            coach: '',
+            coach: 'Christian',
             time: '13h00-13h15'
           },
           {
@@ -624,7 +624,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 30,
             category: 'cardio',
-            coach: '',
+            coach: 'Christian',
             time: '18h00-18h30'
           },
           {
@@ -633,7 +633,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 60,
             category: 'cardio',
-            coach: '',
+            coach: 'Christian',
             time: '18h30-19h30'
           },
           {
@@ -642,7 +642,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 30,
             category: 'renforcement',
-            coach: '',
+            coach: 'Christian',
             time: '19h30-20h00'
           }
         ]
@@ -683,7 +683,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 45,
             category: 'zen',
-            coach: '',
+            coach: 'Adrien',
             time: '12h15-13h00'
           },
           {
@@ -692,7 +692,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 45,
             category: 'danse',
-            coach: '',
+            coach: 'Adrien',
             time: '13h00-13h45'
           },
           {
@@ -701,7 +701,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 45,
             category: 'zen',
-            coach: '',
+            coach: 'Christian',
             time: '17h45-18h30'
           },
           {
@@ -710,7 +710,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 60,
             category: 'cardio',
-            coach: '',
+            coach: 'Christian',
             time: '18h30-19h30'
           },
           {
@@ -719,7 +719,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 45,
             category: 'danse',
-            coach: '',
+            coach: 'Christian',
             time: '19h30-20h15'
           }
         ]
@@ -733,7 +733,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'cardio',
-            coach: '',
+            coach: 'Sylvie',
             time: '9h30-10h15'
           },
           {
@@ -742,7 +742,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 15,
             category: 'renforcement',
-            coach: '',
+            coach: 'Sylvie',
             time: '10h15-10h30'
           },
           {
@@ -751,7 +751,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 45,
             category: 'danse',
-            coach: '',
+            coach: 'Sylvie',
             time: '12h30-13h15'
           },
           {
@@ -760,7 +760,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 15,
             category: 'renforcement',
-            coach: '',
+            coach: 'Sylvie',
             time: '13h15-13h30'
           },
           {
@@ -769,7 +769,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 45,
             category: 'renforcement',
-            coach: '',
+            coach: 'Sofiane',
             time: '18h00-18h45'
           },
           {
@@ -778,7 +778,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 60,
             category: 'danse',
-            coach: '',
+            coach: 'Sofiane',
             time: '18h45-19h45'
           },
           {
@@ -787,7 +787,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 15,
             category: 'zen',
-            coach: '',
+            coach: 'Sofiane',
             time: '19h45-20h00'
           }
         ]
@@ -819,7 +819,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 45,
             category: 'danse',
-            coach: '',
+            coach: 'Adrien',
             time: '12h15-13h00'
           },
           {
@@ -828,7 +828,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 30,
             category: 'zen',
-            coach: '',
+            coach: 'Adrien',
             time: '13h00-13h30'
           },
           {
@@ -837,7 +837,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 15,
             category: 'zen',
-            coach: '',
+            coach: 'Adrien',
             time: '13h30-13h45'
           },
           {
@@ -846,7 +846,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 60,
             category: 'cardio',
-            coach: '',
+            coach: 'Sylvie & Miguel',
             time: '17h30-18h30'
           },
           {
@@ -855,7 +855,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 60,
             category: 'danse',
-            coach: '',
+            coach: 'Sylvie & Miguel',
             time: '18h00-19h00'
           },
           {
@@ -864,7 +864,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 60,
             category: 'danse',
-            coach: '',
+            coach: 'Sylvie & Miguel',
             time: '19h00-20h00'
           }
         ]
@@ -878,7 +878,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'cardio',
-            coach: '',
+            coach: 'Julien',
             time: '10h30-11h15'
           },
           {
@@ -887,7 +887,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: '',
+            coach: 'Julien',
             time: '11h15-12h00'
           },
           {
@@ -896,7 +896,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 30,
             category: 'renforcement',
-            coach: '',
+            coach: 'Julien',
             time: '12h00-12h30'
           }
         ]
@@ -910,7 +910,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: '',
+            coach: 'Clo\xe9',
             time: '10h30-11h15'
           },
           {
@@ -919,7 +919,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 60,
             category: 'danse',
-            coach: '',
+            coach: 'Clo\xe9',
             time: '11h15-12h15'
           },
           {
@@ -928,7 +928,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 15,
             category: 'zen',
-            coach: '',
+            coach: 'Clo\xe9',
             time: '12h15-12h30'
           }
         ]
