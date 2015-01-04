@@ -486,19 +486,13 @@ angular.module('planning').controller('PlanningController', [
             label: 'Matin',
             separator: true,
             category: 'Matin',
-            maxCount: 2
+            maxCount: 3
           },
           {
             label: 'Midi',
             separator: true,
             category: 'Midi',
             maxCount: 2
-          },
-          {
-            label: 'Apr\xe8s-midi',
-            separator: true,
-            category: 'Apr\xe8s-midi',
-            maxCount: 1
           },
           {
             label: 'Soir',
@@ -512,40 +506,76 @@ angular.module('planning').controller('PlanningController', [
         name: 'Lundi',
         classes: [
           {
-            name: 'Zumba',
-            start: '9h30',
-            timeGroup: 'Matin',
-            duration: 60,
-            category: 'danse',
-            coach: 'Nolwen',
-            time: '9h30- 10h30'
-          },
-          {
-            name: 'Body step',
-            start: '10h30',
+            name: 'Biking',
+            start: '10h',
             timeGroup: 'Matin',
             duration: 45,
             category: 'cardio',
-            coach: 'Nolwen',
-            time: '10h30-11h15'
+            coach: '',
+            time: '10h00- 10h45'
           },
           {
-            name: 'Body Pump',
-            start: '12h15',
-            timeGroup: 'Midi',
+            name: 'C.A.F.',
+            start: '10h45',
+            timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: 'Julie',
-            time: '12h15-13h00'
+            coach: '',
+            time: '10h45-11h30'
           },
           {
-            name: 'Body Step',
-            start: '13h00',
+            name: 'Fessiers Flash',
+            start: '12h15',
             timeGroup: 'Midi',
+            duration: 15,
+            category: 'renforcement',
+            coach: '',
+            time: '12h15-12h30'
+          },
+          {
+            name: 'Step',
+            start: '12h30',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'cardio',
+            coach: '',
+            time: '12h30-13h15'
+          },
+          {
+            name: 'Boot Camp',
+            start: '18h00',
+            timeGroup: 'Soir',
             duration: 30,
             category: 'cardio',
-            coach: 'Nolwen',
-            time: '13h00-13h30'
+            coach: '',
+            time: '18h00-18h30'
+          },
+          {
+            name: 'Abdos Fessiers',
+            start: '18h30',
+            timeGroup: 'Soir',
+            duration: 30,
+            category: 'renforcement',
+            coach: '',
+            time: '18h30-19h00'
+          },
+          {
+            name: 'Zumba',
+            start: '19h00',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'danse',
+            coach: '',
+            time: '19h00-19h45'
+          },
+          {
+            name: 'Stretching',
+            start: '19h45',
+            timeGroup: 'Soir',
+            duration: 15,
+            category: 'zen',
+            coach: '',
+            time: '19h45-20h00'
           }
         ]
       },
@@ -553,40 +583,67 @@ angular.module('planning').controller('PlanningController', [
         name: 'Mardi',
         classes: [
           {
-            name: 'Body Balance',
-            start: '9h00',
+            name: 'Gym douce',
+            start: '9h30',
             timeGroup: 'Matin',
-            duration: 30,
-            category: 'cardio',
-            coach: 'Chrystel',
-            time: '9h00-9h30'
+            duration: 45,
+            category: 'zen',
+            coach: '',
+            time: '9h30-10h15'
           },
           {
-            name: 'Body Pump',
-            start: '9h45',
+            name: 'Body Barre',
+            start: '10h15',
             timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: 'Chrystel',
-            time: '9h45-10h30'
+            coach: '',
+            time: '10h15-11h00'
           },
           {
-            name: 'Body Attack',
+            name: 'Cross Training',
             start: '12h15',
             timeGroup: 'Midi',
-            duration: 30,
+            duration: 45,
             category: 'cardio',
-            coach: 'Nolwen',
-            time: '12h15-12h45'
+            coach: '',
+            time: '12h15-13h00'
           },
           {
-            name: 'Core',
-            start: '12h45',
+            name: 'Abdos Flash',
+            start: '13h00',
             timeGroup: 'Midi',
+            duration: 15,
+            category: 'renforcement',
+            coach: '',
+            time: '13h00-13h15'
+          },
+          {
+            name: 'H.I.I.T.',
+            start: '18h00',
+            timeGroup: 'Soir',
+            duration: 30,
+            category: 'cardio',
+            coach: '',
+            time: '18h00-18h30'
+          },
+          {
+            name: 'Biking',
+            start: '18h30',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'cardio',
+            coach: '',
+            time: '18h30-19h30'
+          },
+          {
+            name: 'Abdos Fessiers',
+            start: '19h30',
+            timeGroup: 'Soir',
             duration: 30,
             category: 'renforcement',
-            coach: 'Nolwen',
-            time: '12h45-13h15'
+            coach: '',
+            time: '19h30-20h00'
           }
         ]
       },
@@ -594,31 +651,76 @@ angular.module('planning').controller('PlanningController', [
         name: 'Mercredi',
         classes: [
           {
-            name: 'Pilates',
-            start: '9h00',
+            name: 'Postural Shape',
+            start: '9h30',
             timeGroup: 'Matin',
             duration: 45,
             category: 'zen',
-            coach: 'Nolwen',
-            time: '9h00-9h45'
+            coach: '',
+            time: '9h30-10h15'
           },
           {
-            name: 'Body Pump',
-            start: '12h15',
+            name: 'Abdos Flash',
+            start: '10h15',
+            timeGroup: 'Matin',
+            duration: 15,
+            category: 'renforcement',
+            coach: '',
+            time: '10h15-10h30'
+          },
+          {
+            name: 'H.I.I.T.',
+            start: '10h30',
             timeGroup: 'Matin',
             duration: 30,
-            category: 'renforcement',
-            coach: 'Julie',
-            time: '12h15-12h45'
+            category: 'cardio',
+            coach: '',
+            time: '10h30-11h00'
           },
           {
-            name: 'Body Vive',
-            start: '12h45',
+            name: 'Pilates',
+            start: '12h15',
             timeGroup: 'Midi',
             duration: 45,
+            category: 'zen',
+            coach: '',
+            time: '12h15-13h00'
+          },
+          {
+            name: 'Zumba',
+            start: '13h00',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'danse',
+            coach: '',
+            time: '13h00-13h45'
+          },
+          {
+            name: 'Postural Shape',
+            start: '17h45',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'zen',
+            coach: '',
+            time: '17h45-18h30'
+          },
+          {
+            name: 'Total Body',
+            start: '18h30',
+            timeGroup: 'Soir',
+            duration: 60,
             category: 'cardio',
-            coach: 'Julie',
-            time: '12h45-13h30'
+            coach: '',
+            time: '18h30-19h30'
+          },
+          {
+            name: 'Djembel',
+            start: '19h30',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'danse',
+            coach: '',
+            time: '19h30-20h15'
           }
         ]
       },
@@ -626,40 +728,67 @@ angular.module('planning').controller('PlanningController', [
         name: 'Jeudi',
         classes: [
           {
-            name: 'Body Vive',
+            name: 'Piloxing',
             start: '9h30',
             timeGroup: 'Matin',
-            duration: 30,
+            duration: 45,
             category: 'cardio',
-            coach: 'Chrystel',
-            time: '9h30-10h00'
+            coach: '',
+            time: '9h30-10h15'
+          },
+          {
+            name: 'Abdos Flash',
+            start: '10h15',
+            timeGroup: 'Matin',
+            duration: 15,
+            category: 'renforcement',
+            coach: '',
+            time: '10h15-10h30'
+          },
+          {
+            name: 'Zumba',
+            start: '12h30',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'danse',
+            coach: '',
+            time: '12h30-13h15'
+          },
+          {
+            name: 'Abdos Flash',
+            start: '13h15',
+            timeGroup: 'Midi',
+            duration: 15,
+            category: 'renforcement',
+            coach: '',
+            time: '13h15-13h30'
+          },
+          {
+            name: 'Body Sculpt',
+            start: '18h00',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'renforcement',
+            coach: '',
+            time: '18h00-18h45'
+          },
+          {
+            name: 'Latinva',
+            start: '18h45',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'danse',
+            coach: '',
+            time: '18h45-19h45'
           },
           {
             name: 'Stretching',
-            start: '10h00',
-            timeGroup: 'Matin',
-            duration: 30,
+            start: '19h45',
+            timeGroup: 'Soir',
+            duration: 15,
             category: 'zen',
-            coach: 'Chrystel',
-            time: '10h00-10h30'
-          },
-          {
-            name: 'Body Combat',
-            start: '12h15',
-            timeGroup: 'Midi',
-            duration: 30,
-            category: 'renforcement',
-            coach: 'Nolwen',
-            time: '12h15-12h45'
-          },
-          {
-            name: 'Body Pump',
-            start: '13h00',
-            timeGroup: 'Midi',
-            duration: 30,
-            category: 'renforcement',
-            coach: 'Nolwen',
-            time: '13h00-13h00'
+            coach: '',
+            time: '19h45-20h00'
           }
         ]
       },
@@ -667,40 +796,76 @@ angular.module('planning').controller('PlanningController', [
         name: 'Vendredi',
         classes: [
           {
-            name: 'Body Pump',
-            start: '9h00',
+            name: 'Zumba',
+            start: '9h30',
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'danse',
+            coach: '',
+            time: '9h30-10h15'
+          },
+          {
+            name: 'Full Body',
+            start: '10h15',
             timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: 'Chrystel',
-            time: '9h00-9h45'
+            coach: '',
+            time: '10h15-11h00'
           },
           {
-            name: 'Body Blance',
-            start: '10h00',
-            timeGroup: 'Matin',
-            duration: 30,
-            category: 'zen',
-            coach: 'Chrystel',
-            time: '10h00-10h30'
-          },
-          {
-            name: 'Body Step',
+            name: 'Zumba',
             start: '12h15',
             timeGroup: 'Midi',
-            duration: 30,
-            category: 'cardio',
-            coach: 'Nolwen',
-            time: '12h15-12h45'
+            duration: 45,
+            category: 'danse',
+            coach: '',
+            time: '12h15-13h00'
           },
           {
-            name: 'Core',
-            start: '12h45',
+            name: 'Special Taille fine',
+            start: '13h00',
             timeGroup: 'Midi',
             duration: 30,
-            category: 'renforcement',
-            coach: 'Chrystel',
-            time: '12h45-13h15'
+            category: 'zen',
+            coach: '',
+            time: '13h00-13h30'
+          },
+          {
+            name: 'Stretching',
+            start: '13h30',
+            timeGroup: 'Midi',
+            duration: 15,
+            category: 'zen',
+            coach: '',
+            time: '13h30-13h45'
+          },
+          {
+            name: 'Piloxing',
+            start: '17h30',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'cardio',
+            coach: '',
+            time: '17h30-18h30'
+          },
+          {
+            name: 'Salsa',
+            start: '18h00',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'danse',
+            coach: '',
+            time: '18h00-19h00'
+          },
+          {
+            name: 'Bachata',
+            start: '19h00',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'danse',
+            coach: '',
+            time: '19h00-20h00'
           }
         ]
       },
@@ -708,22 +873,31 @@ angular.module('planning').controller('PlanningController', [
         name: 'Samedi',
         classes: [
           {
-            name: 'Body Attack',
+            name: 'Step',
             start: '10h30',
             timeGroup: 'Matin',
             duration: 45,
             category: 'cardio',
-            coach: 'Julie',
+            coach: '',
             time: '10h30-11h15'
           },
           {
-            name: 'Body Balance',
+            name: 'Body Sculpt',
             start: '11h15',
             timeGroup: 'Matin',
             duration: 45,
-            category: 'zen',
-            coach: 'Chrystel',
+            category: 'renforcement',
+            coach: '',
             time: '11h15-12h00'
+          },
+          {
+            name: 'Abdos Fessiers',
+            start: '12h00',
+            timeGroup: 'Midi',
+            duration: 30,
+            category: 'renforcement',
+            coach: '',
+            time: '12h00-12h30'
           }
         ]
       },
@@ -731,20 +905,31 @@ angular.module('planning').controller('PlanningController', [
         name: 'Dimanche',
         classes: [
           {
-            name: 'Body Balance',
-            start: '9h00',
-            duration: 30,
-            category: 'cardio',
-            coach: 'Chrystel',
-            time: '9h00-9h30'
-          },
-          {
-            name: 'Body Pump',
-            start: '9h45',
+            name: 'C.A.F.',
+            start: '10h30',
+            timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: 'Chrystel',
-            time: '9h45-10h30'
+            coach: '',
+            time: '10h30-11h15'
+          },
+          {
+            name: 'Zumba',
+            start: '11h15',
+            timeGroup: 'Matin',
+            duration: 60,
+            category: 'danse',
+            coach: '',
+            time: '11h15-12h15'
+          },
+          {
+            name: 'Stretching',
+            start: '12h15',
+            timeGroup: 'Midi',
+            duration: 15,
+            category: 'zen',
+            coach: '',
+            time: '12h15-12h30'
           }
         ]
       }
