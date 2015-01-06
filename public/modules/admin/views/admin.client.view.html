@@ -1,0 +1,11 @@
+<section data-ng-controller="AdminController">
+  <json-editor schema="mySchema" startval="myStartVal" buttons-controller="AsyncButtonsController" ng-if="myStartVal">
+
+    <button type="submit" class="btn btn-success" ng-click="onSubmit($event)" ng-disabled="!isValid">
+      <span class="fa fa-check"></span>
+      Submit
+    </button>
+
+  </json-editor>
+
+</section>
