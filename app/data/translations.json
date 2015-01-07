@@ -66,5 +66,39 @@
 			"end": 14,
 			"hour": "10h-14h"
 		}
+	},
+	"coaching": {
+		"title": "Atteignez vos objectifs",
+		"subtitle": "Demandez votre Coach Personnel !",
+		"paragraph1": "Toute l'attention sera essentiellement concentré sur vous. Toute l'énergie de notre coach, tout son savoir-faire est à votre unique service afin d'atteindre vos objectifs et pour que vous exploitiez le meilleur de vous-même...",
+		"paragraph2": "",
+		"paragraph3": "",
+		"footer": "Renseignements et RDV en club"
+	},
+	"access": {
+		"title": "Accès",
+		"byCar": {
+			"header": "En voiture",
+			"details": "D906 ou D920"
+		},
+		"byBus": {
+			"header": "En bus"
+		},
+		"byTrain": {
+			"header": "En train"
+		}
+	},
+	"planning": {
+		"title": "Planning",
+		"filters": {
+			"header": "Filtrer par",
+			"byName": "Nom du cours",
+			"byTime": "Horaires",
+			"byCoach": "Coaches",
+			"byCategory": "Catégories"
+		}
+	},
+	"salle": {
+		"title": "La salle"
 	}
 }

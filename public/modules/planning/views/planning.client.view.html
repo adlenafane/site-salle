@@ -1,16 +1,16 @@
 <section data-ng-controller="PlanningController">
 	<section class="planning-page">
-    <h1>Planning</h1>
+    <h1 data-translate="planning.title"></h1>
     <div class="filters">
-      <h2>Filtrer par</h2>
+      <h2 data-translate="planning.filters.header"></h2>
       <form role="form">
         <div class="row">
           <div class="form-group filter-name">
-            <label for="class-name">Nom du cours</label>
+            <label for="class-name" data-translate="planning.filters.byName"></label>
             <input type="text" class="form-control" id="class-name" placeholder="Nom du cours"  data-ng-model="search.name">
           </div>
           <div class="form-group filter-time">
-            <label for="class-time">Horaires</label>
+            <label for="class-time" data-translate="planning.filters.byTime"></label>
             <select class="form-control" data-ng-model="hour.category" id="class-time">
               <option value="">Tous les horaires</option>
               <option value="Matin">Matin</option>
@@ -20,13 +20,13 @@
             </select>
           </div>
           <div class="form-group filter-coach">
-            <label for="class-coach">Coaches</label>
+            <label for="class-coach" data-translate="planning.filters.byCoach"></label>
             <select id="class-coach" class="form-control" data-ng-model="search.coach" data-ng-options="coach for coach in coaches">
               <option value="">Tous</option>
             </select>
           </div>
           <div class="form-group filter-category">
-            <label for="class-category">Catégories</label>
+            <label for="class-category" data-translate="planning.filters.byCategory"></label>
             <select id="class-category" class="form-control" data-ng-model="search.category" data-ng-options="category for category in categories">
               <option value="">Toutes</option>
             </select>
