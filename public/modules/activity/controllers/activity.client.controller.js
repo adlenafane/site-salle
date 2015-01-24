@@ -1,8 +1,14 @@
 'use strict';
 
-angular.module('activity').controller('ActivityController', ['$scope',
-  function($scope) {
+angular.module('activity').controller('ActivityController', [
+  '$scope', '$state',
+  function ($scope, $state) {
     $scope.currentCategory = null;
+    $scope.search = {};
+
+    if ($state.params.name) {
+      $scope.search.name = $state.params.name;
+    }
 
     $scope.activities = [
       {

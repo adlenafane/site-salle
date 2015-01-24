@@ -6,7 +6,7 @@ angular.module('activity').config(['$stateProvider',
 		// Activity state routing
 		$stateProvider.
     state('activity', {
-     url: '/activites',
+     url: '/activites?name',
      templateUrl: 'modules/activity/views/activity.client.view.html'
     })
     .state('activity.details', {

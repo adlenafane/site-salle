@@ -48,7 +48,7 @@
             </td>
             <td data-ng-repeat="day in planning" data-ng-if="!$first" data-rowspan="{{ slot.maxCount }}">
               <table class="classes">
-                <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.timeGroup === slot.category">
+                <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.timeGroup === slot.category" ui-sref="activity({name: class.name})">
                   <td class="class-content" data-ng-class="class.category">
                     <div class="col-xs-12 col-sm-4 class-time">
                       <div>{{ class.time }}</div>

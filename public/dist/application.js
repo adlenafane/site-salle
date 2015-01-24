@@ -76,7 +76,7 @@ angular.module('activity').config([
   function ($stateProvider) {
     // Activity state routing
     $stateProvider.state('activity', {
-      url: '/activites',
+      url: '/activites?name',
       templateUrl: 'modules/activity/views/activity.client.view.html'
     }).state('activity.details', {
       url: '/activites/:category',
@@ -87,8 +87,13 @@ angular.module('activity').config([
 ]);'use strict';
 angular.module('activity').controller('ActivityController', [
   '$scope',
-  function ($scope) {
+  '$state',
+  function ($scope, $state) {
     $scope.currentCategory = null;
+    $scope.search = {};
+    if ($state.params.name) {
+      $scope.search.name = $state.params.name;
+    }
     $scope.activities = [
       {
         name: 'Boot Camp',
@@ -850,14 +855,19 @@ angular.module('planning').config([
   function ($stateProvider) {
     // Planning state routing
     $stateProvider.state('planning', {
-      url: '/planning',
+      url: '/planning?name',
       templateUrl: 'modules/planning/views/planning.client.view.html'
     });
   }
 ]);'use strict';
 angular.module('planning').controller('PlanningController', [
   '$scope',
-  function ($scope) {
+  '$state',
+  function ($scope, $state) {
+    $scope.search = {};
+    if ($state.params.name) {
+      $scope.search.name = $state.params.name;
+    }
     $scope.planning = [
       {
         name: '',

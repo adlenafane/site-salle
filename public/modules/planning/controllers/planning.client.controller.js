@@ -1,7 +1,14 @@
 'use strict';
 
-angular.module('planning').controller('PlanningController', ['$scope',
-	function($scope) {
+angular.module('planning').controller('PlanningController', [
+  '$scope', '$state',
+	function ($scope, $state) {
+    $scope.search = {};
+
+    if ($state.params.name) {
+      $scope.search.name = $state.params.name;
+    }
+
 		$scope.planning = [
       {
         name: '',

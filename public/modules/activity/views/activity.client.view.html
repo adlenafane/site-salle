@@ -27,7 +27,7 @@
     </div>
     <div class="row">
         <div id="activities">
-            <div data-ng-repeat="activity in activities | filter:search track by activity.name" class="activity">
+            <div data-ng-repeat="activity in activities | filter:search | orderBy:'name' track by activity.name" class="activity" ui-sref="planning({name:activity.name})">
                 <div class="activity-content" ng-class="activity.category">
                     <h3>{{ activity.name }} - {{ activity.duration }}</h3>
                     <p>{{ activity.description }}</p>

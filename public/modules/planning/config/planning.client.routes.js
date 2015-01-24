@@ -6,7 +6,7 @@ angular.module('planning').config(['$stateProvider',
 		// Planning state routing
 		$stateProvider.
 		state('planning', {
-			url: '/planning',
+			url: '/planning?name',
 			templateUrl: 'modules/planning/views/planning.client.view.html'
 		});
 	}
