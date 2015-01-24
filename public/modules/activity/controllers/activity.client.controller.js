@@ -4,26 +4,17 @@ angular.module('activity').controller('ActivityController', ['$scope',
   function($scope) {
     $scope.currentCategory = null;
 
-    $scope.zoomOn = function(category) {
-      if ($scope.currentCategory !== category) {
-        $scope.currentCategory = category;
-
-      } else {
-        $scope.currentCategory = null;
-      }
-    };
-
     $scope.activities = [
       {
         name: 'Boot Camp',
-        duration: '45\'',
+        duration: '30\'',
         level: 'hard',
         category: 'renforcement',
         description: 'C’est un cours inspiré de l’entrainement physique dispensé par les militaires et pour les militaires. Ce cours est un enchainement de plusieurs petits ateliers où le pratiquant effectue un exercice puis sans pause ou seulement de quelques secondes va enchainer sur un autre atelier. Les objectifs de ce type de cours sont la perte de poids et la transformation de la masse grasse (graisse) en masse maigre (muscle) ainsi que l’amélioration du système cardio vasculaire.'
       },
       {
         name: 'Stretching',
-        duration: '45\'',
+        duration: '15\'',
         level: 'easy',
         category: 'renforcement',
         description: 'C’est un cours basé sur l’enseignement des étirements musculaires afin d’optimiser la souplesse musculaire puis articulaire en favorisant le retour veineux et donc la récupération musculaire.'
@@ -51,14 +42,14 @@ angular.module('activity').controller('ActivityController', ['$scope',
       },
       {
         name: 'H.I.I.T.',
-        duration: '45\'',
+        duration: '30\'',
         level: 'extreme',
         category: 'renforcement',
         description: 'Tous comme le boot camp et le cross fit, le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardios et renfo sont directement combinés entre eux afin de faire vivre à l’adhérent une séance très intense qui lui permettra d’obtenir de réels résultats visible et rapide en seulement quelques séances.'
       },
       {
         name: 'Abdos fessiers',
-        duration: '45\'',
+        duration: '30\'',
         level: 'easy',
         category: 'renforcement',
         description: 'C’est un cours basé sur des exercices d’ados et fessiers spécialement pensés pour les femmes.'
@@ -93,14 +84,14 @@ angular.module('activity').controller('ActivityController', ['$scope',
       },
       {
         name: 'Biking',
-        duration: '45\'',
+        duration: '45-60\'',
         level: 'hard',
         category: 'cardio',
         description: 'Cours collectif visant à remplacer une course cycliste, très intense car le mode de travail est basé sur l’alternance de reproduction de montée de col, de sprint et de récupération... Le but est de développer le muscle cardiaque et la perte de graisse.'
       },
       {
         name: 'Total Body',
-        duration: '45\'',
+        duration: '45-60\'',
         level: 'hard',
         category: 'cardio',
         description: 'Ce type de cours est basé sur l’explosivité musculaire et la combustion maximum des graisse pour pouvoir supporter le rythme soutenu de ce type de cours où le corps est soumis à rude épreuve afin de se délester de son stress et de ses kilos en trop.'
@@ -121,17 +112,24 @@ angular.module('activity').controller('ActivityController', ['$scope',
       },
       {
         name: 'Zumba',
-        duration: '45\'',
+        duration: '45-60\'',
         level: 'easy',
         category: 'danse',
         description: 'Cours de danse très accessible car peu de chorégraphie. Il permet de s’amuser facilement et de se délester de son stress.'
       },
       {
         name: 'Latinva',
-        duration: '45\'',
+        duration: '60\'',
         level: 'easy',
         category: 'danse',
         description: 'Cours de danse très accessible basé sur des pas de mérengué, bachata et salsa permettant à tous le monde de s\'amuser.'
+      },
+      {
+        name: 'Bachata',
+        duration: '45\'',
+        level: 'medium',
+        category: 'danse',
+        description: 'Cours de danse latino très à la mode qui peut se danser seul ou à deux.'
       },
       {
         name: 'Salsa',

@@ -1,7 +1,33 @@
 <section data-ng-controller="ActivityController">
+    <h1 data-translate="activity.title"></h1>
+    <div class="row filters">
+        <div class="form-group filter-name">
+            <label for="class-name" data-translate="activity.filters.byName"></label>
+            <input type="text" class="form-control" id="activity-name" placeholder="Nom du cours" data-ng-model="search.name">
+        </div>
+        <div class="form-group filter filter-difficulty">
+            <label for="activity-category" data-translate="activity.filters.byDifficulty"></label>
+            <select class="form-control" data-ng-model="search.level" id="activity-time">
+                  <option value="">Toutes</option>
+                  <option value="easy">Facile</option>
+                  <option value="medium">Moyen</option>
+                  <option value="hard">Difficile</option>
+                  <option value="extreme">Extrême</option>
+            </select>
+        </div>
+        <div class="form-group filter-category">
+            <label for="activity-category" data-translate="activity.filters.byCategory"></label>
+            <select class="form-control" data-ng-model="search.category" id="activity-time">
+                  <option value="">Toutes</option>
+                  <option value="cardio">Cardio</option>
+                  <option value="renfo">Renforcement</option>
+                  <option value="danse">Danse</option>
+            </select>
+        </div>
+    </div>
     <div class="row">
         <div id="activities">
-            <div data-ng-repeat="activity in activities track by activity.name" class="activity">
+            <div data-ng-repeat="activity in activities | filter:search track by activity.name" class="activity">
                 <div class="activity-content" ng-class="activity.category">
                     <h3>{{ activity.name }} - {{ activity.duration }}</h3>
                     <p>{{ activity.description }}</p>

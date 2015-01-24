@@ -88,6 +88,15 @@
 			"header": "En train"
 		}
 	},
+	"activity": {
+		"title": "Activités",
+		"filters": {
+			"header": "Filtrer par",
+			"byName": "Nom du cours",
+			"byDifficulty": "Difficulté",
+			"byCategory": "Catégories"
+		}
+	},
 	"planning": {
 		"title": "Planning",
 		"filters": {

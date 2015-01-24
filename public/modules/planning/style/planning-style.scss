@@ -1,5 +1,5 @@
 .filters {
-   .filter-name, .filter-time, .filter-coach, .filter-category {
+   .filter-name, .filter-time, .filter-coach, .filter-category, .filters-difficulty, .filter {
     @include make-xs-column(6);
     @include make-sm-column(3);
    }

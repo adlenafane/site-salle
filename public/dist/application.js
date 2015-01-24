@@ -89,24 +89,17 @@ angular.module('activity').controller('ActivityController', [
   '$scope',
   function ($scope) {
     $scope.currentCategory = null;
-    $scope.zoomOn = function (category) {
-      if ($scope.currentCategory !== category) {
-        $scope.currentCategory = category;
-      } else {
-        $scope.currentCategory = null;
-      }
-    };
     $scope.activities = [
       {
         name: 'Boot Camp',
-        duration: '45\'',
+        duration: '30\'',
         level: 'hard',
         category: 'renforcement',
         description: 'C\u2019est un cours inspir\xe9 de l\u2019entrainement physique dispens\xe9 par les militaires et pour les militaires. Ce cours est un enchainement de plusieurs petits ateliers o\xf9 le pratiquant effectue un exercice puis sans pause ou seulement de quelques secondes va enchainer sur un autre atelier. Les objectifs de ce type de cours sont la perte de poids et la transformation de la masse grasse (graisse) en masse maigre (muscle) ainsi que l\u2019am\xe9lioration du syst\xe8me cardio vasculaire.'
       },
       {
         name: 'Stretching',
-        duration: '45\'',
+        duration: '15\'',
         level: 'easy',
         category: 'renforcement',
         description: 'C\u2019est un cours bas\xe9 sur l\u2019enseignement des \xe9tirements musculaires afin d\u2019optimiser la souplesse musculaire puis articulaire en favorisant le retour veineux et donc la r\xe9cup\xe9ration musculaire.'
@@ -134,14 +127,14 @@ angular.module('activity').controller('ActivityController', [
       },
       {
         name: 'H.I.I.T.',
-        duration: '45\'',
+        duration: '30\'',
         level: 'extreme',
         category: 'renforcement',
         description: 'Tous comme le boot camp et le cross fit, le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardios et renfo sont directement combin\xe9s entre eux afin de faire vivre \xe0 l\u2019adh\xe9rent une s\xe9ance tr\xe8s intense qui lui permettra d\u2019obtenir de r\xe9els r\xe9sultats visible et rapide en seulement quelques s\xe9ances.'
       },
       {
         name: 'Abdos fessiers',
-        duration: '45\'',
+        duration: '30\'',
         level: 'easy',
         category: 'renforcement',
         description: 'C\u2019est un cours bas\xe9 sur des exercices d\u2019ados et fessiers sp\xe9cialement pens\xe9s pour les femmes.'
@@ -176,14 +169,14 @@ angular.module('activity').controller('ActivityController', [
       },
       {
         name: 'Biking',
-        duration: '45\'',
+        duration: '45-60\'',
         level: 'hard',
         category: 'cardio',
         description: 'Cours collectif visant \xe0 remplacer une course cycliste, tr\xe8s intense car le mode de travail est bas\xe9 sur l\u2019alternance de reproduction de mont\xe9e de col, de sprint et de r\xe9cup\xe9ration... Le but est de d\xe9velopper le muscle cardiaque et la perte de graisse.'
       },
       {
         name: 'Total Body',
-        duration: '45\'',
+        duration: '45-60\'',
         level: 'hard',
         category: 'cardio',
         description: 'Ce type de cours est bas\xe9 sur l\u2019explosivit\xe9 musculaire et la combustion maximum des graisse pour pouvoir supporter le rythme soutenu de ce type de cours o\xf9 le corps est soumis \xe0 rude \xe9preuve afin de se d\xe9lester de son stress et de ses kilos en trop.'
@@ -204,17 +197,24 @@ angular.module('activity').controller('ActivityController', [
       },
       {
         name: 'Zumba',
-        duration: '45\'',
+        duration: '45-60\'',
         level: 'easy',
         category: 'danse',
         description: 'Cours de danse tr\xe8s accessible car peu de chor\xe9graphie. Il permet de s\u2019amuser facilement et de se d\xe9lester de son stress.'
       },
       {
         name: 'Latinva',
-        duration: '45\'',
+        duration: '60\'',
         level: 'easy',
         category: 'danse',
         description: 'Cours de danse tr\xe8s accessible bas\xe9 sur des pas de m\xe9rengu\xe9, bachata et salsa permettant \xe0 tous le monde de s\'amuser.'
+      },
+      {
+        name: 'Bachata',
+        duration: '45\'',
+        level: 'medium',
+        category: 'danse',
+        description: 'Cours de danse latino tr\xe8s \xe0 la mode qui peut se danser seul ou \xe0 deux.'
       },
       {
         name: 'Salsa',

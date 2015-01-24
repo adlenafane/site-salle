@@ -5435,7 +5435,7 @@ footer.navbar {
   footer.navbar a + a {
     padding-right: 1em; }
 
-.filters .filter-name, .filters .filter-time, .filters .filter-coach, .filters .filter-category {
+.filters .filter-name, .filters .filter-time, .filters .filter-coach, .filters .filter-category, .filters .filters-difficulty, .filters .filter {
   position: relative;
   float: left;
   width: 50%;
@@ -5447,7 +5447,7 @@ footer.navbar {
   padding-left: 15px;
   padding-right: 15px; }
   @media (min-width: 768px) {
-    .filters .filter-name, .filters .filter-time, .filters .filter-coach, .filters .filter-category {
+    .filters .filter-name, .filters .filter-time, .filters .filter-coach, .filters .filter-category, .filters .filters-difficulty, .filters .filter {
       float: left;
       width: 25%; } }
 
