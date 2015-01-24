@@ -1,46 +1,12 @@
 <section data-ng-controller="ActivityController">
-    <div class="row" id="categories" data-ng-class="currentCategory">
-        <div class="category cardio" data-ng-click="zoomOn('cardio')">
-            <div class="content">
-                <div class="icon">
-                    <i class="glyphicon glyphicon-heart"></i>
-                    <div>Cardio</div>
-                </div>
-            </div>
-        </div>
-        <div class="category renforcement" data-ng-click="zoomOn('renforcement')">
-            <div class="content">
-                <div class="icon">
-                    <i class="glyphicon glyphicon-fire"></i>
-                    <div>Renforcement</div>
-                </div>
-            </div>
-        </div>
-        <div class="category danse" data-ng-click="zoomOn('danse')">
-            <div class="content">
-                <div class="icon">
-                    <i class="glyphicon glyphicon-leaf"></i>
-                    <div>Danse</div>
-                </div>
-            </div>
-        </div>
-        <div class="category zen" data-ng-click="zoomOn('zen')">
-            <div class="content">
-                <div class="icon">
-                    <i class="glyphicon glyphicon-send"></i>
-                    <div>Zen</div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="row">
-        <h2 class="col-xs-12" data-ng-if="!currentCategory">Toutes les activités</h2>
-    </div>
-    <div class="row activities">
-        <div data-ng-repeat="activity in activities | filter:currentCategory" class="activity">
-            <div class="activity-content" ng-class="activity.category">
-                <h3>{{ activity.name }} - {{ activity.duration }}</h3>
-                <div data-level-icon="level-icon" data-level="{{ activity.level }}" data-size="activity.id * 10"></div>
+        <div id="activities">
+            <div data-ng-repeat="activity in activities track by activity.name" class="activity">
+                <div class="activity-content" ng-class="activity.category">
+                    <h3>{{ activity.name }} - {{ activity.duration }}</h3>
+                    <p>{{ activity.description }}</p>
+                    <div data-level-icon="level-icon" data-level="{{ activity.level }}" data-size="activity.id * 10"></div>
+                </div>
             </div>
         </div>
     </div>

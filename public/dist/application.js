@@ -98,95 +98,81 @@ angular.module('activity').controller('ActivityController', [
     };
     $scope.activities = [
       {
+        name: 'Boot Camp',
+        duration: '45\'',
+        level: 'hard',
+        category: 'renforcement',
+        description: 'C\u2019est un cours inspir\xe9 de l\u2019entrainement physique dispens\xe9 par les militaires et pour les militaires. Ce cours est un enchainements de plusieurs petits ateliers o\xf9 le pratiquant effectue un exercice puis sans pause ou seulement de quelques secondes va enchainer sur un autre atelier. Les objectifs de ce type de cours sont la perte de poids et la transformation de la masse grasse ( graisse) en masse maigre  (muscle) ainsi que l\u2019am\xe9lioration du syst\xe8me cardio vasculaire'
+      },
+      {
         name: 'Step',
-        id: 0,
         duration: '45\'',
         level: 'easy',
-        category: 'cardio'
-      },
-      {
-        name: 'Biking',
-        id: 1,
-        duration: '45\'',
-        level: 'medium',
-        category: 'cardio'
-      },
-      {
-        name: 'Magic Combat',
-        id: 2,
-        duration: '45\'',
-        level: 'hard',
-        category: 'cardio'
-      },
-      {
-        name: 'Cardio Attack',
-        id: 3,
-        duration: '45\'',
-        level: 'easy',
-        category: 'cardio'
-      },
-      {
-        name: 'Abdos Fessiers',
-        id: 4,
-        duration: '45\'',
-        level: 'medium',
-        category: 'cardio'
-      },
-      {
-        name: 'Body Sculpt',
-        id: 5,
-        duration: '45\'',
-        level: 'hard',
-        category: 'renforcement'
-      },
-      {
-        name: 'C.A.F.',
-        id: 6,
-        duration: '45\'',
-        level: 'easy',
-        category: 'renforcement'
-      },
-      {
-        name: 'Abdos Flash',
-        id: 7,
-        duration: '45\'',
-        level: 'medium',
-        category: 'renforcement'
-      },
-      {
-        name: 'Pump',
-        id: 8,
-        duration: '45\'',
-        level: 'hard',
-        category: 'renforcement'
-      },
-      {
-        name: 'Zumba',
-        id: 9,
-        duration: '45\'',
-        level: 'easy',
-        category: 'danse'
-      },
-      {
-        name: 'Pilates',
-        id: 10,
-        duration: '45\'',
-        level: 'medium',
-        category: 'zen'
-      },
-      {
-        name: 'Stretching',
-        id: 11,
-        duration: '45\'',
-        level: 'hard',
-        category: 'zen'
+        category: 'renforcement',
+        description: 'C\u2019est un cours bas\xe9 sur l\u2019enseignement des \xe9tirements musculaires afin d\u2019optimiser la souplesse musculaire puis articulaire en favorisant le retour veineux et donc la r\xe9cup\xe9ration musculaire'
       },
       {
         name: 'Gym douce',
-        id: 12,
         duration: '45\'',
         level: 'easy',
-        category: 'zen'
+        category: 'renforcement',
+        description: 'C\u2019est un cours de renforcement musculaire adapt\xe9 aux d\xe9butants, personnes \xe2g\xe9es en convalescence. Ce cours permet aux personnes de se muscler tout en douceur afin de faciliter les mouvements du quotidien dans sa globalit\xe9'
+      },
+      {
+        name: 'Body Barre',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'C\u2019est un cours de renforcement musculaire bas\xe9 sur des exercices effectu\xe9s \xe0 l\u2019aide d\u2019une barre lest\xe9e. Lors de ce type de cours tous les groupes musculaires sont travaill\xe9s pour permettre une fonte adipeuse ( perte de graisse) et prise de masse musculaire s\xe8che ( permettant d\u2019affiner la silhouette pour faire ressortir la musculature dite naturelle)'
+      },
+      {
+        name: 'Cross training',
+        duration: '45\'',
+        level: 'hard',
+        category: 'renforcement',
+        description: 'C\u2019est un cours inspir\xe9 du cross fit qui est tr\xe8s intense, sp\xe9cialement con\xe7u pour les personnes en qu\xeate de sensations forte souhaitant se d\xe9passer pour repousser les limites de leur propre corps. C\u2019est un cours d\u2019alternance cardio et renfo tr\xe8s difficile'
+      },
+      {
+        name: 'H.I.I.T.',
+        duration: '45\'',
+        level: 'easy',
+        category: 'renforcement',
+        description: 'Tous comme le boot camp et le cross fit le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardions et renfo sont directement combin\xe9s entre eux afin de faire vivre \xe0 l\u2019adh\xe9rents une s\xe9ance tr\xe8s intense qui lui permettra d\u2019obtenir de r\xe9els r\xe9sultats visible et rapide en seulement quelques s\xe9ances'
+      },
+      {
+        name: 'Abdos fessiers',
+        duration: '45\'',
+        level: 'easy',
+        category: 'renforcement',
+        description: 'C\u2019est un cours bas\xe9 sur des exercices d\u2019ados et fessiers sp\xe9cialement pens\xe9s pour les femmes'
+      },
+      {
+        name: 'Postural Shape',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'C\u2019est un cours visant \xe0 renforcer les muscles profonds du corps et en particuliers ceux proches de la colonne vert\xe9brale'
+      },
+      {
+        name: 'Pilates',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'Cours de renforcement musculaire et \xe9tirement musculaires permettant de lutter contre les probl\xe8mes de scoliose, lumbago, sciatiques et hernies discales'
+      },
+      {
+        name: 'Body Sculpt',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'Cours bas\xe9 sur le renforcement global du corps \xe0 l\u2019aide d\u2019halt\xe8res, \xe9lastiques, step\u2026 Ce cours permet de donner de nombreuses id\xe9es de renforcement aux clients se trouvant en d\xe9placement loin de leur magic form'
+      },
+      {
+        name: 'C.A.F.',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'Cuisse , Abdos, Fessiers, C\u2019est le cours collectif de r\xe9f\xe9rence des femmes car il travaille leur zones de pr\xe9dilection'
       }
     ];
   }

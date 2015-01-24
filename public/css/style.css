@@ -5296,7 +5296,7 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.activities .activity {
+#activities .activity {
   position: relative;
   float: left;
   width: 100%;
@@ -5309,153 +5309,22 @@ button.close {
   padding-right: 10;
   padding: 1em; }
   @media (min-width: 768px) {
-    .activities .activity {
+    #activities .activity {
       float: left;
       width: 50%; } }
-  .activities .activity .activity-content {
+  #activities .activity .activity-content {
     border-left: 3px solid;
     padding: 1em; }
-    .activities .activity .activity-content.cardio {
+    #activities .activity .activity-content.cardio {
       border-color: #967ADC; }
-    .activities .activity .activity-content.renforcement {
+    #activities .activity .activity-content.renforcement {
       border-color: #DA4453; }
-    .activities .activity .activity-content.danse {
+    #activities .activity .activity-content.danse {
       border-color: #D770AD; }
-    .activities .activity .activity-content.zen {
+    #activities .activity .activity-content.zen {
       border-color: #37BC9B; }
-    .activities .activity .activity-content h3 {
+    #activities .activity .activity-content h3 {
       margin-top: 0; }
-
-#categories {
-  -webkit-transition: height ease-out 0.5s;
-  -o-transition: height ease-out 0.5s;
-  transition: height ease-out 0.5s; }
-  #categories.cardio, #categories.renforcement, #categories.danse, #categories.zen {
-    -webkit-transition: height ease-in 0.5s;
-    -o-transition: height ease-in 0.5s;
-    transition: height ease-in 0.5s;
-    height: 100px; }
-    @media (min-width: 768px) {
-      #categories.cardio, #categories.renforcement, #categories.danse, #categories.zen {
-        height: 150px; } }
-    @media (min-width: 992px) {
-      #categories.cardio, #categories.renforcement, #categories.danse, #categories.zen {
-        height: 200px; } }
-    @media (min-width: 1200px) {
-      #categories.cardio, #categories.renforcement, #categories.danse, #categories.zen {
-        height: 250px; } }
-    #categories.cardio .category, #categories.renforcement .category, #categories.danse .category, #categories.zen .category {
-      position: relative;
-      float: left;
-      width: 25%;
-      min-height: 1px;
-      padding-left: 15px;
-      padding-right: 15px; }
-      #categories.cardio .category.cardio .content, #categories.renforcement .category.cardio .content, #categories.danse .category.cardio .content, #categories.zen .category.cardio .content {
-        background-color: #FFF;
-        color: #967ADC; }
-        #categories.cardio .category.cardio .content:hover, #categories.cardio .category.cardio .content:active, #categories.cardio .category.cardio .content:focus, #categories.renforcement .category.cardio .content:hover, #categories.renforcement .category.cardio .content:active, #categories.renforcement .category.cardio .content:focus, #categories.danse .category.cardio .content:hover, #categories.danse .category.cardio .content:active, #categories.danse .category.cardio .content:focus, #categories.zen .category.cardio .content:hover, #categories.zen .category.cardio .content:active, #categories.zen .category.cardio .content:focus {
-          background-color: #967ADC;
-          color: #FFF; }
-      #categories.cardio .category.renforcement .content, #categories.renforcement .category.renforcement .content, #categories.danse .category.renforcement .content, #categories.zen .category.renforcement .content {
-        background-color: #FFF;
-        color: #DA4453; }
-        #categories.cardio .category.renforcement .content:hover, #categories.cardio .category.renforcement .content:active, #categories.cardio .category.renforcement .content:focus, #categories.renforcement .category.renforcement .content:hover, #categories.renforcement .category.renforcement .content:active, #categories.renforcement .category.renforcement .content:focus, #categories.danse .category.renforcement .content:hover, #categories.danse .category.renforcement .content:active, #categories.danse .category.renforcement .content:focus, #categories.zen .category.renforcement .content:hover, #categories.zen .category.renforcement .content:active, #categories.zen .category.renforcement .content:focus {
-          background-color: #DA4453;
-          color: #FFF; }
-      #categories.cardio .category.danse .content, #categories.renforcement .category.danse .content, #categories.danse .category.danse .content, #categories.zen .category.danse .content {
-        background-color: #FFF;
-        color: #D770AD; }
-        #categories.cardio .category.danse .content:hover, #categories.cardio .category.danse .content:active, #categories.cardio .category.danse .content:focus, #categories.renforcement .category.danse .content:hover, #categories.renforcement .category.danse .content:active, #categories.renforcement .category.danse .content:focus, #categories.danse .category.danse .content:hover, #categories.danse .category.danse .content:active, #categories.danse .category.danse .content:focus, #categories.zen .category.danse .content:hover, #categories.zen .category.danse .content:active, #categories.zen .category.danse .content:focus {
-          background-color: #D770AD;
-          color: #FFF; }
-      #categories.cardio .category.zen .content, #categories.renforcement .category.zen .content, #categories.danse .category.zen .content, #categories.zen .category.zen .content {
-        background-color: #FFF;
-        color: #37BC9B; }
-        #categories.cardio .category.zen .content:hover, #categories.cardio .category.zen .content:active, #categories.cardio .category.zen .content:focus, #categories.renforcement .category.zen .content:hover, #categories.renforcement .category.zen .content:active, #categories.renforcement .category.zen .content:focus, #categories.danse .category.zen .content:hover, #categories.danse .category.zen .content:active, #categories.danse .category.zen .content:focus, #categories.zen .category.zen .content:hover, #categories.zen .category.zen .content:active, #categories.zen .category.zen .content:focus {
-          background-color: #37BC9B;
-          color: #FFF; }
-  #categories.cardio .cardio .content {
-    background-color: #967ADC !important;
-    color: #FFF !important; }
-  #categories.renforcement .renforcement .content {
-    background-color: #DA4453 !important;
-    color: #FFF !important; }
-  #categories.danse .danse .content {
-    background-color: #D770AD !important;
-    color: #FFF !important; }
-  #categories.zen .zen .content {
-    background-color: #37BC9B !important;
-    color: #FFF !important; }
-
-.category {
-  position: relative;
-  float: left;
-  width: 25%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center; }
-  @media (max-width: 767px) {
-    .category {
-      padding-left: 5px;
-      padding-right: 5px; } }
-  .category .content {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: background-color ease-in 0.1s;
-    -o-transition: background-color ease-in 0.1s;
-    transition: background-color ease-in 0.1s;
-    border: 3px solid;
-    cursor: pointer;
-    height: 90px;
-    position: relative; }
-    @media (max-width: 767px) {
-      .category .content {
-        border: 1px solid; } }
-    @media (min-width: 768px) {
-      .category .content {
-        height: 130px; } }
-    @media (min-width: 992px) {
-      .category .content {
-        height: 180px; } }
-    @media (min-width: 1200px) {
-      .category .content {
-        height: 220px; } }
-    .category .content:hover, .category .content:active, .category .content:focus {
-      -webkit-transition: background-color ease-in 0.3s;
-      -o-transition: background-color ease-in 0.3s;
-      transition: background-color ease-in 0.3s; }
-    .category .content .icon {
-      font-size: 0.9em;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      text-align: center;
-      transform: translate(-50%, -50%); }
-      @media (min-width: 768px) {
-        .category .content .icon {
-          font-size: 1.5em; } }
-      .category .content .icon .glyphicon {
-        font-size: 2em; }
-  .category.cardio .content {
-    background-color: #967ADC;
-    border-color: #967ADC;
-    color: #FFF; }
-  .category.renforcement .content {
-    background-color: #DA4453;
-    border-color: #DA4453;
-    color: #FFF; }
-  .category.danse .content {
-    background-color: #D770AD;
-    border-color: #D770AD;
-    color: #FFF; }
-  .category.zen .content {
-    background-color: #37BC9B;
-    border-color: #37BC9B;
-    color: #FFF; }
 
 .level-icon svg {
   height: 2em;
