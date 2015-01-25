@@ -25,8 +25,18 @@
                         <div class="col-xs-12 contact-block">
                             <div class="contact">
                                 <h3 translate="contact.header"></h3>
-                                <a class="phone" ng-href="{{ 'tel:' + phone }}" translate="contact.phone"></a>
-                                <a class="mail" ng-href="{{ 'mailto:' + email }}" translate="contact.email"></a>
+                                <a class="phone" ng-href="{{ 'tel:' + phone }}"
+                                   translate="contact.phone"
+                                   analytics-on="click"
+                                   analytics-event="contactPhone"
+                                   analytics-category="contact"
+                                   analytics-label="Contact Phone"></a>
+                                <a class="mail" ng-href="{{ 'mailto:' + email }}"
+                                   translate="contact.email"
+                                   analytics-on="click"
+                                   analytics-event="contactEmail"
+                                   analytics-category="contact"
+                                   analytics-label="Contact Email"></a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +80,20 @@
         </div>
 
         <div class="col-xs-12 col-sm-4 download-planning">
-            <a class="btn btn-primary btn-block" translate="home.callToAction" href="http://www.magic-form.fr/pre-inscriptions-magic-form-fontenay-aux-roses/"></a>
+            <a class="btn btn-primary btn-block"
+               translate="home.callToAction"
+               href="http://www.magic-form.fr/pre-inscriptions-magic-form-fontenay-aux-roses/"
+               analytics-on="click"
+               analytics-event="registration"
+               analytics-category="registration"
+               analytics-label="Home Pre registration"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 address-block">
+            <div class="headline">
+                <h3>Réduction sur les frais d'inscriptions pour les 150 premiers !</h3>
+            </div>
         </div>
     </div>
 </section>

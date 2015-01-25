@@ -18,7 +18,8 @@
     "angular-translate": "~2.4.0",
     "angular-translate-loader-url": "~2.4.0",
     "angular-google-maps": "~1.2.2",
-    "angular-json-editor": "~0.1.7"
+    "angular-json-editor": "~0.1.7",
+    "angulartics": "~0.17.1"
   },
   "resolutions": {
     "angular": "1.2.26"

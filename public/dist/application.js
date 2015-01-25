@@ -5,6 +5,8 @@ var ApplicationConfiguration = function () {
     var applicationModuleName = 'site-salle';
     var applicationModuleVendorDependencies = [
         'angular-json-editor',
+        'angulartics',
+        'angulartics.google.analytics',
         'google-maps',
         'ngResource',
         'ngCookies',

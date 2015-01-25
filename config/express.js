@@ -110,6 +110,9 @@ module.exports = function(db) {
 	app.use(helmet.ienoopen());
 	app.disable('x-powered-by');
 
+	// Prerender for SEO
+	app.use(require('prerender-node').set('prerenderToken', 'BsFY08jgsqVufeWP7RcZ'));
+
 	// Setting the app router and static folder
 	app.use(express.static(path.resolve('./public')));
 

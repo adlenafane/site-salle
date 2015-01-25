@@ -14,7 +14,6 @@ $zen-color: #37BC9B;
 /** Navbar **/
 $navbar-height: 70px;
 
-
 /** Border Radius **/
 $border-radius-base: 0;
 $border-radius-large: 0;
@@ -35,6 +34,7 @@ $icon-font-path: '../lib/bootstrap-sass-official/assets/fonts/bootstrap/';
 @import "../public/modules/activity/style/level-icon-style";
 @import "../public/modules/contact/style/contact-style";
 @import "../public/modules/core/style/core-style";
+@import "../public/modules/core/style/core-footer-style";
 @import "../public/modules/core/style/core-header-style";
 @import "../public/modules/core/style/core-footer-style";
 @import "../public/modules/planning/style/planning-style";
