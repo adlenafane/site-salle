@@ -137,28 +137,28 @@ angular.module('activity').controller('ActivityController', [
         duration: '30\'',
         level: 'extreme',
         category: 'renforcement',
-        description: 'Tous comme le boot camp et le cross fit, le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardios et renfo sont directement combin\xe9s entre eux afin de faire vivre \xe0 l\u2019adh\xe9rent une s\xe9ance tr\xe8s intense qui lui permettra d\u2019obtenir de r\xe9els r\xe9sultats visible et rapide en seulement quelques s\xe9ances.'
+        description: 'Tous comme le boot camp et le cross fit, le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardios et renfo sont directement combin\xe9s entre eux afin de faire vivre \xe0 l\u2019adh\xe9rent une s\xe9ance tr\xe8s intense qui lui permettra d\u2019obtenir de r\xe9els r\xe9sultats visibles et rapides en seulement quelques s\xe9ances.'
       },
       {
         name: 'Abdos fessiers',
         duration: '30\'',
         level: 'easy',
         category: 'renforcement',
-        description: 'C\u2019est un cours bas\xe9 sur des exercices d\u2019ados et fessiers sp\xe9cialement pens\xe9s pour les femmes.'
+        description: 'C\u2019est un cours bas\xe9 sur des exercices d\u2019abdos et fessiers sp\xe9cialement pens\xe9s pour les femmes.'
       },
       {
         name: 'Postural Shape',
         duration: '45\'',
         level: 'medium',
         category: 'renforcement',
-        description: 'C\u2019est un cours visant \xe0 renforcer les muscles profonds du corps et en particuliers ceux proches de la colonne vert\xe9brale.'
+        description: 'C\u2019est un cours visant \xe0 renforcer les muscles profonds du corps et en particulier ceux proches de la colonne vert\xe9brale.'
       },
       {
         name: 'Pilates',
         duration: '45\'',
         level: 'medium',
         category: 'renforcement',
-        description: 'Cours de renforcement musculaire et d\'\xe9tirement musculaires permettant de lutter contre les probl\xe8mes de scoliose, lumbago, sciatiques et hernies discales.'
+        description: 'Cours de renforcement musculaire et d\'\xe9tirement musculaire permettant de lutter contre les probl\xe8mes de scoliose, lumbago, sciatiques et hernies discales.'
       },
       {
         name: 'Body Sculpt',
@@ -172,7 +172,7 @@ angular.module('activity').controller('ActivityController', [
         duration: '45\'',
         level: 'medium',
         category: 'renforcement',
-        description: 'Cuisse , Abdos, Fessiers, c\'est le cours collectif de r\xe9f\xe9rence des femmes car il travaille leur zones de pr\xe9dilection.'
+        description: 'Cuisses, Abdos, Fessiers, c\'est le cours collectif de r\xe9f\xe9rence des femmes car il travaille leur zones de pr\xe9dilection.'
       },
       {
         name: 'Biking',
@@ -186,14 +186,14 @@ angular.module('activity').controller('ActivityController', [
         duration: '45-60\'',
         level: 'hard',
         category: 'cardio',
-        description: 'Ce type de cours est bas\xe9 sur l\u2019explosivit\xe9 musculaire et la combustion maximum des graisse pour pouvoir supporter le rythme soutenu de ce type de cours o\xf9 le corps est soumis \xe0 rude \xe9preuve afin de se d\xe9lester de son stress et de ses kilos en trop.'
+        description: 'Ce type de cours est bas\xe9 sur l\u2019explosivit\xe9 musculaire et la combustion maximum des graisses pour pouvoir supporter le rythme soutenu de ce type de cours o\xf9 le corps est soumis \xe0 rude \xe9preuve afin de se d\xe9lester de son stress et de ses kilos en trop.'
       },
       {
         name: 'Piloxing',
         duration: '45\'',
         level: 'hard',
         category: 'cardio',
-        description: 'C\u2019est un m\xe9lange de boxe, pilates, course \xe0 pied, sprint et renforcement global du corps. Ce cours est la solution tous en un pour les personnes actives physiquement.'
+        description: 'C\u2019est un m\xe9lange de boxe, pilates, course \xe0 pied, sprint et renforcement global du corps. Ce cours est la solution tout-en-un pour les personnes actives physiquement.'
       },
       {
         name: 'Full body',
@@ -214,7 +214,7 @@ angular.module('activity').controller('ActivityController', [
         duration: '60\'',
         level: 'easy',
         category: 'danse',
-        description: 'Cours de danse tr\xe8s accessible bas\xe9 sur des pas de m\xe9rengu\xe9, bachata et salsa permettant \xe0 tous le monde de s\'amuser.'
+        description: 'Cours de danse tr\xe8s accessible bas\xe9 sur des pas de m\xe9rengu\xe9, bachata et salsa permettant \xe0 tout le monde de s\'amuser.'
       },
       {
         name: 'Bachata',
