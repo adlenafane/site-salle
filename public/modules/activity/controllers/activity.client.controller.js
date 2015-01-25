@@ -51,28 +51,28 @@ angular.module('activity').controller('ActivityController', [
         duration: '30\'',
         level: 'extreme',
         category: 'renforcement',
-        description: 'Tous comme le boot camp et le cross fit, le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardios et renfo sont directement combinés entre eux afin de faire vivre à l’adhérent une séance très intense qui lui permettra d’obtenir de réels résultats visible et rapide en seulement quelques séances.'
+        description: 'Tous comme le boot camp et le cross fit, le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardios et renfo sont directement combinés entre eux afin de faire vivre à l’adhérent une séance très intense qui lui permettra d’obtenir de réels résultats visibles et rapides en seulement quelques séances.'
       },
       {
         name: 'Abdos fessiers',
         duration: '30\'',
         level: 'easy',
         category: 'renforcement',
-        description: 'C’est un cours basé sur des exercices d’ados et fessiers spécialement pensés pour les femmes.'
+        description: 'C’est un cours basé sur des exercices d’abdos et fessiers spécialement pensés pour les femmes.'
       },
       {
         name: 'Postural Shape',
         duration: '45\'',
         level: 'medium',
         category: 'renforcement',
-        description: 'C’est un cours visant à renforcer les muscles profonds du corps et en particuliers ceux proches de la colonne vertébrale.'
+        description: 'C’est un cours visant à renforcer les muscles profonds du corps et en particulier ceux proches de la colonne vertébrale.'
       },
       {
         name: 'Pilates',
         duration: '45\'',
         level: 'medium',
         category: 'renforcement',
-        description: 'Cours de renforcement musculaire et d\'étirement musculaires permettant de lutter contre les problèmes de scoliose, lumbago, sciatiques et hernies discales.'
+        description: 'Cours de renforcement musculaire et d\'étirement musculaire permettant de lutter contre les problèmes de scoliose, lumbago, sciatiques et hernies discales.'
       },
       {
         name: 'Body Sculpt',
@@ -86,7 +86,7 @@ angular.module('activity').controller('ActivityController', [
         duration: '45\'',
         level: 'medium',
         category: 'renforcement',
-        description: 'Cuisse , Abdos, Fessiers, c\'est le cours collectif de référence des femmes car il travaille leur zones de prédilection.'
+        description: 'Cuisses, Abdos, Fessiers, c\'est le cours collectif de référence des femmes car il travaille leur zones de prédilection.'
       },
       {
         name: 'Biking',
@@ -100,14 +100,14 @@ angular.module('activity').controller('ActivityController', [
         duration: '45-60\'',
         level: 'hard',
         category: 'cardio',
-        description: 'Ce type de cours est basé sur l’explosivité musculaire et la combustion maximum des graisse pour pouvoir supporter le rythme soutenu de ce type de cours où le corps est soumis à rude épreuve afin de se délester de son stress et de ses kilos en trop.'
+        description: 'Ce type de cours est basé sur l’explosivité musculaire et la combustion maximum des graisses pour pouvoir supporter le rythme soutenu de ce type de cours où le corps est soumis à rude épreuve afin de se délester de son stress et de ses kilos en trop.'
       },
       {
         name: 'Piloxing',
         duration: '45\'',
         level: 'hard',
         category: 'cardio',
-        description: 'C’est un mélange de boxe, pilates, course à pied, sprint et renforcement global du corps. Ce cours est la solution tous en un pour les personnes actives physiquement.'
+        description: 'C’est un mélange de boxe, pilates, course à pied, sprint et renforcement global du corps. Ce cours est la solution tout-en-un pour les personnes actives physiquement.'
       },
       {
         name: 'Full body',
@@ -128,7 +128,7 @@ angular.module('activity').controller('ActivityController', [
         duration: '60\'',
         level: 'easy',
         category: 'danse',
-        description: 'Cours de danse très accessible basé sur des pas de mérengué, bachata et salsa permettant à tous le monde de s\'amuser.'
+        description: 'Cours de danse très accessible basé sur des pas de mérengué, bachata et salsa permettant à tout le monde de s\'amuser.'
       },
       {
         name: 'Bachata',
