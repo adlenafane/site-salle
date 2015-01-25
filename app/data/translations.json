@@ -23,42 +23,48 @@
 		"callToAction": "Je m'inscris !"
 	},
 	"schedule": {
-		"header": "Renseignements et pré-inscription sur place aux horaires suivants :",
+		"header": "Horaires",
 		"1": {
 			"name": "Lundi",
-			"start": 12,
-			"end": 20,
-			"hour": "12h-20h"
+			"start": 9,
+			"end": 21,
+			"hour": "9h-21h"
 		},
 		"2": {
 			"name": "Mardi",
-			"start": 12,
-			"end": 20,
-			"hour": "12h-20h"
+			"start": 9,
+			"end": 21,
+			"hour": "9h-21h"
 		},
 		"3": {
 			"name": "Mercredi",
-			"start": 12,
-			"end": 20,
-			"hour": "12h-20h"
+			"start": 9,
+			"end": 21,
+			"hour": "9h-21h"
 		},
 		"4": {
 			"name": "Jeudi",
-			"start": 12,
-			"end": 20,
-			"hour": "12h-20h"
+			"start": 9,
+			"end": 21,
+			"hour": "9h-21h"
 		},
 		"5": {
 			"name": "Vendredi",
-			"start": 12,
-			"end": 20,
-			"hour": "12h-20h"
+			"start": 9,
+			"end": 21,
+			"hour": "9h-21h"
 		},
 		"6": {
 			"name": "Samedi",
-			"start": 12,
+			"start": 10,
 			"end": 17,
-			"hour": "12h-17h"
+			"hour": "10h-17h"
+		},
+		"7": {
+			"name": "Dimanche",
+			"start": 10,
+			"end": 14,
+			"hour": "10h-14h"
 		}
 	},
 	"coaching": {
