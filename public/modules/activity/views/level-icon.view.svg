@@ -1,0 +1,13 @@
+<svg version="1.1"
+     baseProfile="full"
+     width="125" height="125"
+     viewBox="0 0 125 125"
+     xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <line x1="5" y1="90" x2="125" y2="90" stroke="gray" stroke-width="1"/>
+    <rect x="10" y="55" width="20" height="30" fill="gray" />
+    <rect x="40" y="35" width="20" height="50" fill="gray" />
+    <rect x="70" y="15" width="20" height="70" fill="gray" />
+    <rect x="100" y="0" width="20" height="85" fill="gray" />
+  </g>
+</svg>

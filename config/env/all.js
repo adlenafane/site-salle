@@ -8,7 +8,7 @@ module.exports = {
     app: {
         title: 'Magicform FAR - Fontenay aux Roses',
         description: description,
-        keywords: 'Sport, Gym, Fitness, Muscu, Cardio, LesMills'
+        keywords: 'Magic form, Sport, Gym, Fitness, Muscu, Cardio, LesMills'
     },
     port: process.env.PORT || 3000,
     templateEngine: 'swig',
@@ -34,6 +34,8 @@ module.exports = {
                 'public/lib/angular-translate-loader-url/angular-translate-loader-url.js',
                 'public/lib/lodash/dist/lodash.js',
                 'public/lib/angular-google-maps/dist/angular-google-maps.js',
+                'public/lib/json-editor/dist/jsoneditor.js',
+                'public/lib/angular-json-editor/src/angular-json-editor.js',
                 'public/lib/angulartics/src/angulartics.js',
                 'public/lib/angulartics/src/angulartics-ga.js'
             ]

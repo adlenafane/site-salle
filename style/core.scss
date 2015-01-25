@@ -6,6 +6,11 @@ $gray-dark: $brand-gray-dark;
 $white: #FFF;
 $body-bg: $white;
 
+$cardio-color: #967ADC;
+$renforcement-color: $brand-primary;
+$danse-color: #D770AD;
+$zen-color: #37BC9B;
+
 /** Navbar **/
 $navbar-height: 70px;
 
@@ -21,13 +26,16 @@ $pager-border-radius: 0;
 /** Fonts **/
 @import url(http://fonts.googleapis.com/css?family=Lato:400);
 $font-family-sans-serif: 'Lato', Helvetica, Arial, sans-serif !default;
+// $font-family-sans-serif: Helvetica, Arial, sans-serif !default;
 $icon-font-path: '../lib/bootstrap-sass-official/assets/fonts/bootstrap/';
 
 @import "../public/lib/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../public/modules/activity/style/activity-style";
+@import "../public/modules/activity/style/level-icon-style";
 @import "../public/modules/contact/style/contact-style";
 @import "../public/modules/core/style/core-style";
 @import "../public/modules/core/style/core-footer-style";
 @import "../public/modules/core/style/core-header-style";
+@import "../public/modules/core/style/core-footer-style";
 @import "../public/modules/planning/style/planning-style";
 @import "../public/modules/salle/style/salle-style";

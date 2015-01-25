@@ -1,4 +1,4 @@
-[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
+# Website for Magicform FAR
 
 ## Prerequisites
 Make sure you have installed all these prerequisites on your development machine.

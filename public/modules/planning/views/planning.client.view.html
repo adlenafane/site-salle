@@ -1,33 +1,67 @@
 <section data-ng-controller="PlanningController">
 	<section class="planning-page">
-    <h1>Planning</h1>
+    <h1 data-translate="planning.title"></h1>
     <div class="filters">
-
+      <h2 data-translate="planning.filters.header"></h2>
+      <form role="form">
+        <div class="row">
+          <div class="form-group filter-name">
+            <label for="class-name" data-translate="planning.filters.byName"></label>
+            <input type="text" class="form-control" id="class-name" placeholder="Nom du cours"  data-ng-model="search.name">
+          </div>
+          <div class="form-group filter-time">
+            <label for="class-time" data-translate="planning.filters.byTime"></label>
+            <select class="form-control" data-ng-model="hour.category" id="class-time">
+              <option value="">Tous les horaires</option>
+              <option value="Matin">Matin</option>
+              <option value="Midi">Midi</option>
+              <option value="Après-midi">Après-midi</option>
+              <option value="Soir">Soir</option>
+            </select>
+          </div>
+          <div class="form-group filter-coach">
+            <label for="class-coach" data-translate="planning.filters.byCoach"></label>
+            <select id="class-coach" class="form-control" data-ng-model="search.coach" data-ng-options="coach for coach in coaches">
+              <option value="">Tous</option>
+            </select>
+          </div>
+          <div class="form-group filter-category">
+            <label for="class-category" data-translate="planning.filters.byCategory"></label>
+            <select id="class-category" class="form-control" data-ng-model="search.category" data-ng-options="category for category in categories">
+              <option value="">Toutes</option>
+            </select>
+          </div>
+        </div>
+      </form>
     </div>
     <div class="table-responsive">
       <table class="planning table">
         <thead>
-          <tr>
-            <th data-ng-repeat="day in planning track by $index">{{ day.name }}</th>
+          <tr class="header">
+            <th data-ng-repeat="day in planning track by $index" class="day">{{ day.name }}</th>
           </tr>
         </thead>
         <tbody>
-          <tr data-ng-repeat="slot in planning.0.slots track by $index" data-ng-class="{'separator': slot.separator}">
-            <td data-rowspan="{{ slot.maxCount }}">
+          <tr data-ng-repeat="slot in planning.0.slots | filter:hour track by $index" data-ng-class="{'separator': slot.separator}">
+            <td data-rowspan="{{ slot.maxCount }}" data-ng-class="{day: slot.separator}">
               {{ slot.label }}
             </td>
             <td data-ng-repeat="day in planning" data-ng-if="!$first" data-rowspan="{{ slot.maxCount }}">
-              <table>
-                <tr data-ng-repeat="class in day.classes" data-ng-if="class.start === slot.label">
-                <td>
-                  <h4>{{ class.name }}</h4>
-                  <div class="details">
-                    <span>{{ class.start }}</span>
-                    <span>{{ class.duration }}'</span>
-                  </div>
-                </td>
-              </tr>
-            </table>
+              <table class="classes">
+                <tr data-ng-repeat="class in day.classes | filter:search" data-ng-if="class.timeGroup === slot.category" ui-sref="activity({name: class.name})">
+                  <td class="class-content" data-ng-class="class.category">
+                    <div class="col-xs-12 col-sm-4 class-time">
+                      <div>{{ class.time }}</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 class-details">
+                      <h4>{{ class.name }}</h4>
+                      <div class="details">
+                        <div>{{ class.coach }}</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
         </tbody>

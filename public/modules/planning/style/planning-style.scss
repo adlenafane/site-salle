@@ -1,7 +1,114 @@
+.filters {
+   .filter-name, .filter-time, .filter-coach, .filter-category, .filters-difficulty, .filter {
+    @include make-xs-column(6);
+    @include make-sm-column(3);
+   }
+}
+
+.table > tbody > tr > td {
+  min-width: 150px;
+}
+
 table.planning.table {
   border: none;
+
+  .header {
+    border-color: transparent;
+    font-size: 1.3em;
+
+    th {
+      text-align: center;
+    }
+  }
+
   .separator {
-    border-bottom: 2px solid $brand-primary;
+    border-top: 3px solid $brand-primary;
+
+    .day {
+      color: $brand-primary;
+    }
+  }
+
+  td.day {
+    font-size: 1.5em;
+  }
+
+  table.classes {
+    border-collapse:separate;
+    border-spacing: 0.5em;
+    color: inherit;
+
+    tr + tr {
+      padding-top: 1em;
+    }
+
+    td {
+      height: 70px;
+    }
+
+    .white-separator {
+      height: 0.5em;
+    }
+  }
+
+  td.class-content {
+    @include box-shadow(0 0px 2px rgba(0,0,0,.24));
+    @include box-shadow(0 2px 4px rgba(0,0,0,.36));
+    border-left: 3px solid;
+    padding: 0.5em;
+
+    &.cardio {
+      border-color: $cardio-color;
+    }
+
+    &.renforcement {
+      border-color: $renforcement-color;
+    }
+
+    &.danse {
+      border-color: $danse-color;
+    }
+
+    &.zen {
+      border-color: $zen-color;
+    }
+
+    .class-time {
+      &.cardio {
+      background-color: $cardio-color;
+      color: white;
+    }
+
+    &.renforcement {
+      background-color: $renforcement-color;
+      color: white;
+    }
+
+    &.danse {
+      background-color: $danse-color;
+      color: white;
+    }
+
+    &.zen {
+      background-color: $zen-color;
+      color: white;
+    }
+    }
+
+    .class-time, .class-details {
+      font-size: 0.8em;
+      padding: 0;
+    }
+
+    .class-details {
+      @media (min-width: $screen-sm-min) {
+        padding-left: 0.5em;
+      }
+
+      h4 {
+        margin: 0;
+      }
+    }
   }
 }
 

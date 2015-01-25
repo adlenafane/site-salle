@@ -4190,8 +4190,7 @@ a.list-group-item {
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
   background-color: #eeeeee;
-  color: #777777;
-  cursor: not-allowed; }
+  color: #777777; }
   .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading {
     color: inherit; }
   .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text {
@@ -5297,46 +5296,58 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-#categories {
-  height: 500px; }
-
 #activities {
-  height: 500px; }
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0; }
   #activities .activity {
-    background-color: #DA4453; }
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    min-height: 1px;
+    padding-left: 10;
+    padding-right: 10;
+    padding: 1em; }
+    @media (min-width: 768px) {
+      #activities .activity {
+        float: left;
+        width: 50%; } }
+    #activities .activity .activity-content {
+      -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
+      -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
+      border-left: 3px solid;
+      padding: 1em; }
+      #activities .activity .activity-content.cardio {
+        border-color: #967ADC; }
+      #activities .activity .activity-content.renforcement {
+        border-color: #DA4453; }
+      #activities .activity .activity-content.danse {
+        border-color: #D770AD; }
+      #activities .activity .activity-content.zen {
+        border-color: #37BC9B; }
+      #activities .activity .activity-content h3 {
+        margin-top: 0; }
 
-.category {
-  color: #FFF;
-  text-align: center; }
-  .category .content {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #967ADC;
-    cursor: pointer;
-    height: 220px;
-    margin: 1em;
-    position: relative; }
-    .category .content .glyphicon, .category .content span {
-      display: block;
-      height: 50%;
-      width: 100%;
-      position: absolute; }
-    .category .content .glyphicon {
-      top: 50px;
-      font-size: 3em; }
-    .category .content span {
-      bottom: 0;
-      font-size: 1.5em; }
-  .category:nth-of-type(2) .content {
-    background-color: #DA4453; }
-  .category:nth-of-type(3) .content {
-    background-color: #D770AD; }
-  .category:nth-of-type(4) .content {
-    background-color: #37BC9B; }
-  .category:nth-of-type(5) .content {
-    background-color: #4A89DC; }
+.level-icon svg {
+  height: 2em;
+  width: 2em; }
+.level-icon.easy svg rect:nth-of-type(1) {
+  fill: #A0D468; }
+.level-icon.medium svg rect:nth-of-type(2) {
+  fill: #FFCE54; }
+.level-icon.hard svg rect:nth-of-type(3) {
+  fill: #FC6E51; }
+.level-icon.extreme svg rect:nth-of-type(4) {
+  fill: #DA4453; }
 
 .access {
   margin-bottom: 2em; }
@@ -5410,6 +5421,8 @@ footer.navbar {
   margin-bottom: 0;
   margin-top: 20px;
   padding-top: 20px; }
+  footer.navbar a + a {
+    padding-right: 1em; }
 
 header.navbar {
   border-bottom: 3px solid #DA4453;
@@ -5430,10 +5443,91 @@ header .navbar-toggle {
   header .navbar-toggle .icon-bar {
     background-color: #DA4453; }
 
+footer.navbar {
+  border-top: 3px solid #DA4453;
+  margin-bottom: 0;
+  margin-top: 20px;
+  padding-top: 20px; }
+  footer.navbar a + a {
+    padding-right: 1em; }
+
+.filters .filter-name, .filters .filter-time, .filters .filter-coach, .filters .filter-category, .filters .filters-difficulty, .filters .filter {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    .filters .filter-name, .filters .filter-time, .filters .filter-coach, .filters .filter-category, .filters .filters-difficulty, .filters .filter {
+      float: left;
+      width: 25%; } }
+
+.table > tbody > tr > td {
+  min-width: 150px; }
+
 table.planning.table {
   border: none; }
+  table.planning.table .header {
+    border-color: transparent;
+    font-size: 1.3em; }
+    table.planning.table .header th {
+      text-align: center; }
   table.planning.table .separator {
-    border-bottom: 2px solid #DA4453; }
+    border-top: 3px solid #DA4453; }
+    table.planning.table .separator .day {
+      color: #DA4453; }
+  table.planning.table td.day {
+    font-size: 1.5em; }
+  table.planning.table table.classes {
+    border-collapse: separate;
+    border-spacing: 0.5em;
+    color: inherit; }
+    table.planning.table table.classes tr + tr {
+      padding-top: 1em; }
+    table.planning.table table.classes td {
+      height: 70px; }
+    table.planning.table table.classes .white-separator {
+      height: 0.5em; }
+  table.planning.table td.class-content {
+    -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
+    border-left: 3px solid;
+    padding: 0.5em; }
+    table.planning.table td.class-content.cardio {
+      border-color: #967ADC; }
+    table.planning.table td.class-content.renforcement {
+      border-color: #DA4453; }
+    table.planning.table td.class-content.danse {
+      border-color: #D770AD; }
+    table.planning.table td.class-content.zen {
+      border-color: #37BC9B; }
+    table.planning.table td.class-content .class-time.cardio {
+      background-color: #967ADC;
+      color: white; }
+    table.planning.table td.class-content .class-time.renforcement {
+      background-color: #DA4453;
+      color: white; }
+    table.planning.table td.class-content .class-time.danse {
+      background-color: #D770AD;
+      color: white; }
+    table.planning.table td.class-content .class-time.zen {
+      background-color: #37BC9B;
+      color: white; }
+    table.planning.table td.class-content .class-time, table.planning.table td.class-content .class-details {
+      font-size: 0.8em;
+      padding: 0; }
+    @media (min-width: 768px) {
+      table.planning.table td.class-content .class-details {
+        padding-left: 0.5em; } }
+    table.planning.table td.class-content .class-details h4 {
+      margin: 0; }
 
 .table-responsive table {
   border: none; }

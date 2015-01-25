@@ -4,6 +4,7 @@ var ApplicationConfiguration = function () {
     // Init module configuration options
     var applicationModuleName = 'site-salle';
     var applicationModuleVendorDependencies = [
+        'angular-json-editor',
         'angulartics',
         'angulartics.google.analytics',
         'google-maps',
@@ -58,6 +59,8 @@ angular.element(document).ready(function () {
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('activity');'use strict';
 // Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('admin');'use strict';
+// Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('coaching');'use strict';
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('contact');'use strict';
@@ -73,84 +76,529 @@ ApplicationConfiguration.registerModule('users');'use strict';
 angular.module('activity').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Activity state routing
+    $stateProvider.state('activity', {
+      url: '/activites?name',
+      templateUrl: 'modules/activity/views/activity.client.view.html'
+    }).state('activity.details', {
+      url: '/activites/:category',
+      templateUrl: 'modules/activity/views/activity.client.view.html',
+      controller: 'ActivityController'
+    });
   }
 ]);'use strict';
 angular.module('activity').controller('ActivityController', [
   '$scope',
-  function ($scope) {
-    $scope.zoomOn = function (category) {
-      if ($scope.currentCategory !== category) {
-        $scope.currentCategory = category;
-      } else {
-        $scope.currentCategory = null;
+  '$state',
+  function ($scope, $state) {
+    $scope.currentCategory = null;
+    $scope.search = {};
+    if ($state.params.name) {
+      $scope.search.name = $state.params.name;
+    }
+    $scope.activities = [
+      {
+        name: 'Boot Camp',
+        duration: '30\'',
+        level: 'hard',
+        category: 'renforcement',
+        description: 'C\u2019est un cours inspir\xe9 de l\u2019entrainement physique dispens\xe9 par les militaires et pour les militaires. Ce cours est un enchainement de plusieurs petits ateliers o\xf9 le pratiquant effectue un exercice puis sans pause ou seulement de quelques secondes va enchainer sur un autre atelier. Les objectifs de ce type de cours sont la perte de poids et la transformation de la masse grasse (graisse) en masse maigre (muscle) ainsi que l\u2019am\xe9lioration du syst\xe8me cardio vasculaire.'
+      },
+      {
+        name: 'Stretching',
+        duration: '15\'',
+        level: 'easy',
+        category: 'renforcement',
+        description: 'C\u2019est un cours bas\xe9 sur l\u2019enseignement des \xe9tirements musculaires afin d\u2019optimiser la souplesse musculaire puis articulaire en favorisant le retour veineux et donc la r\xe9cup\xe9ration musculaire.'
+      },
+      {
+        name: 'Gym douce',
+        duration: '45\'',
+        level: 'easy',
+        category: 'renforcement',
+        description: 'C\u2019est un cours de renforcement musculaire adapt\xe9 aux d\xe9butants, personnes \xe2g\xe9es en convalescence... Ce cours permet aux personnes de se muscler tout en douceur afin de faciliter les mouvements du quotidien dans sa globalit\xe9.'
+      },
+      {
+        name: 'Body Barre',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'C\u2019est un cours de renforcement musculaire bas\xe9 sur des exercices effectu\xe9s \xe0 l\u2019aide d\u2019une barre lest\xe9e. Lors de ce type de cours tous les groupes musculaires sont travaill\xe9s pour permettre une fonte adipeuse (perte de graisse) et prise de masse musculaire s\xe8che (permettant d\u2019affiner la silhouette pour faire ressortir la musculature dite naturelle).'
+      },
+      {
+        name: 'Cross training',
+        duration: '45\'',
+        level: 'hard',
+        category: 'renforcement',
+        description: 'C\u2019est un cours inspir\xe9 du cross fit qui est tr\xe8s intense, sp\xe9cialement con\xe7u pour les personnes en qu\xeate de sensations fortes souhaitant se d\xe9passer pour repousser les limites de leur propre corps. C\u2019est un cours d\u2019alternance cardio et renforcement tr\xe8s difficile.'
+      },
+      {
+        name: 'H.I.I.T.',
+        duration: '30\'',
+        level: 'extreme',
+        category: 'renforcement',
+        description: 'Tous comme le boot camp et le cross fit, le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardios et renfo sont directement combin\xe9s entre eux afin de faire vivre \xe0 l\u2019adh\xe9rent une s\xe9ance tr\xe8s intense qui lui permettra d\u2019obtenir de r\xe9els r\xe9sultats visibles et rapides en seulement quelques s\xe9ances.'
+      },
+      {
+        name: 'Abdos fessiers',
+        duration: '30\'',
+        level: 'easy',
+        category: 'renforcement',
+        description: 'C\u2019est un cours bas\xe9 sur des exercices d\u2019abdos et fessiers sp\xe9cialement pens\xe9s pour les femmes.'
+      },
+      {
+        name: 'Postural Shape',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'C\u2019est un cours visant \xe0 renforcer les muscles profonds du corps et en particulier ceux proches de la colonne vert\xe9brale.'
+      },
+      {
+        name: 'Pilates',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'Cours de renforcement musculaire et d\'\xe9tirement musculaire permettant de lutter contre les probl\xe8mes de scoliose, lumbago, sciatiques et hernies discales.'
+      },
+      {
+        name: 'Body Sculpt',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'Cours bas\xe9 sur le renforcement global du corps \xe0 l\u2019aide d\u2019halt\xe8res, \xe9lastiques, step... Ce cours permet de donner de nombreuses id\xe9es de renforcement aux adh\xe9rents se trouvant en d\xe9placement loin du Magic Form.'
+      },
+      {
+        name: 'C.A.F.',
+        duration: '45\'',
+        level: 'medium',
+        category: 'renforcement',
+        description: 'Cuisses, Abdos, Fessiers, c\'est le cours collectif de r\xe9f\xe9rence des femmes car il travaille leur zones de pr\xe9dilection.'
+      },
+      {
+        name: 'Biking',
+        duration: '45-60\'',
+        level: 'hard',
+        category: 'cardio',
+        description: 'Cours collectif visant \xe0 remplacer une course cycliste, tr\xe8s intense car le mode de travail est bas\xe9 sur l\u2019alternance de reproduction de mont\xe9e de col, de sprint et de r\xe9cup\xe9ration... Le but est de d\xe9velopper le muscle cardiaque et la perte de graisse.'
+      },
+      {
+        name: 'Total Body',
+        duration: '45-60\'',
+        level: 'hard',
+        category: 'cardio',
+        description: 'Ce type de cours est bas\xe9 sur l\u2019explosivit\xe9 musculaire et la combustion maximum des graisses pour pouvoir supporter le rythme soutenu de ce type de cours o\xf9 le corps est soumis \xe0 rude \xe9preuve afin de se d\xe9lester de son stress et de ses kilos en trop.'
+      },
+      {
+        name: 'Piloxing',
+        duration: '45\'',
+        level: 'hard',
+        category: 'cardio',
+        description: 'C\u2019est un m\xe9lange de boxe, pilates, course \xe0 pied, sprint et renforcement global du corps. Ce cours est la solution tout-en-un pour les personnes actives physiquement.'
+      },
+      {
+        name: 'Full body',
+        duration: '45\'',
+        level: 'medium',
+        category: 'cardio',
+        description: 'Comme le Total Body ce cours est bas\xe9 sur l\u2019expressivit\xe9 musculaire mais \xe0 un niveau moindre permettant aux d\xe9butant de commencer plus en douceur ces types de cours.'
+      },
+      {
+        name: 'Zumba',
+        duration: '45-60\'',
+        level: 'easy',
+        category: 'danse',
+        description: 'Cours de danse tr\xe8s accessible car peu de chor\xe9graphie. Il permet de s\u2019amuser facilement et de se d\xe9lester de son stress.'
+      },
+      {
+        name: 'Latinva',
+        duration: '60\'',
+        level: 'easy',
+        category: 'danse',
+        description: 'Cours de danse tr\xe8s accessible bas\xe9 sur des pas de m\xe9rengu\xe9, bachata et salsa permettant \xe0 tout le monde de s\'amuser.'
+      },
+      {
+        name: 'Bachata',
+        duration: '45\'',
+        level: 'medium',
+        category: 'danse',
+        description: 'Cours de danse latino tr\xe8s \xe0 la mode qui peut se danser seul ou \xe0 deux.'
+      },
+      {
+        name: 'Salsa',
+        duration: '45\'',
+        level: 'medium',
+        category: 'danse',
+        description: 'Cours de danse qui peut se pratiquer seul ou accompagn\xe9.'
+      },
+      {
+        name: 'Step',
+        duration: '45\'',
+        level: 'medium',
+        category: 'danse',
+        description: 'Cours a\xe9robic s\u2019effectuant sur un step qui permet \xe0 la fois de s\u2019amuser tout en perdant de la masse graisseuse et en musclant le coeur.'
       }
-    };
-    $scope.activities = {
-      cardio: [
-        {
-          name: 'Step',
-          id: 0
-        },
-        {
-          name: 'Biking',
-          id: 1
-        },
-        {
-          name: 'Magic Combat',
-          id: 2
-        },
-        {
-          name: 'Cardio Attack',
-          id: 3
-        }
-      ],
-      renforcement: [
-        {
-          name: 'Abdos Fessiers',
-          id: 4
-        },
-        {
-          name: 'Body Sculpt',
-          id: 5
-        },
-        {
-          name: 'C.A.F.',
-          id: 6
-        },
-        {
-          name: 'Abdos Flash',
-          id: 7
-        },
-        {
-          name: 'Pump',
-          id: 8
-        }
-      ],
-      danse: [{
-          name: 'Zumba',
-          id: 9
-        }],
-      zen: [
-        {
-          name: 'Pilates',
-          id: 10
-        },
-        {
-          name: 'Stretching',
-          id: 11
-        },
-        {
-          name: 'Gym douce',
-          id: 12
-        }
-      ]
+    ];
+  }
+]);'use strict';
+angular.module('activity').directive('levelIcon', [
+  '$window',
+  function ($window) {
+    return {
+      restrict: 'EA',
+      scope: {
+        size: '@',
+        level: '@'
+      },
+      template: '<div data-ng-include="\'modules/activity/views/level-icon.view.svg\'" class="level-icon" data-ng-class="level"></div>',
+      link: function ($scope, $element, $attr) {
+      }
     };
   }
 ]);'use strict';
 //Setting up route
+angular.module('admin').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Admin state routing
+    $stateProvider.state('admin', {
+      url: '/admin',
+      templateUrl: 'modules/admin/views/admin.client.view.html'
+    });
+  }
+]);'use strict';
+angular.module('admin').controller('AdminController', [
+  '$scope',
+  '$http',
+  function ($scope, $http) {
+    $scope.mySchema = {
+      type: 'object',
+      title: 'Traductions',
+      required: true,
+      properties: {
+        address: {
+          type: 'object',
+          title: 'Adresse',
+          required: true,
+          properties: {
+            header: {
+              type: 'string',
+              title: 'Label de l\'adresse',
+              required: true
+            },
+            city: {
+              type: 'string',
+              title: 'Ville',
+              required: true
+            },
+            line1: {
+              type: 'string',
+              title: 'Ligne1',
+              required: true
+            },
+            line2: {
+              type: 'string',
+              title: 'Ligne2',
+              required: true
+            }
+          }
+        },
+        brand: {
+          type: 'string',
+          title: 'Nom de la marque',
+          required: true
+        },
+        contact: {
+          type: 'object',
+          title: 'Contact',
+          required: true,
+          properties: {
+            header: {
+              type: 'string',
+              title: 'Label',
+              required: true
+            },
+            phone: {
+              type: 'string',
+              title: 'T\xe9l\xe9phone',
+              required: true
+            },
+            email: {
+              type: 'string',
+              title: 'Email',
+              required: true
+            }
+          }
+        },
+        header: {
+          type: 'object',
+          title: 'Barre de navigation',
+          required: true,
+          properties: {
+            salle: {
+              type: 'string',
+              title: 'Salle',
+              required: true
+            },
+            activities: {
+              type: 'string',
+              title: 'Activit\xe9s',
+              required: true
+            },
+            schedule: {
+              type: 'string',
+              title: 'Planning',
+              required: true
+            },
+            coaching: {
+              type: 'string',
+              title: 'Coaching',
+              required: true
+            },
+            osteopathy: {
+              type: 'string',
+              title: 'Ost\xe9opathie',
+              required: true
+            },
+            contact: {
+              type: 'string',
+              title: 'Acc\xe8s',
+              required: true
+            }
+          }
+        },
+        home: {
+          type: 'object',
+          title: 'Page d\'accueil',
+          required: true,
+          properties: {
+            callToAction: {
+              type: 'string',
+              title: 'Bouton principal',
+              required: true
+            }
+          }
+        },
+        schedule: {
+          type: 'object',
+          title: 'Planning - accueil',
+          required: true,
+          properties: {
+            header: {
+              type: 'string',
+              title: 'Label',
+              required: true
+            },
+            1: {
+              type: 'object',
+              title: 'Jour 1',
+              required: true,
+              properties: {
+                name: {
+                  type: 'string',
+                  title: 'Nom',
+                  required: true
+                },
+                start: {
+                  type: 'integer',
+                  title: 'Heure de d\xe9but',
+                  required: true
+                },
+                end: {
+                  type: 'integer',
+                  title: 'Heure de fin',
+                  required: true
+                },
+                hour: {
+                  type: 'string',
+                  title: 'Horaires',
+                  required: true
+                }
+              }
+            },
+            2: {
+              type: 'object',
+              title: 'Jour 2',
+              required: true,
+              properties: {
+                name: {
+                  type: 'string',
+                  title: 'Nom',
+                  required: true
+                },
+                start: {
+                  type: 'integer',
+                  title: 'Heure de d\xe9but',
+                  required: true
+                },
+                end: {
+                  type: 'integer',
+                  title: 'Heure de fin',
+                  required: true
+                },
+                hour: {
+                  type: 'string',
+                  title: 'Horaires',
+                  required: true
+                }
+              }
+            },
+            3: {
+              type: 'object',
+              title: 'Jour 3',
+              required: true,
+              properties: {
+                name: {
+                  type: 'string',
+                  title: 'Nom',
+                  required: true
+                },
+                start: {
+                  type: 'integer',
+                  title: 'Heure de d\xe9but',
+                  required: true
+                },
+                end: {
+                  type: 'integer',
+                  title: 'Heure de fin',
+                  required: true
+                },
+                hour: {
+                  type: 'string',
+                  title: 'Horaires',
+                  required: true
+                }
+              }
+            },
+            4: {
+              type: 'object',
+              title: 'Jour 4',
+              required: true,
+              properties: {
+                name: {
+                  type: 'string',
+                  title: 'Nom',
+                  required: true
+                },
+                start: {
+                  type: 'integer',
+                  title: 'Heure de d\xe9but',
+                  required: true
+                },
+                end: {
+                  type: 'integer',
+                  title: 'Heure de fin',
+                  required: true
+                },
+                hour: {
+                  type: 'string',
+                  title: 'Horaires',
+                  required: true
+                }
+              }
+            },
+            5: {
+              type: 'object',
+              title: 'Jour 5',
+              required: true,
+              properties: {
+                name: {
+                  type: 'string',
+                  title: 'Nom',
+                  required: true
+                },
+                start: {
+                  type: 'integer',
+                  title: 'Heure de d\xe9but',
+                  required: true
+                },
+                end: {
+                  type: 'integer',
+                  title: 'Heure de fin',
+                  required: true
+                },
+                hour: {
+                  type: 'string',
+                  title: 'Horaires',
+                  required: true
+                }
+              }
+            },
+            6: {
+              type: 'object',
+              title: 'Jour 6',
+              required: true,
+              properties: {
+                name: {
+                  type: 'string',
+                  title: 'Nom',
+                  required: true
+                },
+                start: {
+                  type: 'integer',
+                  title: 'Heure de d\xe9but',
+                  required: true
+                },
+                end: {
+                  type: 'integer',
+                  title: 'Heure de fin',
+                  required: true
+                },
+                hour: {
+                  type: 'string',
+                  title: 'Horaires',
+                  required: true
+                }
+              }
+            },
+            7: {
+              type: 'object',
+              title: 'Jour 7',
+              required: true,
+              properties: {
+                name: {
+                  type: 'string',
+                  title: 'Nom',
+                  required: true
+                },
+                start: {
+                  type: 'integer',
+                  title: 'Heure de d\xe9but',
+                  required: true
+                },
+                end: {
+                  type: 'integer',
+                  title: 'Heure de fin',
+                  required: true
+                },
+                hour: {
+                  type: 'string',
+                  title: 'Horaires',
+                  required: true
+                }
+              }
+            }
+          }
+        }
+      }
+    };
+    $http.get('/api/translation').then(function (response) {
+      $scope.myStartVal = response.data;
+    });
+  }
+]).controller('AsyncButtonsController', function ($scope) {
+  $scope.onSubmit = function () {
+    console.log('onSubmit data in async controller', $scope.editor.getValue());
+  };
+});'use strict';
+//Setting up route
 angular.module('coaching').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Coaching state routing
+    $stateProvider.state('coaching', {
+      url: '/coaching',
+      templateUrl: 'modules/coaching/views/coaching.client.view.html'
+    });
   }
 ]);'use strict';
 angular.module('coaching').controller('CoachingController', [
@@ -407,11 +855,21 @@ angular.module('core').service('Menus', [function () {
 angular.module('planning').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Planning state routing
+    $stateProvider.state('planning', {
+      url: '/planning?name',
+      templateUrl: 'modules/planning/views/planning.client.view.html'
+    });
   }
 ]);'use strict';
 angular.module('planning').controller('PlanningController', [
   '$scope',
-  function ($scope) {
+  '$state',
+  function ($scope, $state) {
+    $scope.search = {};
+    if ($state.params.name) {
+      $scope.search.name = $state.params.name;
+    }
     $scope.planning = [
       {
         name: '',
@@ -419,27 +877,19 @@ angular.module('planning').controller('PlanningController', [
           {
             label: 'Matin',
             separator: true,
-            maxCount: 1
+            category: 'Matin',
+            maxCount: 3
           },
           {
-            label: '9h30',
+            label: 'Midi',
+            separator: true,
+            category: 'Midi',
             maxCount: 2
           },
           {
-            label: '10h30',
-            maxCount: 1
-          },
-          {
-            label: '11h30',
-            maxCount: 1
-          },
-          {
-            label: 'Apr\xe8s-midi',
+            label: 'Soir',
             separator: true,
-            maxCount: 1
-          },
-          {
-            label: '14h30',
+            category: 'Soir',
             maxCount: 1
           }
         ]
@@ -448,14 +898,76 @@ angular.module('planning').controller('PlanningController', [
         name: 'Lundi',
         classes: [
           {
-            name: 'Zumba',
-            start: '9h30',
-            duration: 60
+            name: 'Cross fit',
+            start: '10h',
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'cardio',
+            coach: 'Samuel',
+            time: '10h00- 10h45'
           },
           {
-            name: 'Body step',
-            start: '10h30',
-            duration: 45
+            name: 'C.A.F.',
+            start: '10h45',
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'renforcement',
+            coach: 'Samuel',
+            time: '10h45-11h30'
+          },
+          {
+            name: 'Fessiers Flash',
+            start: '12h15',
+            timeGroup: 'Midi',
+            duration: 15,
+            category: 'renforcement',
+            coach: 'Samuel',
+            time: '12h15-12h30'
+          },
+          {
+            name: 'Step',
+            start: '12h30',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'cardio',
+            coach: 'Samuel',
+            time: '12h30-13h15'
+          },
+          {
+            name: 'Boot Camp',
+            start: '18h00',
+            timeGroup: 'Soir',
+            duration: 30,
+            category: 'cardio',
+            coach: 'C\xe9dric',
+            time: '18h00-18h30'
+          },
+          {
+            name: 'Abdos Fessiers',
+            start: '18h30',
+            timeGroup: 'Soir',
+            duration: 30,
+            category: 'renforcement',
+            coach: 'C\xe9dric',
+            time: '18h30-19h00'
+          },
+          {
+            name: 'Step',
+            start: '19h00',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'danse',
+            coach: 'C\xe9dric',
+            time: '19h00-19h45'
+          },
+          {
+            name: 'Stretching',
+            start: '19h45',
+            timeGroup: 'Soir',
+            duration: 30,
+            category: 'zen',
+            coach: 'C\xe9dric',
+            time: '19h45-20h15'
           }
         ]
       },
@@ -463,14 +975,67 @@ angular.module('planning').controller('PlanningController', [
         name: 'Mardi',
         classes: [
           {
-            name: 'Body Attack',
+            name: 'Gym douce',
             start: '9h30',
-            duration: 90
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'zen',
+            coach: 'Christian',
+            time: '9h30-10h15'
           },
           {
-            name: 'Body Pump',
-            start: '14h30',
-            duration: 45
+            name: 'Body Barre',
+            start: '10h15',
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'renforcement',
+            coach: 'Christian',
+            time: '10h15-11h00'
+          },
+          {
+            name: 'Biking',
+            start: '12h15',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'cardio',
+            coach: 'Christian',
+            time: '12h15-13h00'
+          },
+          {
+            name: 'Abdos Flash',
+            start: '13h00',
+            timeGroup: 'Midi',
+            duration: 15,
+            category: 'renforcement',
+            coach: 'Christian',
+            time: '13h00-13h15'
+          },
+          {
+            name: 'H.I.I.T.',
+            start: '18h00',
+            timeGroup: 'Soir',
+            duration: 30,
+            category: 'cardio',
+            coach: 'Christian',
+            time: '18h00-18h30'
+          },
+          {
+            name: 'Biking',
+            start: '18h30',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'cardio',
+            coach: 'Christian',
+            time: '18h30-19h30'
+          },
+          {
+            name: 'Abdos Fessiers',
+            start: '19h30',
+            timeGroup: 'Soir',
+            duration: 30,
+            category: 'renforcement',
+            coach: 'Christian',
+            time: '19h30-20h00'
           }
         ]
       },
@@ -478,14 +1043,76 @@ angular.module('planning').controller('PlanningController', [
         name: 'Mercredi',
         classes: [
           {
-            name: 'Body Attack',
+            name: 'Postural Shape',
             start: '9h30',
-            duration: 90
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'zen',
+            coach: '',
+            time: '9h30-10h15'
           },
           {
-            name: 'Body Pump',
-            start: '14h30',
-            duration: 45
+            name: 'Abdos Flash',
+            start: '10h15',
+            timeGroup: 'Matin',
+            duration: 15,
+            category: 'renforcement',
+            coach: '',
+            time: '10h15-10h30'
+          },
+          {
+            name: 'H.I.I.T.',
+            start: '10h30',
+            timeGroup: 'Matin',
+            duration: 30,
+            category: 'cardio',
+            coach: '',
+            time: '10h30-11h00'
+          },
+          {
+            name: 'Pilates',
+            start: '12h15',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'zen',
+            coach: 'Adrien',
+            time: '12h15-13h00'
+          },
+          {
+            name: 'Zumba',
+            start: '13h00',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'danse',
+            coach: 'Adrien',
+            time: '13h00-13h45'
+          },
+          {
+            name: 'Postural Shape',
+            start: '17h45',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'zen',
+            coach: 'Christian',
+            time: '17h45-18h30'
+          },
+          {
+            name: 'Djembel',
+            start: '18h30',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'danse',
+            coach: 'Christian',
+            time: '18h30-19h30'
+          },
+          {
+            name: 'Body Sculpt',
+            start: '19h30',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'renforcement',
+            coach: 'Christian',
+            time: '19h30-20h15'
           }
         ]
       },
@@ -493,14 +1120,67 @@ angular.module('planning').controller('PlanningController', [
         name: 'Jeudi',
         classes: [
           {
-            name: 'Body Attack',
+            name: 'Piloxing',
             start: '9h30',
-            duration: 90
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'cardio',
+            coach: 'Sylvie',
+            time: '9h30-10h15'
           },
           {
-            name: 'Body Pump',
-            start: '9h30',
-            duration: 45
+            name: 'Abdos Flash',
+            start: '10h15',
+            timeGroup: 'Matin',
+            duration: 15,
+            category: 'renforcement',
+            coach: 'Sylvie',
+            time: '10h15-10h30'
+          },
+          {
+            name: 'Zumba',
+            start: '12h30',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'danse',
+            coach: 'Sylvie',
+            time: '12h30-13h15'
+          },
+          {
+            name: 'Abdos Flash',
+            start: '13h15',
+            timeGroup: 'Midi',
+            duration: 15,
+            category: 'renforcement',
+            coach: 'Sylvie',
+            time: '13h15-13h30'
+          },
+          {
+            name: 'Body Sculpt',
+            start: '18h00',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'renforcement',
+            coach: 'Sofiane',
+            time: '18h00-18h45'
+          },
+          {
+            name: 'Latinva',
+            start: '18h45',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'danse',
+            coach: 'Sofiane',
+            time: '18h45-19h45'
+          },
+          {
+            name: 'Stretching',
+            start: '19h45',
+            timeGroup: 'Soir',
+            duration: 30,
+            category: 'zen',
+            coach: 'Sofiane',
+            time: '19h45-20h15'
           }
         ]
       },
@@ -508,14 +1188,76 @@ angular.module('planning').controller('PlanningController', [
         name: 'Vendredi',
         classes: [
           {
-            name: 'Body Attack',
+            name: 'Biking',
             start: '9h30',
-            duration: 90
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'cardio',
+            coach: 'C\xe9dric',
+            time: '9h30-10h15'
           },
           {
-            name: 'Body Pump',
-            start: '14h30',
-            duration: 45
+            name: 'Pilates',
+            start: '10h15',
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'renforcement',
+            coach: 'C\xe9dric',
+            time: '10h15-11h00'
+          },
+          {
+            name: 'Zumba',
+            start: '12h15',
+            timeGroup: 'Midi',
+            duration: 45,
+            category: 'danse',
+            coach: 'Adrien',
+            time: '12h15-13h00'
+          },
+          {
+            name: 'Special Taille fine',
+            start: '13h00',
+            timeGroup: 'Midi',
+            duration: 30,
+            category: 'zen',
+            coach: 'Adrien',
+            time: '13h00-13h30'
+          },
+          {
+            name: 'Stretching',
+            start: '13h30',
+            timeGroup: 'Midi',
+            duration: 15,
+            category: 'zen',
+            coach: 'Adrien',
+            time: '13h30-13h45'
+          },
+          {
+            name: 'Piloxing',
+            start: '17h30',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'cardio',
+            coach: 'Sylvie & Miguel',
+            time: '17h30-18h30'
+          },
+          {
+            name: 'Salsa',
+            start: '18h00',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'danse',
+            coach: 'Sylvie & Miguel',
+            time: '18h00-19h00'
+          },
+          {
+            name: 'Bachata',
+            start: '19h00',
+            timeGroup: 'Soir',
+            duration: 60,
+            category: 'danse',
+            coach: 'Sylvie & Miguel',
+            time: '19h00-20h00'
           }
         ]
       },
@@ -523,14 +1265,31 @@ angular.module('planning').controller('PlanningController', [
         name: 'Samedi',
         classes: [
           {
-            name: 'Body Attack',
-            start: '9h30',
-            duration: 90
+            name: 'Step',
+            start: '10h30',
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'cardio',
+            coach: 'Julien',
+            time: '10h30-11h15'
           },
           {
-            name: 'Body Pump',
-            start: '14h30',
-            duration: 45
+            name: 'Body Sculpt',
+            start: '11h15',
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'renforcement',
+            coach: 'Julien',
+            time: '11h15-12h00'
+          },
+          {
+            name: 'Abdos Fessiers',
+            start: '12h00',
+            timeGroup: 'Midi',
+            duration: 30,
+            category: 'renforcement',
+            coach: 'Julien',
+            time: '12h00-12h30'
           }
         ]
       },
@@ -538,24 +1297,68 @@ angular.module('planning').controller('PlanningController', [
         name: 'Dimanche',
         classes: [
           {
-            name: 'Body Attack',
-            start: '9h30',
-            duration: 90
+            name: 'C.A.F.',
+            start: '10h30',
+            timeGroup: 'Matin',
+            duration: 45,
+            category: 'renforcement',
+            coach: 'Clo\xe9',
+            time: '10h30-11h15'
           },
           {
-            name: 'Body Pump',
-            start: '11h30',
-            duration: 45
+            name: 'Zumba',
+            start: '11h15',
+            timeGroup: 'Matin',
+            duration: 60,
+            category: 'danse',
+            coach: 'Clo\xe9',
+            time: '11h15-12h15'
+          },
+          {
+            name: 'Stretching',
+            start: '12h15',
+            timeGroup: 'Midi',
+            duration: 15,
+            category: 'zen',
+            coach: 'Clo\xe9',
+            time: '12h15-12h30'
           }
         ]
       }
     ];
+    $scope.coaches = [];
+    $scope.categories = [];
+    for (var i = 1; i < $scope.planning.length; i++) {
+      for (var classIndex = 0; classIndex < $scope.planning[i].classes.length; classIndex++) {
+        var coach = $scope.planning[i].classes[classIndex].coach;
+        var category = $scope.planning[i].classes[classIndex].category;
+        if ($scope.coaches.indexOf(coach) === -1) {
+          $scope.coaches.push(coach);
+        }
+        if ($scope.categories.indexOf(category) === -1) {
+          $scope.categories.push(category);
+        }
+      }
+    }
+    $scope.coaches.sort();
+    $scope.$watch('search', function () {
+      for (var key in $scope.search) {
+        if (!$scope.search[key]) {
+          delete $scope.search[key];
+        }
+      }
+    }, true);
   }
 ]);'use strict';
 //Setting up route
 angular.module('salle').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Salle state routing
+    $stateProvider.state('salle', {
+      url: '/salle',
+      templateUrl: 'modules/salle/views/salle.client.view.html'
+    });
   }
 ]);'use strict';
 angular.module('salle').controller('SalleController', [
