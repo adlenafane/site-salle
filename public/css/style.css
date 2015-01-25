@@ -5412,6 +5412,18 @@ button.close {
     font-size: 1.8em;
     height: 100%; }
 
+.headline {
+  color: #DA4453;
+  text-align: center; }
+
+footer.navbar {
+  border-top: 3px solid #DA4453;
+  margin-bottom: 0;
+  margin-top: 20px;
+  padding-top: 20px; }
+  footer.navbar a + a {
+    padding-right: 1em; }
+
 header.navbar {
   border-bottom: 3px solid #DA4453;
   border-top: none; }
