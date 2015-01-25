@@ -37,12 +37,12 @@ angular.module('planning').controller('PlanningController', [
         name: 'Lundi',
         classes: [
           {
-            name: 'Biking',
+            name: 'Cross fit',
             start: '10h',
             timeGroup: 'Matin',
             duration: 45,
             category: 'cardio',
-            coach: 'Cédric',
+            coach: 'Samuel',
             time: '10h00- 10h45'
           },
           {
@@ -51,7 +51,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: 'Cédric',
+            coach: 'Samuel',
             time: '10h45-11h30'
           },
           {
@@ -60,7 +60,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 15,
             category: 'renforcement',
-            coach: 'Cédric',
+            coach: 'Samuel',
             time: '12h15-12h30'
           },
           {
@@ -69,7 +69,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Midi',
             duration: 45,
             category: 'cardio',
-            coach: 'Cédric',
+            coach: 'Samuel',
             time: '12h30-13h15'
           },
           {
@@ -78,7 +78,7 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 30,
             category: 'cardio',
-            coach: '',
+            coach: 'Cédric',
             time: '18h00-18h30'
           },
           {
@@ -87,26 +87,26 @@ angular.module('planning').controller('PlanningController', [
             timeGroup: 'Soir',
             duration: 30,
             category: 'renforcement',
-            coach: '',
+            coach: 'Cédric',
             time: '18h30-19h00'
           },
           {
-            name: 'Zumba',
+            name: 'Step',
             start: '19h00',
             timeGroup: 'Soir',
             duration: 45,
             category: 'danse',
-            coach: '',
+            coach: 'Cédric',
             time: '19h00-19h45'
           },
           {
             name: 'Stretching',
             start: '19h45',
             timeGroup: 'Soir',
-            duration: 15,
+            duration: 30,
             category: 'zen',
-            coach: '',
-            time: '19h45-20h00'
+            coach: 'Cédric',
+            time: '19h45-20h15'
           }
         ]
       },
@@ -132,7 +132,7 @@ angular.module('planning').controller('PlanningController', [
             time: '10h15-11h00'
           },
           {
-            name: 'Cross Training',
+            name: 'Biking',
             start: '12h15',
             timeGroup: 'Midi',
             duration: 45,
@@ -236,20 +236,20 @@ angular.module('planning').controller('PlanningController', [
             time: '17h45-18h30'
           },
           {
-            name: 'Total Body',
+            name: 'Djembel',
             start: '18h30',
             timeGroup: 'Soir',
             duration: 60,
-            category: 'cardio',
+            category: 'danse',
             coach: 'Christian',
             time: '18h30-19h30'
           },
           {
-            name: 'Djembel',
+            name: 'Body Sculpt',
             start: '19h30',
             timeGroup: 'Soir',
             duration: 45,
-            category: 'danse',
+            category: 'renforcement',
             coach: 'Christian',
             time: '19h30-20h15'
           }
@@ -316,10 +316,10 @@ angular.module('planning').controller('PlanningController', [
             name: 'Stretching',
             start: '19h45',
             timeGroup: 'Soir',
-            duration: 15,
+            duration: 30,
             category: 'zen',
             coach: 'Sofiane',
-            time: '19h45-20h00'
+            time: '19h45-20h15'
           }
         ]
       },
@@ -327,21 +327,21 @@ angular.module('planning').controller('PlanningController', [
         name: 'Vendredi',
         classes: [
           {
-            name: 'Zumba',
+            name: 'Biking',
             start: '9h30',
             timeGroup: 'Matin',
             duration: 45,
-            category: 'danse',
-            coach: '',
+            category: 'cardio',
+            coach: 'Cédric',
             time: '9h30-10h15'
           },
           {
-            name: 'Full Body',
+            name: 'Pilates',
             start: '10h15',
             timeGroup: 'Matin',
             duration: 45,
             category: 'renforcement',
-            coach: '',
+            coach: 'Cédric',
             time: '10h15-11h00'
           },
           {
