@@ -5296,6 +5296,25 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+.activity-page .filters, .activity-page h1 {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10;
+  padding-right: 10; }
+  @media (min-width: 768px) {
+    .activity-page .filters, .activity-page h1 {
+      margin-left: 16.66667%; } }
+  @media (min-width: 768px) {
+    .activity-page .filters, .activity-page h1 {
+      float: left;
+      width: 66.66667%; } }
+
 #activities {
   position: relative;
   float: left;
@@ -5317,8 +5336,11 @@ button.close {
     padding: 1em; }
     @media (min-width: 768px) {
       #activities .activity {
+        margin-left: 16.66667%; } }
+    @media (min-width: 768px) {
+      #activities .activity {
         float: left;
-        width: 50%; } }
+        width: 66.66667%; } }
     #activities .activity .activity-content {
       -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
       box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
