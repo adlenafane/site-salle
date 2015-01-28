@@ -1243,21 +1243,21 @@ angular.module('planning').controller('PlanningController', [
           },
           {
             name: 'Salsa',
-            start: '18h00',
+            start: '18h30',
             timeGroup: 'Soir',
             duration: 60,
             category: 'danse',
             coach: 'Sylvie & Miguel',
-            time: '18h00-19h00'
+            time: '18h30-19h30'
           },
           {
             name: 'Bachata',
-            start: '19h00',
+            start: '19h30',
             timeGroup: 'Soir',
             duration: 60,
             category: 'danse',
             coach: 'Sylvie & Miguel',
-            time: '19h00-20h00'
+            time: '19h30-20h30'
           }
         ]
       },
