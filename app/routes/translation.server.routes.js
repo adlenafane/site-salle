@@ -2,7 +2,8 @@
 
 module.exports = function(app) {
 	// Translations Routes
-	var translations = require('../../app/controllers/translations');
+	var data = require('../../app/controllers/data');
 
-	app.route('/api/translation').get(translations.getTranslation);
+  app.route('/api/translation').get(data.getTranslation);
+	app.route('/api/planning').get(data.getPlanning);
 };
