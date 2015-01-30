@@ -925,7 +925,7 @@ angular.module('planning').controller('PlanningController', [
             time: '12h15-12h30'
           },
           {
-            name: 'Step',
+            name: 'Biking',
             start: '12h30',
             timeGroup: 'Midi',
             duration: 45,
@@ -964,10 +964,19 @@ angular.module('planning').controller('PlanningController', [
             name: 'Stretching',
             start: '19h45',
             timeGroup: 'Soir',
-            duration: 30,
+            duration: 15,
             category: 'zen',
             coach: 'C\xe9dric',
-            time: '19h45-20h15'
+            time: '19h45-20h00'
+          },
+          {
+            name: 'Zumba',
+            start: '20h00',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'zen',
+            coach: 'C\xe9dric',
+            time: '20h00-20h45'
           }
         ]
       },
@@ -1097,22 +1106,31 @@ angular.module('planning').controller('PlanningController', [
             time: '17h45-18h30'
           },
           {
-            name: 'Djembel',
+            name: 'Biking',
             start: '18h30',
             timeGroup: 'Soir',
-            duration: 60,
-            category: 'danse',
+            duration: 45,
+            category: 'cardio',
             coach: 'Christian',
-            time: '18h30-19h30'
+            time: '18h30-19h15'
           },
           {
             name: 'Body Sculpt',
-            start: '19h30',
+            start: '19h15',
             timeGroup: 'Soir',
             duration: 45,
             category: 'renforcement',
             coach: 'Christian',
-            time: '19h30-20h15'
+            time: '19h15-20h00'
+          },
+          {
+            name: 'Zumba',
+            start: '20h00',
+            timeGroup: 'Soir',
+            duration: 45,
+            category: 'renforcement',
+            coach: 'Christian',
+            time: '20h00-20h45'
           }
         ]
       },
@@ -1197,7 +1215,7 @@ angular.module('planning').controller('PlanningController', [
             time: '9h30-10h15'
           },
           {
-            name: 'Pilates',
+            name: 'Body and Mind',
             start: '10h15',
             timeGroup: 'Matin',
             duration: 45,
@@ -1215,7 +1233,7 @@ angular.module('planning').controller('PlanningController', [
             time: '12h15-13h00'
           },
           {
-            name: 'Special Taille fine',
+            name: 'Special Taille',
             start: '13h00',
             timeGroup: 'Midi',
             duration: 30,
@@ -1306,7 +1324,7 @@ angular.module('planning').controller('PlanningController', [
             time: '10h30-11h15'
           },
           {
-            name: 'Zumba',
+            name: 'Djembel',
             start: '11h15',
             timeGroup: 'Matin',
             duration: 60,
