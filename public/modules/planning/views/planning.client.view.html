@@ -1,6 +1,8 @@
 <section data-ng-controller="PlanningController">
 	<section class="planning-page">
     <h1 data-translate="planning.title"></h1>
+    <p class="text-warning"><i class="fa fa-warning fa-2x"></i> Attention : Seuls les cours le lundi, mercredi et vendredi sont assurés pendant la phase de lancement.</p>
+
     <div class="filters">
       <h2 data-translate="planning.filters.header"></h2>
       <form role="form">
@@ -34,7 +36,7 @@
         </div>
       </form>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive" data-ng-if="planning">
       <table class="planning table">
         <thead>
           <tr class="header">

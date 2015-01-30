@@ -315,7 +315,11 @@ angular.module('admin').controller('AdminController', ['$scope', '$http',
     };
 
     $http.get('/api/translation').then(function (response) {
-      $scope.myStartVal = response.data;
+      $scope.translations = response.data;
+    });
+
+    $http.get('/api/planning').then(function (response) {
+      $scope.planning = response.data;
     });
 	}
 ]).controller('AsyncButtonsController', function ($scope) {
