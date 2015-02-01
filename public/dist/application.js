@@ -917,18 +917,18 @@ angular.module('salle').controller('SalleController', [
   function ($scope) {
     $scope.carouselInterval = 5000;
     $scope.slides = [
-      { image: '/modules/salle/img/cardio.jpg' },
-      { image: '/modules/salle/img/libre.jpg' },
-      { image: '/modules/salle/img/guide.jpg' },
-      { image: '/modules/salle/img/classes.jpg' },
-      { image: '/modules/salle/img/classes-2.jpg' },
-      { image: '/modules/salle/img/classes-3.jpg' },
-      { image: '/modules/salle/img/classes-4.jpg' },
-      { image: '/modules/salle/img/classes-5.jpg' },
-      { image: '/modules/salle/img/biking.jpg' },
-      { image: '/modules/salle/img/freedom.jpg' },
-      { image: '/modules/salle/img/trx.jpg' },
-      { image: '/modules/salle/img/rest.jpg' }
+      { image: '/modules/salle/img/cardio-header.jpg' },
+      { image: '/modules/salle/img/1.jpg' },
+      { image: '/modules/salle/img/2.jpg' },
+      { image: '/modules/salle/img/guide-header.jpg' },
+      { image: '/modules/salle/img/3.jpg' },
+      { image: '/modules/salle/img/classes-header.jpg' },
+      { image: '/modules/salle/img/4.jpg' },
+      { image: '/modules/salle/img/libre-header.jpg' },
+      { image: '/modules/salle/img/6.jpg' },
+      { image: '/modules/salle/img/7.jpg' },
+      { image: '/modules/salle/img/8.jpg' },
+      { image: '/modules/salle/img/freedom.jpg' }
     ];
   }
 ]);'use strict';

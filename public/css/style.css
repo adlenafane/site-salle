@@ -5556,19 +5556,19 @@ table.planning.table {
 
 .salle article .cardio-image {
   background: url("../modules/salle/img/cardio-header.jpg");
-  background-position: 0px 18%;
+  background-position: 0px 50%;
   background-size: cover; }
 .salle article .libre-image {
   background: url("../modules/salle/img/libre-header.jpg");
-  background-position: 0px 50%;
+  background-position: 0px 61%;
   background-size: cover; }
 .salle article .guide-image {
   background: url("../modules/salle/img/guide-header.jpg");
-  background-position: 0px 60%;
+  background-position: 0px 49%;
   background-size: cover; }
 .salle article .classes-image {
   background: url("../modules/salle/img/classes-header.jpg");
-  background-position: 0px 40%;
+  background-position: 0px 44%;
   background-size: cover; }
 .salle article .biking-image {
   background: url("../modules/salle/img/biking-header.jpg");
@@ -5576,7 +5576,7 @@ table.planning.table {
   background-size: cover; }
 .salle article .freedom-image {
   background: url("../modules/salle/img/freedom.jpg");
-  background-position: 0px 18%;
+  background-position: 0px 62%;
   background-size: cover; }
 .salle article .trx-image {
   background: url("../modules/salle/img/trx-header.jpg");
