@@ -14,6 +14,7 @@ var ApplicationConfiguration = function () {
         'ngTouch',
         'ngSanitize',
         'pascalprecht.translate',
+        'textAngular',
         'ui.router',
         'ui.bootstrap',
         'ui.utils'
@@ -68,6 +69,8 @@ ApplicationConfiguration.registerModule('contact');'use strict';
 ApplicationConfiguration.registerModule('core');'use strict';
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('planning');'use strict';
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('posts');'use strict';
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('salle');'use strict';
 // Use Applicaion configuration module to register a new module
@@ -902,6 +905,93 @@ angular.module('planning').controller('PlanningController', [
   }
 ]);'use strict';
 //Setting up route
+angular.module('posts').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Posts state routing
+    $stateProvider.state('listPosts', {
+      url: '/posts',
+      templateUrl: 'modules/posts/views/list-posts.client.view.html'
+    }).state('createPost', {
+      url: '/posts/create',
+      templateUrl: 'modules/posts/views/create-post.client.view.html'
+    }).state('viewPost', {
+      url: '/posts/:postId',
+      templateUrl: 'modules/posts/views/view-post.client.view.html'
+    }).state('editPost', {
+      url: '/posts/:postId/edit',
+      templateUrl: 'modules/posts/views/edit-post.client.view.html'
+    });
+  }
+]);'use strict';
+// Posts controller
+angular.module('posts').controller('PostsController', [
+  '$scope',
+  '$stateParams',
+  '$location',
+  'Authentication',
+  'Posts',
+  function ($scope, $stateParams, $location, Authentication, Posts) {
+    $scope.authentication = Authentication;
+    // Create new Post
+    $scope.create = function () {
+      // Create new Post object
+      var post = new Posts({
+          name: this.name,
+          content: this.content
+        });
+      // Redirect after save
+      post.$save(function (response) {
+        $location.path('posts/' + response._id);
+        // Clear form fields
+        $scope.name = '';
+        $scope.content = '';
+      }, function (errorResponse) {
+        $scope.error = errorResponse.data.message;
+      });
+    };
+    // Remove existing Post
+    $scope.remove = function (post) {
+      if (post) {
+        post.$remove();
+        for (var i in $scope.posts) {
+          if ($scope.posts[i] === post) {
+            $scope.posts.splice(i, 1);
+          }
+        }
+      } else {
+        $scope.post.$remove(function () {
+          $location.path('posts');
+        });
+      }
+    };
+    // Update existing Post
+    $scope.update = function () {
+      var post = $scope.post;
+      post.$update(function () {
+        $location.path('posts/' + post._id);
+      }, function (errorResponse) {
+        $scope.error = errorResponse.data.message;
+      });
+    };
+    // Find a list of Posts
+    $scope.find = function () {
+      $scope.posts = Posts.query();
+    };
+    // Find existing Post
+    $scope.findOne = function () {
+      $scope.post = Posts.get({ postId: $stateParams.postId });
+    };
+  }
+]);'use strict';
+//Posts service used to communicate Posts REST endpoints
+angular.module('posts').factory('Posts', [
+  '$resource',
+  function ($resource) {
+    return $resource('posts/:postId', { postId: '@_id' }, { update: { method: 'PUT' } });
+  }
+]);'use strict';
+//Setting up route
 angular.module('salle').config([
   '$stateProvider',
   function ($stateProvider) {
@@ -997,6 +1087,35 @@ angular.module('users').config([
 angular.module('users').config([
   '$stateProvider',
   function ($stateProvider) {
+    // Users state routing
+    $stateProvider.state('profile', {
+      url: '/settings/profile',
+      templateUrl: 'modules/users/views/settings/edit-profile.client.view.html'
+    }).state('password', {
+      url: '/settings/password',
+      templateUrl: 'modules/users/views/settings/change-password.client.view.html'
+    }).state('accounts', {
+      url: '/settings/accounts',
+      templateUrl: 'modules/users/views/settings/social-accounts.client.view.html'
+    }).state('signup', {
+      url: '/signup',
+      templateUrl: 'modules/users/views/authentication/signup.client.view.html'
+    }).state('signin', {
+      url: '/signin',
+      templateUrl: 'modules/users/views/authentication/signin.client.view.html'
+    }).state('forgot', {
+      url: '/password/forgot',
+      templateUrl: 'modules/users/views/password/forgot-password.client.view.html'
+    }).state('reset-invlaid', {
+      url: '/password/reset/invalid',
+      templateUrl: 'modules/users/views/password/reset-password-invalid.client.view.html'
+    }).state('reset-success', {
+      url: '/password/reset/success',
+      templateUrl: 'modules/users/views/password/reset-password-success.client.view.html'
+    }).state('reset', {
+      url: '/password/reset/:token',
+      templateUrl: 'modules/users/views/password/reset-password.client.view.html'
+    });
   }
 ]);'use strict';
 angular.module('users').controller('AuthenticationController', [
