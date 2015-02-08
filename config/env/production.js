@@ -27,9 +27,9 @@ module.exports = {
                 'public/lib/angular-json-editor/dist/angular-json-editor.min.js',
                 'public/lib/angulartics/dist/angulartics.min.js',
                 'public/lib/angulartics/dist/angulartics-ga.min.js',
-                'public/textAngular/dist/textAngular-rangy.min.js',
-                'public/textAngular/dist/textAngular-sanitize.min.js',
-                'public/textAngular/dist/textAngular.min.js'
+                'public/lib/textAngular/dist/textAngular-rangy.min.js',
+                'public/lib/textAngular/dist/textAngular-sanitize.min.js',
+                'public/lib/textAngular/dist/textAngular.min.js'
             ]
         },
         css: 'public/dist/application.min.css',
