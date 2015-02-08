@@ -5,7 +5,8 @@ module.exports = {
     assets: {
         lib: {
             css: [
-                'public/lib/bootstrap/dist/css/application.min.css'
+                'public/lib/bootstrap/dist/css/application.min.css',
+                'public/lib/textAngular/src/textAngular.css'
             ],
             js: [
                 'public/lib/jquery/dist/jquery.min.js',
@@ -25,7 +26,10 @@ module.exports = {
                 'public/lib/json-editor/dist/jsoneditor.min.js',
                 'public/lib/angular-json-editor/dist/angular-json-editor.min.js',
                 'public/lib/angulartics/dist/angulartics.min.js',
-                'public/lib/angulartics/dist/angulartics-ga.min.js'
+                'public/lib/angulartics/dist/angulartics-ga.min.js',
+                'public/textAngular/dist/textAngular-rangy.min.js',
+                'public/textAngular/dist/textAngular-sanitize.min.js',
+                'public/textAngular/dist/textAngular.min.js'
             ]
         },
         css: 'public/dist/application.min.css',
