@@ -68,6 +68,8 @@ ApplicationConfiguration.registerModule('contact');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');'use strict';
 // Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('osteopathy');'use strict';
+// Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('planning');'use strict';
 // Use applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('posts');'use strict';
@@ -857,6 +859,22 @@ angular.module('core').service('Menus', [function () {
     //Adding the topbar menu
     this.addMenu('topbar');
   }]);'use strict';
+//Setting up route
+angular.module('osteopathy').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Osteopathy state routing
+    $stateProvider.state('osteopathy', {
+      url: '/osteopathie',
+      templateUrl: 'modules/osteopathy/views/osteopathy.client.view.html'
+    });
+  }
+]);'use strict';
+angular.module('osteopathy').controller('OsteopathyController', [
+  '$scope',
+  function ($scope) {
+  }
+]);'use strict';
 //Setting up route
 angular.module('planning').config([
   '$stateProvider',
