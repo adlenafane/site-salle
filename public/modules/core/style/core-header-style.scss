@@ -12,6 +12,10 @@ header {
     color: $brand-gray-dark;
     font-size: 1.2em;
 
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      font-size: 0.9em;
+    }
+
     &:hover, &:active, &:focus {
       background-color: $brand-primary;
       color: $white;

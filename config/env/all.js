@@ -17,7 +17,8 @@ module.exports = {
     assets: {
         lib: {
             css: [
-                'public/dist/style.css'
+                'public/dist/style.css',
+                'public/lib/textAngular/src/textAngular.css'
             ],
             js: [
                 'public/lib/jquery/dist/jquery.js',
@@ -37,7 +38,10 @@ module.exports = {
                 'public/lib/json-editor/dist/jsoneditor.js',
                 'public/lib/angular-json-editor/src/angular-json-editor.js',
                 'public/lib/angulartics/src/angulartics.js',
-                'public/lib/angulartics/src/angulartics-ga.js'
+                'public/lib/angulartics/src/angulartics-ga.js',
+                'public/lib/textAngular/dist/textAngular-rangy.min.js',
+                'public/lib/textAngular/dist/textAngular-sanitize.min.js',
+                'public/lib/textAngular/dist/textAngular.min.js'
             ]
         },
         css: [

@@ -5454,6 +5454,9 @@ header.navbar {
 header .nav > li > a {
   color: #534e4b;
   font-size: 1.2em; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    header .nav > li > a {
+      font-size: 0.9em; } }
   header .nav > li > a:hover, header .nav > li > a:active, header .nav > li > a:focus {
     background-color: #DA4453;
     color: #FFF; }
