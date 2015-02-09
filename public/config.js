@@ -15,6 +15,7 @@ var ApplicationConfiguration = (function() {
 		'ngTouch',
 		'ngSanitize',
 		'pascalprecht.translate',
+		'textAngular',
 		'ui.router',
 		'ui.bootstrap',
 		'ui.utils'

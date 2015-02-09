@@ -12,6 +12,7 @@
 		"email": "contact@magicform-far.fr"
 	},
 	"header": {
+		"posts": "Évènements",
 		"salle": "La Salle",
 		"activities": "Activités",
 		"schedule": "Planning",
@@ -69,10 +70,27 @@
 	},
 	"coaching": {
 		"title": "Atteignez vos objectifs",
-		"subtitle": "Demandez votre Coach Personnel !",
-		"paragraph1": "Toute l'attention sera concentré sur vous. Toute l'énergie de notre coach, tout son savoir-faire est à votre unique service afin d'atteindre vos objectifs et pour que vous exploitiez le meilleur de vous-même...",
-		"paragraph2": "Aujourd'hui 2 coachs vous proposent des rendez-vous de 30 minutes aux horaires ci-dessous pour vous accompagner.",
-		"paragraph3": "",
+		"subtitle": "Demandez votre programme personalisé !",
+		"paragraph1": "Toute l'attention sera concentrée sur vous. Toute l'énergie de notre coach, tout son savoir-faire est à votre unique service afin d'atteindre vos objectifs et pour que vous exploitiez le meilleur de vous-même...",
+		"paragraph2": "Aujourd'hui notre coach Samuel vous propose des rendez-vous de 30 minutes aux horaires ci-dessous pour vous accompagner.",
+		"subtitleCoachingPerso": "Demandez votre Coach Personnel !",
+		"paragraph3": "Vous pouvez aussi demander qu'un coach travaille avec vous et rien que pour vous pendant 1h. Une séance qui s'annonce riche en apprentissage et permettra de répondre à toutes vos questions tout en vous dépassant !",
+		"footer": "Plus de renseignements et RDV en club"
+	},
+	"osteopathy": {
+		"title": "Ostéopathie",
+		"subtitle": "Après une bonne séance de sport, pour finir en beauté, rien de tel qu’un long massage pour se relaxer.",
+		"paragraph1": "Votre salle accueille Caroline De Toni, étudiante en ostéopathie en 5ème année à l’école OSTEOBIO de Cachan. Vous pouvez venir la consulter pour :",
+		"paragraph2": "",
+		"item1": "Pour les douleurs de type nerveux  (décharges électriques, fourmillements, engourdissements, perte de sensibilité) : sciatique, cruralgie (douleur dans la cuisse), névralgie cervico-brachiale (douleur dans les bras)",
+		"item2": "Pour les douleurs du dos, du cou, mais également des articulations des bras et des jambes ;",
+		"item3": "Pour les douleurs tendineuses et musculaires : tendinopathies, contractures...",
+		"item4": "Pour les troubles digestifs chroniques : constipation, diarrhée, reflux...",
+		"item5": "Pour les troubles ORL chroniques  et non allergiques : otites, sinusites, rhinites...",
+		"item6": "",
+		"item7": "",
+		"item8": "",
+		"availability": "Les consultations sont le mercredi de 10h à 13h.",
 		"footer": "Plus de renseignements et RDV en club"
 	},
 	"access": {
