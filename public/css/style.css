@@ -5435,7 +5435,9 @@ button.close {
     height: 100%; }
 
 .headline {
+  border-top: 1px solid #DA4453;
   color: #DA4453;
+  margin-top: 3em;
   text-align: center; }
 
 footer.navbar {
@@ -5556,6 +5558,11 @@ table.planning.table {
 
 .table-responsive table {
   border: none; }
+
+.posts .post + .post {
+  margin-top: 1em; }
+.posts .post.major {
+  border: 2px solid #DA4453; }
 
 .salle article .cardio-image {
   background: url("../modules/salle/img/cardio-header.jpg");

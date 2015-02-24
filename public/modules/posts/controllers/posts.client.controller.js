@@ -10,6 +10,7 @@ angular.module('posts').controller('PostsController', ['$scope', '$stateParams',
 			// Create new Post object
 			var post = new Posts ({
 				name: this.name,
+				major: this.major,
 				content: this.content
 			});
 
@@ -19,6 +20,7 @@ angular.module('posts').controller('PostsController', ['$scope', '$stateParams',
 
 				// Clear form fields
 				$scope.name = '';
+				$scope.major = false;
 				$scope.content = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
@@ -59,7 +61,7 @@ angular.module('posts').controller('PostsController', ['$scope', '$stateParams',
 
 		// Find existing Post
 		$scope.findOne = function() {
-			$scope.post = Posts.get({ 
+			$scope.post = Posts.get({
 				postId: $stateParams.postId
 			});
 		};

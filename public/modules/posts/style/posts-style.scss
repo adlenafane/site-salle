@@ -1,0 +1,11 @@
+.posts {
+  .post + .post {
+    margin-top: 1em;
+  }
+
+  .post {
+    &.major {
+      border: 2px solid $brand-primary;
+    }
+  }
+}

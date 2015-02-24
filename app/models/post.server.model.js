@@ -20,6 +20,10 @@ var PostSchema = new Schema({
 		type: String,
 		default: ''
 	},
+	major: {
+		type: Boolean,
+		default: false
+	},
 	created: {
 		type: Date,
 		default: Date.now

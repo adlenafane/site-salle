@@ -710,7 +710,8 @@ angular.module('core').controller('HomeController', [
   '$scope',
   'Authentication',
   '$translate',
-  function ($scope, Authentication, $translate) {
+  'Posts',
+  function ($scope, Authentication, $translate, Posts) {
     // This provides Authentication context.
     $scope.authentication = Authentication;
     $scope.currentDay = new Date().getDay();
@@ -720,6 +721,7 @@ angular.module('core').controller('HomeController', [
     $translate('contact.email').then(function (email) {
       $scope.email = email;
     });
+    $scope.posts = Posts.query({ major: true });
   }
 ]);'use strict';
 //Menu service used for managing  menus
@@ -956,6 +958,7 @@ angular.module('posts').controller('PostsController', [
       // Create new Post object
       var post = new Posts({
           name: this.name,
+          major: this.major,
           content: this.content
         });
       // Redirect after save
@@ -963,6 +966,7 @@ angular.module('posts').controller('PostsController', [
         $location.path('posts/' + response._id);
         // Clear form fields
         $scope.name = '';
+        $scope.major = false;
         $scope.content = '';
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;

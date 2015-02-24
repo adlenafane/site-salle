@@ -72,7 +72,12 @@ exports.delete = function(req, res) {
 /**
  * List of Posts
  */
-exports.list = function(req, res) { Post.find().sort('-created').populate('user', 'displayName').exec(function(err, posts) {
+exports.list = function(req, res) {
+	var where = {};
+	if (req.query.major) {
+		where = {major: req.query.major === 'true'};
+	}
+	Post.find(where).sort('-created').populate('user', 'displayName').exec(function(err, posts) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
