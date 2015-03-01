@@ -1,7 +1,7 @@
 <section data-ng-controller="PlanningController">
 	<section class="planning-page">
     <h1 data-translate="planning.title"></h1>
-    <p class="text-warning"><i class="fa fa-warning fa-2x"></i> Attention : Seuls les cours le lundi, mercredi et vendredi sont assurés pendant la phase de lancement.</p>
+    <p class="text-success"><i class="fa fa-check fa-2x"></i> Tous les cours sont maintenant disponibles !</p>
 
     <div class="filters">
       <h2 data-translate="planning.filters.header"></h2>
@@ -32,6 +32,12 @@
             <select id="class-category" class="form-control" data-ng-model="search.category" data-ng-options="category for category in categories">
               <option value="">Toutes</option>
             </select>
+          </div>
+          <div class="form-group filter-category">
+            <label for="download">Télécharger</label>
+            <a class="btn btn-primary btn-block" id="download" data-ng-href="http://www.magicform-far.fr/modules/planning/assets/150301_Planning_Magicform_Fontenay_aux_Roses.pdf" target="_blank">
+              PDF
+            </a>
           </div>
         </div>
       </form>
