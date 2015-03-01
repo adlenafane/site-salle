@@ -32,7 +32,7 @@
                     "timeGroup": "Matin",
                     "duration": 45,
                     "category": "renforcement",
-                    "coach": "Samuel",
+                    "coach": "Cédric",
                     "time": "10h00- 10h45"
                 },
                 {
@@ -41,7 +41,7 @@
                     "timeGroup": "Matin",
                     "duration": 45,
                     "category": "renforcement",
-                    "coach": "Samuel",
+                    "coach": "Cédric",
                     "time": "10h45-11h30"
                 },
                 {
@@ -50,7 +50,7 @@
                     "timeGroup": "Midi",
                     "duration": 15,
                     "category": "renforcement",
-                    "coach": "Samuel",
+                    "coach": "Cédric",
                     "time": "12h15-12h30"
                 },
                 {
@@ -59,7 +59,7 @@
                     "timeGroup": "Midi",
                     "duration": 45,
                     "category": "cardio",
-                    "coach": "Samuel",
+                    "coach": "Cédric",
                     "time": "12h30-13h15"
                 },
                 {
