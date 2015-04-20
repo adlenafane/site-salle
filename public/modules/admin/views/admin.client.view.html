@@ -1,7 +1,7 @@
 <section data-ng-controller="AdminController">
-  <json-editor schema="mySchema" startval="translations" buttons-controller="AsyncButtonsController" ng-if="translations">
+  <json-editor schema="{}" startval="translations" buttons-controller="AsyncButtonsController" ng-if="translations">
 
-    <button type="submit" class="btn btn-success" ng-click="onSubmit($event)" ng-disabled="!isValid">
+    <button type="submit" class="btn btn-success" ng-click="onSubmit($event, 'translations')" ng-disabled="!isValid">
       <span class="fa fa-check"></span>
       Submit
     </button>
@@ -10,7 +10,7 @@
 
   <json-editor schema="{}" startval="planning" buttons-controller="AsyncButtonsController" ng-if="planning">
 
-    <button type="submit" class="btn btn-success" ng-click="onSubmit($event)" ng-disabled="!isValid">
+    <button type="submit" class="btn btn-success" ng-click="onSubmit($event, 'planning')" ng-disabled="!isValid">
       <span class="fa fa-check"></span>
       Submit
     </button>
