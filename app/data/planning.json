@@ -1,5 +1,24 @@
 [
-    {},
+    {
+        "name": "",
+        "slots": [
+            {
+                "label": "Matin",
+                "separator": true,
+                "category": "Matin"
+            },
+            {
+                "label": "Midi",
+                "separator": true,
+                "category": "Midi"
+            },
+            {
+                "label": "Soir",
+                "separator": true,
+                "category": "Soir"
+            }
+        ]
+    },
     {
         "name": "Lundi",
         "classes": [
