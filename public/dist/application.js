@@ -45,7 +45,7 @@ angular.module(ApplicationConfiguration.applicationModuleName).config([
 angular.module(ApplicationConfiguration.applicationModuleName).config([
   '$translateProvider',
   function ($translateProvider) {
-    $translateProvider.useUrlLoader('api/translation');
+    $translateProvider.useUrlLoader('api/translations');
     $translateProvider.preferredLanguage('fr');
   }
 ]);
@@ -586,16 +586,19 @@ angular.module('admin').controller('AdminController', [
         }
       }
     };
-    $http.get('/api/translation').then(function (response) {
+    $http.get('/api/translations').then(function (response) {
       $scope.translations = response.data;
     });
     $http.get('/api/planning').then(function (response) {
       $scope.planning = response.data;
     });
   }
-]).controller('AsyncButtonsController', function ($scope) {
-  $scope.onSubmit = function () {
+]).controller('AsyncButtonsController', function ($scope, $http) {
+  $scope.onSubmit = function ($event, type) {
     console.log('onSubmit data in async controller', $scope.editor.getValue());
+    var payload = $scope.editor.getValue();
+    $http.post('/api/' + type, payload).then(function (response) {
+    });
   };
 });'use strict';
 //Setting up route
@@ -900,7 +903,7 @@ angular.module('planning').controller('PlanningController', [
       $scope.search.name = $state.params.name;
     }
     $http.get('/api/planning').then(function (response) {
-      $scope.planning = response.data.data;
+      $scope.planning = response.data;
       for (var i = 1; i < $scope.planning.length; i++) {
         for (var classIndex = 0; classIndex < $scope.planning[i].classes.length; classIndex++) {
           var coach = $scope.planning[i].classes[classIndex].coach;

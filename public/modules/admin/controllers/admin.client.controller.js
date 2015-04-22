@@ -314,7 +314,7 @@ angular.module('admin').controller('AdminController', ['$scope', '$http',
         }
     };
 
-    $http.get('/api/translation').then(function (response) {
+    $http.get('/api/translations').then(function (response) {
       $scope.translations = response.data;
     });
 
@@ -322,10 +322,14 @@ angular.module('admin').controller('AdminController', ['$scope', '$http',
       $scope.planning = response.data;
     });
 	}
-]).controller('AsyncButtonsController', function ($scope) {
+]).controller('AsyncButtonsController', function ($scope, $http) {
 
-    $scope.onSubmit = function () {
+    $scope.onSubmit = function ($event, type) {
         console.log('onSubmit data in async controller', $scope.editor.getValue());
+        var payload = $scope.editor.getValue();
+        $http.post('/api/' + type, payload)
+        .then(function (response) {
+        });
     };
 
 });

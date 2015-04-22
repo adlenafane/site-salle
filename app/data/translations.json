@@ -1,131 +1,131 @@
 {
-	"address": {
-		"header": "Adresse :",
-		"city": "Fontenay aux Roses",
-		"line1": "5 rue d'Estienne d'Orves",
-		"line2": "92260 Fontenay aux Roses"
-	},
-	"brand": "Magic Form",
-	"contact": {
-		"header": "Contact :",
-		"phone": "01 46 01 03 53",
-		"email": "contact@magicform-far.fr"
-	},
-	"header": {
-		"posts": "Évènements",
-		"salle": "La Salle",
-		"activities": "Activités",
-		"schedule": "Planning",
-		"coaching": "Coaching",
-		"osteopathy": "Ostéopathie",
-		"contact": "Accès"
-	},
-	"home": {
-		"callToAction": "Je m'inscris !"
-	},
-	"schedule": {
-		"header": "Horaires",
-		"1": {
-			"name": "Lundi",
-			"start": 9,
-			"end": 21,
-			"hour": "9h-21h"
-		},
-		"2": {
-			"name": "Mardi",
-			"start": 9,
-			"end": 21,
-			"hour": "9h-21h"
-		},
-		"3": {
-			"name": "Mercredi",
-			"start": 9,
-			"end": 21,
-			"hour": "9h-21h"
-		},
-		"4": {
-			"name": "Jeudi",
-			"start": 9,
-			"end": 21,
-			"hour": "9h-21h"
-		},
-		"5": {
-			"name": "Vendredi",
-			"start": 9,
-			"end": 21,
-			"hour": "9h-21h"
-		},
-		"6": {
-			"name": "Samedi",
-			"start": 10,
-			"end": 17,
-			"hour": "10h-17h"
-		},
-		"7": {
-			"name": "Dimanche",
-			"start": 10,
-			"end": 14,
-			"hour": "10h-14h"
-		}
-	},
-	"coaching": {
-		"title": "Atteignez vos objectifs",
-		"subtitle": "Demandez votre programme personalisé !",
-		"paragraph1": "Toute l'attention sera concentrée sur vous. Toute l'énergie de notre coach, tout son savoir-faire est à votre unique service afin d'atteindre vos objectifs et pour que vous exploitiez le meilleur de vous-même...",
-		"paragraph2": "Aujourd'hui notre coach Cédric vous propose des rendez-vous de 30 minutes aux horaires ci-dessous pour vous accompagner.",
-		"subtitleCoachingPerso": "Demandez votre Coach Personnel !",
-		"paragraph3": "Vous pouvez aussi demander qu'un coach travaille avec vous et rien que pour vous pendant 1h. Une séance qui s'annonce riche en apprentissage et permettra de répondre à toutes vos questions tout en vous dépassant !",
-		"footer": "Plus de renseignements et RDV en club"
-	},
-	"osteopathy": {
-		"title": "Ostéopathie",
-		"subtitle": "Après une bonne séance de sport, pour finir en beauté, rien de tel qu’un long massage pour se relaxer.",
-		"paragraph1": "Votre salle accueille Caroline De Toni, étudiante en ostéopathie en 5ème année à l’école OSTEOBIO de Cachan. Vous pouvez venir la consulter pour :",
-		"paragraph2": "",
-		"item1": "Pour les douleurs de type nerveux  (décharges électriques, fourmillements, engourdissements, perte de sensibilité) : sciatique, cruralgie (douleur dans la cuisse), névralgie cervico-brachiale (douleur dans les bras)",
-		"item2": "Pour les douleurs du dos, du cou, mais également des articulations des bras et des jambes ;",
-		"item3": "Pour les douleurs tendineuses et musculaires : tendinopathies, contractures...",
-		"item4": "Pour les troubles digestifs chroniques : constipation, diarrhée, reflux...",
-		"item5": "Pour les troubles ORL chroniques  et non allergiques : otites, sinusites, rhinites...",
-		"item6": "",
-		"item7": "",
-		"item8": "",
-		"availability": "Les consultations sont le mercredi de 10h à 13h.",
-		"footer": "Plus de renseignements et RDV en club"
-	},
-	"access": {
-		"title": "Accès",
-		"byCar": {
-			"header": "En voiture",
-			"details": "D906 ou D920"
-		},
-		"byBus": {
-			"header": "En bus"
-		},
-		"byTrain": {
-			"header": "En train"
-		}
-	},
-	"activity": {
-		"title": "Activités",
-		"filters": {
-			"header": "Filtrer par",
-			"byName": "Nom du cours",
-			"byDifficulty": "Difficulté",
-			"byCategory": "Catégories"
-		}
-	},
-	"planning": {
-		"title": "Planning",
-		"filters": {
-			"header": "Filtrer par",
-			"byName": "Nom du cours",
-			"byTime": "Horaires",
-			"byCoach": "Coaches",
-			"byCategory": "Catégories"
-		}
-	},
-	"salle": {
-		"title": "La salle"
-	}
+    "address": {
+        "header": "Adresse :",
+        "city": "Fontenay aux Roses",
+        "line1": "5 rue d'Estienne d'Orves",
+        "line2": "92260 Fontenay aux Roses"
+    },
+    "brand": "Magic Form",
+    "contact": {
+        "header": "Contact :",
+        "phone": "01 46 01 03 53",
+        "email": "contact@magicform-far.fr"
+    },
+    "header": {
+        "posts": "Évènements",
+        "salle": "La Salle",
+        "activities": "Activités",
+        "schedule": "Planning",
+        "coaching": "Coaching",
+        "osteopathy": "Ostéopathie",
+        "contact": "Accès"
+    },
+    "home": {
+        "callToAction": "Je m'inscris !"
+    },
+    "schedule": {
+        "1": {
+            "name": "Lundi",
+            "start": 9,
+            "end": 21,
+            "hour": "9h-21h"
+        },
+        "2": {
+            "name": "Mardi",
+            "start": 9,
+            "end": 21,
+            "hour": "9h-21h"
+        },
+        "3": {
+            "name": "Mercredi",
+            "start": 9,
+            "end": 21,
+            "hour": "9h-21h"
+        },
+        "4": {
+            "name": "Jeudi",
+            "start": 9,
+            "end": 21,
+            "hour": "9h-21h"
+        },
+        "5": {
+            "name": "Vendredi",
+            "start": 9,
+            "end": 21,
+            "hour": "9h-21h"
+        },
+        "6": {
+            "name": "Samedi",
+            "start": 10,
+            "end": 17,
+            "hour": "10h-17h"
+        },
+        "7": {
+            "name": "Dimanche",
+            "start": 10,
+            "end": 14,
+            "hour": "10h-14h"
+        },
+        "header": "Horaires"
+    },
+    "coaching": {
+        "title": "Atteignez vos objectifs",
+        "subtitle": "Demandez votre programme personalisé !",
+        "paragraph1": "Toute l'attention sera concentrée sur vous. Toute l'énergie de notre coach, tout son savoir-faire est à votre unique service afin d'atteindre vos objectifs et pour que vous exploitiez le meilleur de vous-même...",
+        "paragraph2": "Aujourd'hui notre coach Cédric vous propose des rendez-vous de 30 minutes aux horaires ci-dessous pour vous accompagner.",
+        "subtitleCoachingPerso": "Demandez votre Coach Personnel !",
+        "paragraph3": "Vous pouvez aussi demander qu'un coach travaille avec vous et rien que pour vous pendant 1h. Une séance qui s'annonce riche en apprentissage et permettra de répondre à toutes vos questions tout en vous dépassant !",
+        "footer": "Plus de renseignements et RDV en club"
+    },
+    "osteopathy": {
+        "title": "Ostéopathie",
+        "subtitle": "Après une bonne séance de sport, pour finir en beauté, rien de tel qu’un long massage pour se relaxer.",
+        "paragraph1": "Votre salle accueille Caroline De Toni, étudiante en ostéopathie en 5ème année à l’école OSTEOBIO de Cachan. Vous pouvez venir la consulter pour :",
+        "paragraph2": "",
+        "item1": "Pour les douleurs de type nerveux  (décharges électriques, fourmillements, engourdissements, perte de sensibilité) : sciatique, cruralgie (douleur dans la cuisse), névralgie cervico-brachiale (douleur dans les bras)",
+        "item2": "Pour les douleurs du dos, du cou, mais également des articulations des bras et des jambes ;",
+        "item3": "Pour les douleurs tendineuses et musculaires : tendinopathies, contractures...",
+        "item4": "Pour les troubles digestifs chroniques : constipation, diarrhée, reflux...",
+        "item5": "Pour les troubles ORL chroniques  et non allergiques : otites, sinusites, rhinites...",
+        "item6": "",
+        "item7": "",
+        "item8": "",
+        "availability": "Les consultations sont le mercredi de 10h à 13h.",
+        "footer": "Plus de renseignements et RDV en club"
+    },
+    "access": {
+        "title": "Accès",
+        "byCar": {
+            "header": "En voiture",
+            "details": "D906 ou D920"
+        },
+        "byBus": {
+            "header": "En bus"
+        },
+        "byTrain": {
+            "header": "En train"
+        }
+    },
+    "activity": {
+        "title": "Activités",
+        "filters": {
+            "header": "Filtrer par",
+            "byName": "Nom du cours",
+            "byDifficulty": "Difficulté",
+            "byCategory": "Catégories"
+        }
+    },
+    "planning": {
+        "title": "Planning",
+        "filters": {
+            "header": "Filtrer par",
+            "byName": "Nom du cours",
+            "byTime": "Horaires",
+            "byCoach": "Coaches",
+            "byCategory": "Catégories"
+        }
+    },
+    "salle": {
+        "title": "La salle"
+    }
 }
