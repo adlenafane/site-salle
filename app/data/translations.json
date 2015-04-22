@@ -27,8 +27,8 @@
         "1": {
             "name": "Lundi",
             "start": 9,
-            "end": 21,
-            "hour": "9h-21h"
+            "end": 22,
+            "hour": "9h-22h"
         },
         "2": {
             "name": "Mardi",
@@ -51,8 +51,8 @@
         "5": {
             "name": "Vendredi",
             "start": 9,
-            "end": 21,
-            "hour": "9h-21h"
+            "end": 22,
+            "hour": "9h-22h"
         },
         "6": {
             "name": "Samedi",
