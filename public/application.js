@@ -13,7 +13,7 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 // Setting translate options
 angular.module(ApplicationConfiguration.applicationModuleName).config(['$translateProvider',
 	function($translateProvider) {
-		$translateProvider.useUrlLoader('api/translation');
+		$translateProvider.useUrlLoader('api/translations');
 		$translateProvider.preferredLanguage('fr');
 	}
 ]);

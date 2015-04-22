@@ -12,7 +12,7 @@ angular.module('planning').controller('PlanningController', [
     }
 
 		$http.get('/api/planning').then(function (response) {
-      $scope.planning = response.data.data;
+      $scope.planning = response.data;
 
       for (var i = 1; i < $scope.planning.length; i++) {
         for (var classIndex = 0; classIndex < $scope.planning[i].classes.length; classIndex++) {
