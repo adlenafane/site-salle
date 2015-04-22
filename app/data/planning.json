@@ -1,27 +1,5 @@
 [
-    {
-        "name": "",
-        "slots": [
-            {
-                "label": "Matin",
-                "separator": true,
-                "category": "Matin",
-                "maxCount": 3
-            },
-            {
-                "label": "Midi",
-                "separator": true,
-                "category": "Midi",
-                "maxCount": 2
-            },
-            {
-                "label": "Soir",
-                "separator": true,
-                "category": "Soir",
-                "maxCount": 1
-            }
-        ]
-    },
+    {},
     {
         "name": "Lundi",
         "classes": [
@@ -208,21 +186,21 @@
             },
             {
                 "name": "Pilates",
-                "start": "12h15",
+                "start": "11h00",
                 "timeGroup": "Midi",
                 "duration": 45,
                 "category": "renforcement",
                 "coach": "Adrien",
-                "time": "12h15-13h00"
+                "time": "11h00-11h45"
             },
             {
                 "name": "Zumba",
-                "start": "13h00",
+                "start": "11h45",
                 "timeGroup": "Midi",
                 "duration": 45,
                 "category": "danse",
                 "coach": "Adrien",
-                "time": "13h00-13h45"
+                "time": "11h45-12h30"
             },
             {
                 "name": "Postural Shape",
@@ -234,16 +212,16 @@
                 "time": "17h45-18h30"
             },
             {
-                "name": "Biking",
+                "name": "Body Sculpt",
                 "start": "18h30",
                 "timeGroup": "Soir",
                 "duration": 45,
-                "category": "cardio",
+                "category": "renforcement",
                 "coach": "Christian",
                 "time": "18h30-19h15"
             },
             {
-                "name": "Body Sculpt",
+                "name": "Biking",
                 "start": "19h15",
                 "timeGroup": "Soir",
                 "duration": 45,
@@ -257,6 +235,15 @@
                 "timeGroup": "Soir",
                 "duration": 45,
                 "category": "danse",
+                "coach": "Christian",
+                "time": "20h00-20h45"
+            },
+            {
+                "name": "TRX",
+                "start": "20h00",
+                "timeGroup": "Soir",
+                "duration": 45,
+                "category": "renforcement",
                 "coach": "Christian",
                 "time": "20h00-20h45"
             }
@@ -282,24 +269,6 @@
                 "category": "renforcement",
                 "coach": "Sylvie",
                 "time": "10h15-10h30"
-            },
-            {
-                "name": "Zumba",
-                "start": "12h30",
-                "timeGroup": "Midi",
-                "duration": 45,
-                "category": "danse",
-                "coach": "Sylvie",
-                "time": "12h30-13h15"
-            },
-            {
-                "name": "Abdos Flash",
-                "start": "13h15",
-                "timeGroup": "Midi",
-                "duration": 15,
-                "category": "renforcement",
-                "coach": "Sylvie",
-                "time": "13h15-13h30"
             },
             {
                 "name": "Body Sculpt",
@@ -350,33 +319,6 @@
                 "category": "cardio",
                 "coach": "Cédric",
                 "time": "10h15-11h00"
-            },
-            {
-                "name": "Zumba",
-                "start": "12h15",
-                "timeGroup": "Midi",
-                "duration": 45,
-                "category": "danse",
-                "coach": "Adrien",
-                "time": "12h15-13h00"
-            },
-            {
-                "name": "Special Taille",
-                "start": "13h00",
-                "timeGroup": "Midi",
-                "duration": 30,
-                "category": "renforcement",
-                "coach": "Adrien",
-                "time": "13h00-13h30"
-            },
-            {
-                "name": "Stretching",
-                "start": "13h30",
-                "timeGroup": "Midi",
-                "duration": 15,
-                "category": "renforcement",
-                "coach": "Adrien",
-                "time": "13h30-13h45"
             },
             {
                 "name": "Piloxing",
