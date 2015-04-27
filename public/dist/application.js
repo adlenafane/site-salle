@@ -1036,6 +1036,7 @@ angular.module('salle').controller('SalleController', [
       { image: '/modules/salle/img/1.jpg' },
       { image: '/modules/salle/img/2.jpg' },
       { image: '/modules/salle/img/guide-header.jpg' },
+      { image: '/modules/salle/img/9.jpg' },
       { image: '/modules/salle/img/3.jpg' },
       { image: '/modules/salle/img/classes-header.jpg' },
       { image: '/modules/salle/img/4.jpg' },
