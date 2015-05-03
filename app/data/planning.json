@@ -205,21 +205,21 @@
             },
             {
                 "name": "Pilates",
-                "start": "11h00",
+                "start": "12h15",
                 "timeGroup": "Midi",
                 "duration": 45,
                 "category": "renforcement",
                 "coach": "Adrien",
-                "time": "11h00-11h45"
+                "time": "12h15-13h00"
             },
             {
                 "name": "Zumba",
-                "start": "11h45",
+                "start": "13h00",
                 "timeGroup": "Midi",
                 "duration": 45,
                 "category": "danse",
                 "coach": "Adrien",
-                "time": "11h45-12h30"
+                "time": "13h00-13h45"
             },
             {
                 "name": "Postural Shape",
