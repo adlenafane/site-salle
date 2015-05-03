@@ -13,6 +13,8 @@ var _ = require('lodash'),
  * Signup
  */
 exports.signup = function(req, res) {
+	// Block signup for now
+	res.status(403).send();
 	// For security measurement we remove the roles from the req.body object
 	delete req.body.roles;
 
@@ -24,7 +26,7 @@ exports.signup = function(req, res) {
 	user.provider = 'local';
 	user.displayName = user.firstName + ' ' + user.lastName;
 
-	// Then save the user 
+	// Then save the user
 	user.save(function(err) {
 		if (err) {
 			return res.status(400).send({
