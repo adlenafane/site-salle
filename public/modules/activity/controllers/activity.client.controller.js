@@ -47,6 +47,13 @@ angular.module('activity').controller('ActivityController', [
         description: 'C’est un cours inspiré du cross fit qui est très intense, spécialement conçu pour les personnes en quête de sensations fortes souhaitant se dépasser pour repousser les limites de leur propre corps. C’est un cours d’alternance cardio et renforcement très difficile.'
       },
       {
+        name: 'Cross fit',
+        duration: '60\'',
+        level: 'hard',
+        category: 'renforcement',
+        description: 'Le CrossFit est une méthode d\'entraînement physique dont l\'objectif est de développer simultanément dix qualités : l\'agilité, l\'équilibre, la résistance, la coordination, la vitesse, la puissance, la précision, la force, l\'endurance cardiovasculaire et la flexibilité. Pour ce faire, les différents exercices font travailler plusieurs muscles à la fois pour dépenser un maximum d\'énergie. L\'entraînement est particulièrement intensif. Cette discipline est très populaire aux Etats-Unis.'
+      },
+      {
         name: 'H.I.I.T.',
         duration: '30\'',
         level: 'extreme',
