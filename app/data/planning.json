@@ -374,6 +374,15 @@
                 "category": "danse",
                 "coach": "Sylvie & Miguel",
                 "time": "19h30-20h30"
+            },
+            {
+                "name": "Cross fit",
+                "start": "20h45",
+                "timeGroup": "Soir",
+                "duration": 60,
+                "category": "renforcement",
+                "coach": "",
+                "time": "20h45-21h45"
             }
         ]
     },
