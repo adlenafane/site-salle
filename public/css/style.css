@@ -5440,8 +5440,12 @@ button.close {
   margin-top: 3em;
   text-align: center; }
 
-.post img {
-  max-width: 100%; }
+.post {
+  border-bottom: 1px solid #555555;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .post img {
+    max-width: 100%; }
 
 footer.navbar {
   border-top: 3px solid #DA4453;
