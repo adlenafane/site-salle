@@ -5440,6 +5440,9 @@ button.close {
   margin-top: 3em;
   text-align: center; }
 
+.post img {
+  max-width: 100%; }
+
 footer.navbar {
   border-top: 3px solid #DA4453;
   margin-bottom: 0;
