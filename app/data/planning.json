@@ -290,6 +290,15 @@
                 "time": "10h15-10h30"
             },
             {
+                "name": "Zumba",
+                "start": "10h30",
+                "timeGroup": "Matin",
+                "duration": 45,
+                "category": "danse",
+                "coach": "Sylvie",
+                "time": "10h30-11h15"
+            },
+            {
                 "name": "Body Sculpt",
                 "start": "18h00",
                 "timeGroup": "Soir",
