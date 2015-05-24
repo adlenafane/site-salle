@@ -35,9 +35,17 @@
           </div>
           <div class="form-group filter-category">
             <label for="download">Télécharger</label>
-            <a class="btn btn-primary btn-block" id="download" data-ng-href="http://www.magicform-far.fr/modules/planning/assets/150301_Planning_Magicform_Fontenay_aux_Roses.pdf" target="_blank">
-              PDF
+            <a class="btn btn-primary btn-block"
+               id="download"
+               ng-click="downloadPlanning()">
+              Télécharger le planning
             </a>
+            <!-- <a class="btn btn-primary btn-block"
+               id="download"
+               data-ng-href="http://www.magicform-far.fr/modules/planning/assets/150301_Planning_Magicform_Fontenay_aux_Roses.pdf"
+               target="_blank">
+              PDF
+            </a> -->
           </div>
         </div>
       </form>
