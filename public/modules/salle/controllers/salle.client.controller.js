@@ -18,7 +18,9 @@ angular.module('salle').controller('SalleController', ['$scope',
       { image: '/modules/salle/img/6.jpg' },
       { image: '/modules/salle/img/7.jpg' },
       { image: '/modules/salle/img/8.jpg' },
-      { image: '/modules/salle/img/freedom.jpg' }
+      { image: '/modules/salle/img/13.JPG' },
+      { image: '/modules/salle/img/freedom.jpg' },
+      { image: '/modules/salle/img/freedom-header.jpg' }
     ];
 	}
 ]);
