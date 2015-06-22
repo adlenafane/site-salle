@@ -5440,6 +5440,13 @@ button.close {
   margin-top: 3em;
   text-align: center; }
 
+.post {
+  border-bottom: 1px solid #555555;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .post img {
+    max-width: 100%; }
+
 footer.navbar {
   border-top: 3px solid #DA4453;
   margin-bottom: 0;
@@ -5585,7 +5592,7 @@ table.planning.table {
   background-position: 0px 31%;
   background-size: cover; }
 .salle article .freedom-image {
-  background: url("../modules/salle/img/freedom.jpg");
+  background: url("../modules/salle/img/freedom-header.jpg");
   background-position: 0px 62%;
   background-size: cover; }
 .salle article .trx-image {

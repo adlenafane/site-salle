@@ -21,7 +21,8 @@
         "contact": "Accès"
     },
     "home": {
-        "callToAction": "Je m'inscris !"
+        "callToAction": "Je m'inscris !",
+        "planningMoreInfo": "Jours Fériés 10h - 14h, pas de cours collectifs"
     },
     "schedule": {
         "1": {

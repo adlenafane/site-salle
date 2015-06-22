@@ -87,3 +87,13 @@
   margin-top: 3em;
   text-align: center;
 }
+
+.post {
+  border-bottom: 1px solid $gray;
+  padding-top: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
+
+  img {
+    max-width: 100%;
+  }
+}

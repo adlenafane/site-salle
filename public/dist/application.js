@@ -138,6 +138,13 @@ angular.module('activity').controller('ActivityController', [
         description: 'C\u2019est un cours inspir\xe9 du cross fit qui est tr\xe8s intense, sp\xe9cialement con\xe7u pour les personnes en qu\xeate de sensations fortes souhaitant se d\xe9passer pour repousser les limites de leur propre corps. C\u2019est un cours d\u2019alternance cardio et renforcement tr\xe8s difficile.'
       },
       {
+        name: 'Cross fit',
+        duration: '60\'',
+        level: 'hard',
+        category: 'renforcement',
+        description: 'Le CrossFit est une m\xe9thode d\'entra\xeenement physique dont l\'objectif est de d\xe9velopper simultan\xe9ment dix qualit\xe9s : l\'agilit\xe9, l\'\xe9quilibre, la r\xe9sistance, la coordination, la vitesse, la puissance, la pr\xe9cision, la force, l\'endurance cardiovasculaire et la flexibilit\xe9. Pour ce faire, les diff\xe9rents exercices font travailler plusieurs muscles \xe0 la fois pour d\xe9penser un maximum d\'\xe9nergie. L\'entra\xeenement est particuli\xe8rement intensif. Cette discipline est tr\xe8s populaire aux Etats-Unis.'
+      },
+      {
         name: 'H.I.I.T.',
         duration: '30\'',
         level: 'extreme',
@@ -895,7 +902,8 @@ angular.module('planning').controller('PlanningController', [
   '$scope',
   '$state',
   '$http',
-  function ($scope, $state, $http) {
+  '$window',
+  function ($scope, $state, $http, $window) {
     $scope.search = {};
     $scope.coaches = [];
     $scope.categories = [];
@@ -925,6 +933,38 @@ angular.module('planning').controller('PlanningController', [
         }
       }
     }, true);
+    var getCurrentDate = function () {
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth() + 1;
+      //January is 0!
+      var yyyy = today.getFullYear();
+      if (dd < 10) {
+        dd = '0' + dd;
+      }
+      if (mm < 10) {
+        mm = '0' + mm;
+      }
+      today = yyyy + '-' + mm + '-' + dd;
+      return today;
+    };
+    $scope.downloadPlanning = function () {
+      // Reinit search view
+      var tmpSearch = $scope.search;
+      $scope.search = {};
+      $window.html2canvas($window.$('.planning.table'), {
+        onrendered: function (canvas) {
+          var img = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
+          var downloadLink = document.createElement('a');
+          downloadLink.href = img;
+          downloadLink.download = getCurrentDate() + '-MagicFormFAR-planning.png';
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+          $scope.search = tmpSearch;
+        }
+      });
+    };
   }
 ]);'use strict';
 //Setting up route
@@ -1033,18 +1073,19 @@ angular.module('salle').controller('SalleController', [
     $scope.carouselInterval = 5000;
     $scope.slides = [
       { image: '/modules/salle/img/cardio-header.jpg' },
-      { image: '/modules/salle/img/1.jpg' },
-      { image: '/modules/salle/img/2.jpg' },
       { image: '/modules/salle/img/guide-header.jpg' },
       { image: '/modules/salle/img/9.jpg' },
       { image: '/modules/salle/img/3.jpg' },
       { image: '/modules/salle/img/classes-header.jpg' },
-      { image: '/modules/salle/img/4.jpg' },
+      { image: '/modules/salle/img/11.jpg' },
+      { image: '/modules/salle/img/12.jpg' },
       { image: '/modules/salle/img/libre-header.jpg' },
       { image: '/modules/salle/img/6.jpg' },
       { image: '/modules/salle/img/7.jpg' },
       { image: '/modules/salle/img/8.jpg' },
-      { image: '/modules/salle/img/freedom.jpg' }
+      { image: '/modules/salle/img/13.JPG' },
+      { image: '/modules/salle/img/freedom.jpg' },
+      { image: '/modules/salle/img/freedom-header.jpg' }
     ];
   }
 ]);'use strict';
