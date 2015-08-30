@@ -98,7 +98,7 @@ angular.module('activity').controller('ActivityController', [
       {
         name: 'Zumba',
         duration: '45-60\'',
-        level: 'easy',
+        level: 'meidum',
         category: 'Cardio dance',
         description: 'Cours de danse très accessible car peu de chorégraphie. Il permet de s’amuser facilement et de se délester de son stress.'
       },
@@ -133,14 +133,14 @@ angular.module('activity').controller('ActivityController', [
       {
         name: 'BP Fighting',
         duration: '15\'',
-        level: 'medium',
+        level: 'hard',
         category: 'Cardio',
         description: 'Cours de fitness avec jeux d\'opposition de forte intensité basé sur des mouvements d\'arts martiaux et sports de combat divers. Cet entrainement complet permet un travail cardio vasculaire et musculaire.'
       },
       {
         name: 'Cardio Fit Boxing',
         duration: '15\'',
-        level: 'medium',
+        level: 'hard',
         category: 'Renfo / Cardio',
         description: 'Fusion harmonieuse du karaté-fitness et de la boxe training sans contact, un entrainement complet du corps.'
       },
