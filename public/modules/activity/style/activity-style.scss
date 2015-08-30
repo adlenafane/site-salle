@@ -21,19 +21,23 @@
       border-left: 3px solid;
       padding: 1em;
 
-      &.cardio {
+      &.Cardio {
         border-color: $cardio-color;
+
+        &.Renfo {
+          border-color: $cardio-renforcement-color;
+        }
       }
 
-      &.renforcement {
+      &.Renfo {
         border-color: $renforcement-color;
       }
 
-      &.danse {
+      &.dance {
         border-color: $danse-color;
       }
 
-      &.zen {
+      &.Etirement {
         border-color: $zen-color;
       }
 

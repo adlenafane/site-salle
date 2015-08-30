@@ -23,48 +23,43 @@
         "name": "Lundi",
         "classes": [
             {
-                "name": "Cross fit",
+                "name": "Yoga",
                 "start": "10h",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Cédric",
-                "time": "10h00- 10h45"
+                "category": "Etirement / Détente / Renfo",
+                "time": "10h00-10h45"
             },
             {
                 "name": "C.A.F.",
                 "start": "10h45",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Cédric",
+                "category": "Renfo",
                 "time": "10h45-11h30"
             },
             {
-                "name": "Fessiers Flash",
+                "name": "Pilates",
+                "start": "11h30",
+                "timeGroup": "Matin",
+                "duration": 45,
+                "category": "Etirement / Détente / Renfo",
+                "time": "11h30-12h15"
+            },
+            {
+                "name": "Total Body",
                 "start": "12h15",
                 "timeGroup": "Midi",
-                "duration": 15,
-                "category": "renforcement",
-                "coach": "Cédric",
-                "time": "12h15-12h30"
-            },
-            {
-                "name": "Body barre",
-                "start": "12h30",
-                "timeGroup": "Midi",
                 "duration": 45,
-                "category": "cardio",
-                "coach": "Cédric",
-                "time": "12h30-13h15"
+                "category": "Renfo / Cardio",
+                "time": "12h15-13h00"
             },
             {
-                "name": "Boot Camp",
+                "name": "Cross Training",
                 "start": "18h00",
                 "timeGroup": "Soir",
                 "duration": 30,
-                "category": "renforcement",
-                "coach": "Cédric",
+                "category": "Renfo / Cardio",
                 "time": "18h00-18h30"
             },
             {
@@ -72,8 +67,7 @@
                 "start": "18h30",
                 "timeGroup": "Soir",
                 "duration": 30,
-                "category": "renforcement",
-                "coach": "Cédric",
+                "category": "Renfo",
                 "time": "18h30-19h00"
             },
             {
@@ -81,8 +75,7 @@
                 "start": "19h00",
                 "timeGroup": "Soir",
                 "duration": 45,
-                "category": "danse",
-                "coach": "Cédric",
+                "category": "Cardio",
                 "time": "19h00-19h45"
             },
             {
@@ -90,18 +83,16 @@
                 "start": "19h45",
                 "timeGroup": "Soir",
                 "duration": 15,
-                "category": "renforcement",
-                "coach": "Cédric",
+                "category": "Etirement / Détente / Renforcement",
                 "time": "19h45-20h00"
             },
             {
                 "name": "Zumba",
                 "start": "20h00",
                 "timeGroup": "Soir",
-                "duration": 45,
-                "category": "danse",
-                "coach": "Cédric",
-                "time": "20h00-20h45"
+                "duration": 60,
+                "category": "Cardio dance",
+                "time": "20h00-21h00"
             }
         ]
     },
@@ -113,63 +104,56 @@
                 "start": "9h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Christian",
+                "category": "Etirement / Détente / Renforcement",
                 "time": "9h30-10h15"
             },
             {
-                "name": "Body Barre",
-                "start": "10h15",
+                "name": "Cross Training",
+                "start": "10h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Christian",
-                "time": "10h15-11h00"
+                "category": "Renfo / Cardio",
+                "time": "10h30-11h15"
             },
             {
                 "name": "Biking",
                 "start": "12h15",
                 "timeGroup": "Midi",
                 "duration": 45,
-                "category": "cardio",
-                "coach": "Christian",
+                "category": "Cardio",
                 "time": "12h15-13h00"
             },
             {
-                "name": "Abdos Flash",
+                "name": "BP Fighting",
                 "start": "13h00",
                 "timeGroup": "Midi",
-                "duration": 15,
-                "category": "renforcement",
-                "coach": "Christian",
-                "time": "13h00-13h15"
-            },
-            {
-                "name": "H.I.I.T.",
-                "start": "18h00",
-                "timeGroup": "Soir",
-                "duration": 30,
-                "category": "renforcement",
-                "coach": "Christian",
-                "time": "18h00-18h30"
+                "duration": 45,
+                "category": "Cardio",
+                "time": "13h00-13h45"
             },
             {
                 "name": "Biking",
                 "start": "18h30",
                 "timeGroup": "Soir",
-                "duration": 60,
-                "category": "cardio",
-                "coach": "Christian",
-                "time": "18h30-19h30"
+                "duration": 45,
+                "category": "Cardio",
+                "time": "18h30-19h13"
             },
             {
                 "name": "Abdos Fessiers",
-                "start": "19h30",
+                "start": "19h15",
                 "timeGroup": "Soir",
                 "duration": 30,
-                "category": "renforcement",
-                "coach": "Christian",
-                "time": "19h30-20h00"
+                "category": "Renfo",
+                "time": "19h15-19h45"
+            },
+            {
+                "name": "Step",
+                "start": "19h45",
+                "timeGroup": "Soir",
+                "duration": 45,
+                "category": "Cardio",
+                "time": "19h45-20h30"
             }
         ]
     },
@@ -181,8 +165,7 @@
                 "start": "9h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "",
+                "category": "Etirement / Détente / Renforcement",
                 "time": "9h30-10h15"
             },
             {
@@ -190,8 +173,7 @@
                 "start": "10h15",
                 "timeGroup": "Matin",
                 "duration": 15,
-                "category": "renforcement",
-                "coach": "",
+                "category": "Renfo",
                 "time": "10h15-10h30"
             },
             {
@@ -199,8 +181,7 @@
                 "start": "10h30",
                 "timeGroup": "Matin",
                 "duration": 30,
-                "category": "renforcement",
-                "coach": "",
+                "category": "Cardio",
                 "time": "10h30-11h00"
             },
             {
@@ -208,8 +189,7 @@
                 "start": "12h15",
                 "timeGroup": "Midi",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Adrien",
+                "category": "Etirement / Détente / Renforcement",
                 "time": "12h15-13h00"
             },
             {
@@ -217,54 +197,40 @@
                 "start": "13h00",
                 "timeGroup": "Midi",
                 "duration": 45,
-                "category": "danse",
-                "coach": "Adrien",
+                "category": "Cardio dance",
                 "time": "13h00-13h45"
             },
             {
-                "name": "Postural Shape",
-                "start": "17h45",
+                "name": "Body Zen",
+                "start": "18h00",
                 "timeGroup": "Soir",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Christian",
-                "time": "17h45-18h30"
+                "category": "Etirement / Détente / Renforcement",
+                "time": "18h00-18h45"
             },
             {
                 "name": "Body Sculpt",
-                "start": "18h30",
+                "start": "18h45",
                 "timeGroup": "Soir",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Christian",
-                "time": "18h30-19h15"
+                "category": "Renfo",
+                "time": "18h30-19h30"
             },
             {
                 "name": "Biking",
-                "start": "19h15",
+                "start": "19h30",
                 "timeGroup": "Soir",
                 "duration": 45,
-                "category": "cardio",
-                "coach": "Christian",
-                "time": "19h15-20h00"
+                "category": "Cardio",
+                "time": "19h30-20h15"
             },
             {
                 "name": "Zumba",
-                "start": "20h00",
+                "start": "20h15",
                 "timeGroup": "Soir",
                 "duration": 45,
-                "category": "danse",
-                "coach": "Christian",
-                "time": "20h00-20h45"
-            },
-            {
-                "name": "TRX",
-                "start": "20h00",
-                "timeGroup": "Soir",
-                "duration": 45,
-                "category": "renforcement",
-                "coach": "Christian",
-                "time": "20h00-20h45"
+                "category": "Cardio dance",
+                "time": "20h15-21h00"
             }
         ]
     },
@@ -272,12 +238,11 @@
         "name": "Jeudi",
         "classes": [
             {
-                "name": "Piloxing",
+                "name": "Postural Shape",
                 "start": "9h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "cardio",
-                "coach": "Sylvie",
+                "category": "Etirement / Détente / Renforcement",
                 "time": "9h30-10h15"
             },
             {
@@ -285,8 +250,7 @@
                 "start": "10h15",
                 "timeGroup": "Matin",
                 "duration": 15,
-                "category": "renforcement",
-                "coach": "Sylvie",
+                "category": "Renfo",
                 "time": "10h15-10h30"
             },
             {
@@ -294,36 +258,40 @@
                 "start": "10h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "danse",
-                "coach": "Sylvie",
+                "category": "Cardio dance",
                 "time": "10h30-11h15"
             },
             {
+                "name": "BP Fighting",
+                "start": "12h15",
+                "timeGroup": "Midi",
+                "duration": 60,
+                "category": "Cardio",
+                "time": "12h15-13h15"
+            },
+            {
                 "name": "Body Sculpt",
-                "start": "18h00",
+                "start": "18h15",
                 "timeGroup": "Soir",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Sofiane",
-                "time": "18h00-18h45"
+                "category": "Renfo",
+                "time": "18h15-19h00"
             },
             {
-                "name": "Latinva",
-                "start": "18h45",
+                "name": "Djembel",
+                "start": "19h00",
                 "timeGroup": "Soir",
                 "duration": 60,
-                "category": "danse",
-                "coach": "Sofiane",
-                "time": "18h45-19h45"
+                "category": "Cardio dance",
+                "time": "19h00-20h00"
             },
             {
-                "name": "Stretching",
-                "start": "19h45",
+                "name": "Pilates",
+                "start": "20h00",
                 "timeGroup": "Soir",
-                "duration": 30,
-                "category": "renforcement",
-                "coach": "Sofiane",
-                "time": "19h45-20h15"
+                "duration": 45,
+                "category": "Etirement / Détente / Renforcement",
+                "time": "20h00-20h45"
             }
         ]
     },
@@ -335,54 +303,48 @@
                 "start": "9h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "cardio",
-                "coach": "Cédric",
+                "category": "Cardio",
                 "time": "9h30-10h15"
             },
             {
-                "name": "Body and Mind",
+                "name": "Body Zen",
                 "start": "10h15",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "cardio",
-                "coach": "Cédric",
+                "category": "Etirement / Détente / Renforcement",
                 "time": "10h15-11h00"
             },
             {
-                "name": "Piloxing",
-                "start": "17h30",
-                "timeGroup": "Soir",
-                "duration": 60,
-                "category": "cardio",
-                "coach": "Sylvie & Miguel",
-                "time": "17h30-18h30"
+                "name": "Step",
+                "start": "12h30",
+                "timeGroup": "Midi",
+                "duration": 45,
+                "category": "Cardio",
+                "time": "12h30-13h15"
             },
             {
-                "name": "Salsa",
-                "start": "18h30",
-                "timeGroup": "Soir",
-                "duration": 60,
-                "category": "danse",
-                "coach": "Sylvie & Miguel",
-                "time": "18h30-19h30"
+                "name": "Abdos Flash",
+                "start": "13h15",
+                "timeGroup": "Midi",
+                "duration": 15,
+                "category": "Renfo",
+                "time": "13h15-13h30"
             },
             {
-                "name": "Bachata",
-                "start": "19h30",
+                "name": "BP Fighting",
+                "start": "18h15",
                 "timeGroup": "Soir",
-                "duration": 60,
-                "category": "danse",
-                "coach": "Sylvie & Miguel",
-                "time": "19h30-20h30"
+                "duration": 120,
+                "category": "Cardio",
+                "time": "18h15-20h15"
             },
             {
-                "name": "Cross fit",
-                "start": "20h45",
+                "name": "Cross Training",
+                "start": "20h15",
                 "timeGroup": "Soir",
-                "duration": 60,
-                "category": "renforcement",
-                "coach": "",
-                "time": "20h45-21h45"
+                "duration": 45,
+                "category": "Renfo / Cardio",
+                "time": "20h15-21h45"
             }
         ]
     },
@@ -394,17 +356,15 @@
                 "start": "10h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "danse",
-                "coach": "Julien",
+                "category": "Cardio",
                 "time": "10h30-11h15"
             },
             {
-                "name": "Body Sculpt",
+                "name": "Body Barre",
                 "start": "11h15",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "cardio",
-                "coach": "Julien",
+                "category": "Renfo",
                 "time": "11h15-12h00"
             },
             {
@@ -412,9 +372,24 @@
                 "start": "12h00",
                 "timeGroup": "Midi",
                 "duration": 30,
-                "category": "renforcement",
-                "coach": "Julien",
+                "category": "Renfo",
                 "time": "12h00-12h30"
+            },
+            {
+                "name": "Cardio Fit Boxing",
+                "start": "14h30",
+                "timeGroup": "Soir",
+                "duration": 60,
+                "category": "Renfo / Cardio",
+                "time": "14h30-15h30"
+            },
+            {
+                "name": "Body Zen",
+                "start": "15h30",
+                "timeGroup": "Soir",
+                "duration": 30,
+                "category": "Etirement / Détente / Renforcement",
+                "time": "15h30-16h00"
             }
         ]
     },
@@ -426,17 +401,15 @@
                 "start": "10h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "renforcement",
-                "coach": "Cloé",
+                "category": "Renfo",
                 "time": "10h30-11h15"
             },
             {
-                "name": "Djembel",
+                "name": "Zumba",
                 "start": "11h15",
                 "timeGroup": "Matin",
                 "duration": 60,
-                "category": "danse",
-                "coach": "Cloé",
+                "category": "Cardio dance",
                 "time": "11h15-12h15"
             },
             {
@@ -444,8 +417,7 @@
                 "start": "12h15",
                 "timeGroup": "Midi",
                 "duration": 15,
-                "category": "renforcement",
-                "coach": "Cloé",
+                "category": "Etirement / Détente / Renforcement",
                 "time": "12h15-12h30"
             }
         ]

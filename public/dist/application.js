@@ -95,7 +95,8 @@ angular.module('activity').config([
 angular.module('activity').controller('ActivityController', [
   '$scope',
   '$state',
-  function ($scope, $state) {
+  '$window',
+  function ($scope, $state, $window) {
     $scope.currentCategory = null;
     $scope.search = {};
     if ($state.params.name) {
@@ -103,153 +104,147 @@ angular.module('activity').controller('ActivityController', [
     }
     $scope.activities = [
       {
-        name: 'Boot Camp',
-        duration: '30\'',
-        level: 'hard',
-        category: 'renforcement',
-        description: 'C\u2019est un cours inspir\xe9 de l\u2019entrainement physique dispens\xe9 par les militaires et pour les militaires. Ce cours est un enchainement de plusieurs petits ateliers o\xf9 le pratiquant effectue un exercice puis sans pause ou seulement de quelques secondes va enchainer sur un autre atelier. Les objectifs de ce type de cours sont la perte de poids et la transformation de la masse grasse (graisse) en masse maigre (muscle) ainsi que l\u2019am\xe9lioration du syst\xe8me cardio vasculaire.'
-      },
-      {
         name: 'Stretching',
         duration: '15\'',
         level: 'easy',
-        category: 'renforcement',
+        category: 'Etirement / D\xe9tente / Renforcement',
         description: 'C\u2019est un cours bas\xe9 sur l\u2019enseignement des \xe9tirements musculaires afin d\u2019optimiser la souplesse musculaire puis articulaire en favorisant le retour veineux et donc la r\xe9cup\xe9ration musculaire.'
       },
       {
         name: 'Gym douce',
         duration: '45\'',
         level: 'easy',
-        category: 'renforcement',
+        category: 'Etirement / D\xe9tente / Renforcement',
         description: 'C\u2019est un cours de renforcement musculaire adapt\xe9 aux d\xe9butants, personnes \xe2g\xe9es en convalescence... Ce cours permet aux personnes de se muscler tout en douceur afin de faciliter les mouvements du quotidien dans sa globalit\xe9.'
       },
       {
         name: 'Body Barre',
         duration: '45\'',
         level: 'medium',
-        category: 'renforcement',
+        category: 'Renfo',
         description: 'C\u2019est un cours de renforcement musculaire bas\xe9 sur des exercices effectu\xe9s \xe0 l\u2019aide d\u2019une barre lest\xe9e. Lors de ce type de cours tous les groupes musculaires sont travaill\xe9s pour permettre une fonte adipeuse (perte de graisse) et prise de masse musculaire s\xe8che (permettant d\u2019affiner la silhouette pour faire ressortir la musculature dite naturelle).'
       },
       {
         name: 'Cross training',
         duration: '45\'',
         level: 'hard',
-        category: 'renforcement',
+        category: 'Renfo / Cardio',
         description: 'C\u2019est un cours inspir\xe9 du cross fit qui est tr\xe8s intense, sp\xe9cialement con\xe7u pour les personnes en qu\xeate de sensations fortes souhaitant se d\xe9passer pour repousser les limites de leur propre corps. C\u2019est un cours d\u2019alternance cardio et renforcement tr\xe8s difficile.'
-      },
-      {
-        name: 'Cross fit',
-        duration: '60\'',
-        level: 'hard',
-        category: 'renforcement',
-        description: 'Le CrossFit est une m\xe9thode d\'entra\xeenement physique dont l\'objectif est de d\xe9velopper simultan\xe9ment dix qualit\xe9s : l\'agilit\xe9, l\'\xe9quilibre, la r\xe9sistance, la coordination, la vitesse, la puissance, la pr\xe9cision, la force, l\'endurance cardiovasculaire et la flexibilit\xe9. Pour ce faire, les diff\xe9rents exercices font travailler plusieurs muscles \xe0 la fois pour d\xe9penser un maximum d\'\xe9nergie. L\'entra\xeenement est particuli\xe8rement intensif. Cette discipline est tr\xe8s populaire aux Etats-Unis.'
       },
       {
         name: 'H.I.I.T.',
         duration: '30\'',
         level: 'extreme',
-        category: 'renforcement',
+        category: 'Cardio',
         description: 'Tous comme le boot camp et le cross fit, le H.I.I.T. est le plus difficile des cours de renforcement musculaire car les exercices cardios et renfo sont directement combin\xe9s entre eux afin de faire vivre \xe0 l\u2019adh\xe9rent une s\xe9ance tr\xe8s intense qui lui permettra d\u2019obtenir de r\xe9els r\xe9sultats visibles et rapides en seulement quelques s\xe9ances.'
       },
       {
         name: 'Abdos fessiers',
         duration: '30\'',
         level: 'easy',
-        category: 'renforcement',
+        category: 'Renfo',
         description: 'C\u2019est un cours bas\xe9 sur des exercices d\u2019abdos et fessiers sp\xe9cialement pens\xe9s pour les femmes.'
       },
       {
         name: 'Postural Shape',
         duration: '45\'',
         level: 'medium',
-        category: 'renforcement',
+        category: 'Etirement / D\xe9tente / Renforcement',
         description: 'C\u2019est un cours visant \xe0 renforcer les muscles profonds du corps et en particulier ceux proches de la colonne vert\xe9brale.'
       },
       {
         name: 'Pilates',
         duration: '45\'',
         level: 'medium',
-        category: 'renforcement',
+        category: 'Etirement / D\xe9tente / Renforcement',
         description: 'Cours de renforcement musculaire et d\'\xe9tirement musculaire permettant de lutter contre les probl\xe8mes de scoliose, lumbago, sciatiques et hernies discales.'
       },
       {
         name: 'Body Sculpt',
         duration: '45\'',
         level: 'medium',
-        category: 'renforcement',
+        category: 'Renfo',
         description: 'Cours bas\xe9 sur le renforcement global du corps \xe0 l\u2019aide d\u2019halt\xe8res, \xe9lastiques, step... Ce cours permet de donner de nombreuses id\xe9es de renforcement aux adh\xe9rents se trouvant en d\xe9placement loin du Magic Form.'
       },
       {
         name: 'C.A.F.',
         duration: '45\'',
         level: 'medium',
-        category: 'renforcement',
+        category: 'Renfo',
         description: 'Cuisses, Abdos, Fessiers, c\'est le cours collectif de r\xe9f\xe9rence des femmes car il travaille leur zones de pr\xe9dilection.'
       },
       {
         name: 'Biking',
         duration: '45-60\'',
         level: 'hard',
-        category: 'cardio',
+        category: 'Cardio',
         description: 'Cours collectif visant \xe0 remplacer une course cycliste, tr\xe8s intense car le mode de travail est bas\xe9 sur l\u2019alternance de reproduction de mont\xe9e de col, de sprint et de r\xe9cup\xe9ration... Le but est de d\xe9velopper le muscle cardiaque et la perte de graisse.'
       },
       {
         name: 'Total Body',
         duration: '45-60\'',
         level: 'hard',
-        category: 'cardio',
+        category: 'Renfo / Cardio',
         description: 'Ce type de cours est bas\xe9 sur l\u2019explosivit\xe9 musculaire et la combustion maximum des graisses pour pouvoir supporter le rythme soutenu de ce type de cours o\xf9 le corps est soumis \xe0 rude \xe9preuve afin de se d\xe9lester de son stress et de ses kilos en trop.'
-      },
-      {
-        name: 'Piloxing',
-        duration: '45\'',
-        level: 'hard',
-        category: 'cardio',
-        description: 'C\u2019est un m\xe9lange de boxe, pilates, course \xe0 pied, sprint et renforcement global du corps. Ce cours est la solution tout-en-un pour les personnes actives physiquement.'
-      },
-      {
-        name: 'Full body',
-        duration: '45\'',
-        level: 'medium',
-        category: 'cardio',
-        description: 'Comme le Total Body ce cours est bas\xe9 sur l\u2019expressivit\xe9 musculaire mais \xe0 un niveau moindre permettant aux d\xe9butant de commencer plus en douceur ces types de cours.'
       },
       {
         name: 'Zumba',
         duration: '45-60\'',
         level: 'easy',
-        category: 'danse',
+        category: 'Cardio dance',
         description: 'Cours de danse tr\xe8s accessible car peu de chor\xe9graphie. Il permet de s\u2019amuser facilement et de se d\xe9lester de son stress.'
-      },
-      {
-        name: 'Latinva',
-        duration: '60\'',
-        level: 'easy',
-        category: 'danse',
-        description: 'Cours de danse tr\xe8s accessible bas\xe9 sur des pas de m\xe9rengu\xe9, bachata et salsa permettant \xe0 tout le monde de s\'amuser.'
-      },
-      {
-        name: 'Bachata',
-        duration: '45\'',
-        level: 'medium',
-        category: 'danse',
-        description: 'Cours de danse latino tr\xe8s \xe0 la mode qui peut se danser seul ou \xe0 deux.'
-      },
-      {
-        name: 'Salsa',
-        duration: '45\'',
-        level: 'medium',
-        category: 'danse',
-        description: 'Cours de danse qui peut se pratiquer seul ou accompagn\xe9.'
       },
       {
         name: 'Step',
         duration: '45\'',
         level: 'medium',
-        category: 'danse',
+        category: 'Cardio',
         description: 'Cours a\xe9robic s\u2019effectuant sur un step qui permet \xe0 la fois de s\u2019amuser tout en perdant de la masse graisseuse et en musclant le coeur.'
+      },
+      {
+        name: 'Yoga',
+        duration: '45\'',
+        level: 'medium',
+        category: 'Etirement / D\xe9tente / Renforcement',
+        description: 'C\u2019est une discipline du corps et de l\u2019esprit qui comprend une grande vari\xe9t\xe9 d\u2019exercices et de techniques. Les techniques employ\xe9es utilisent des postures physiques (appel\xe9es asanas), des pratiques respiratoires (pranayama) et de m\xe9ditation, ainsi que la relaxation profonde (yoga nidra).'
+      },
+      {
+        name: 'Abdos Flash',
+        duration: '45\'',
+        level: 'medium',
+        category: 'Renfo',
+        description: 'En mettant l\u2019accent sur le travail des abdominaux aussi bien profonds que superficiels, vous allez retrouver un bon gainage abdominale et par cons\xe9quent, un ventre plat ! Simple, rapide et efficace.'
+      },
+      {
+        name: 'Body Zen',
+        duration: '15\'',
+        level: 'medium',
+        category: 'Etirement / D\xe9tente / Renforcement',
+        description: 'Body Zen Associe des exercices de yoga, de tai chi et de Pilates pour acqu\xe9rir force et flexibilit\xe9, centration et calme. La respiration contr\xf4l\xe9e, la concentration et une s\xe9rie structur\xe9e avec soin d\'\xe9tirements, de mouvements et de postures, associ\xe9s \xe0 des musiques savamment choisies, contribuent \xe0 cr\xe9er un entra\xeenement holistique qui plonge votre corps dans un \xe9tat d\'harmonie et d\'\xe9quilibre.'
+      },
+      {
+        name: 'BP Fighting',
+        duration: '15\'',
+        level: 'medium',
+        category: 'Cardio',
+        description: 'Cours de fitness avec jeux d\'opposition de forte intensit\xe9 bas\xe9 sur des mouvements d\'arts martiaux et sports de combat divers. Cet entrainement complet permet un travail cardio vasculaire et musculaire.'
+      },
+      {
+        name: 'Cardio Fit Boxing',
+        duration: '15\'',
+        level: 'medium',
+        category: 'Renfo / Cardio',
+        description: 'Fusion harmonieuse du karat\xe9-fitness et de la boxe training sans contact, un entrainement complet du corps.'
+      },
+      {
+        name: 'Djembel',
+        duration: '15\'',
+        level: 'medium',
+        category: 'Cardio dance',
+        description: 'Danse de bien-\xeatre bas\xe9e sur les sonorit\xe9s, la gestuelle et les mouvements issus des danses africaines'
       }
     ];
+    $scope.categories = $window._.chain($scope.activities).pluck('category').uniq().sortBy().value();
   }
 ]);'use strict';
 angular.module('activity').directive('levelIcon', [

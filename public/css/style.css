@@ -5348,14 +5348,16 @@ button.close {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
       border-left: 3px solid;
       padding: 1em; }
-      #activities .activity .activity-content.cardio {
+      #activities .activity .activity-content.Cardio {
+        border-color: #48B071; }
+        #activities .activity .activity-content.Cardio.Renfo {
+          border-color: #DA4453; }
+      #activities .activity .activity-content.Renfo {
         border-color: #967ADC; }
-      #activities .activity .activity-content.renforcement {
-        border-color: #DA4453; }
-      #activities .activity .activity-content.danse {
-        border-color: #D770AD; }
-      #activities .activity .activity-content.zen {
-        border-color: #37BC9B; }
+      #activities .activity .activity-content.dance {
+        border-color: #eb711d; }
+      #activities .activity .activity-content.Etirement {
+        border-color: #0266a1; }
       #activities .activity .activity-content h3 {
         margin-top: 0; }
 
@@ -5534,25 +5536,27 @@ table.planning.table {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
     border-left: 3px solid;
     padding: 0.5em; }
-    table.planning.table td.class-content.cardio {
+    table.planning.table td.class-content.Cardio {
+      border-color: #48B071; }
+      table.planning.table td.class-content.Cardio.Renfo {
+        border-color: #DA4453; }
+    table.planning.table td.class-content.Renfo {
       border-color: #967ADC; }
-    table.planning.table td.class-content.renforcement {
-      border-color: #DA4453; }
-    table.planning.table td.class-content.danse {
-      border-color: #D770AD; }
-    table.planning.table td.class-content.zen {
-      border-color: #37BC9B; }
+    table.planning.table td.class-content.dance {
+      border-color: #eb711d; }
+    table.planning.table td.class-content.Etirement {
+      border-color: #0266a1; }
     table.planning.table td.class-content .class-time.cardio {
-      background-color: #967ADC;
+      background-color: #48B071;
       color: white; }
     table.planning.table td.class-content .class-time.renforcement {
-      background-color: #DA4453;
+      background-color: #967ADC;
       color: white; }
     table.planning.table td.class-content .class-time.danse {
-      background-color: #D770AD;
+      background-color: #eb711d;
       color: white; }
     table.planning.table td.class-content .class-time.zen {
-      background-color: #37BC9B;
+      background-color: #0266a1;
       color: white; }
     table.planning.table td.class-content .class-time, table.planning.table td.class-content .class-details {
       font-size: 0.8em;
