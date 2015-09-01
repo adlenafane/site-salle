@@ -98,7 +98,7 @@ angular.module('activity').controller('ActivityController', [
       {
         name: 'Zumba',
         duration: '45-60\'',
-        level: 'meidum',
+        level: 'medium',
         category: 'Cardio dance',
         description: 'Cours de danse très accessible car peu de chorégraphie. Il permet de s’amuser facilement et de se délester de son stress.'
       },
@@ -128,7 +128,7 @@ angular.module('activity').controller('ActivityController', [
         duration: '15\'',
         level: 'medium',
         category: 'Etirement / Détente / Renforcement',
-        description: 'Body Zen Associe des exercices de yoga, de tai chi et de Pilates pour acquérir force et flexibilité, centration et calme. La respiration contrôlée, la concentration et une série structurée avec soin d\'étirements, de mouvements et de postures, associés à des musiques savamment choisies, contribuent à créer un entraînement holistique qui plonge votre corps dans un état d\'harmonie et d\'équilibre.'
+        description: 'Ce cours associe des exercices de yoga, de tai chi et de Pilates pour acquérir force et flexibilité, centration et calme. La respiration contrôlée, la concentration et une série structurée avec soin d\'étirements, de mouvements et de postures, associés à des musiques savamment choisies, contribuent à créer un entraînement holistique qui plonge votre corps dans un état d\'harmonie et d\'équilibre.'
       },
       {
         name: 'BP Fighting',

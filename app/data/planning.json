@@ -238,11 +238,11 @@
         "name": "Jeudi",
         "classes": [
             {
-                "name": "Postural Shape",
+                "name": "Total Body",
                 "start": "9h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "Etirement / Détente / Renforcement",
+                "category": "Renfo / Cardio",
                 "time": "9h30-10h15"
             },
             {
