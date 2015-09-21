@@ -332,11 +332,11 @@
             },
             {
                 "name": "BP Fighting",
-                "start": "18h15",
+                "start": "18h30",
                 "timeGroup": "Soir",
-                "duration": 120,
+                "duration": 105,
                 "category": "Cardio",
-                "time": "18h15-20h15"
+                "time": "18h30-20h15"
             },
             {
                 "name": "Cross Training",
