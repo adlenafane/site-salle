@@ -101,11 +101,11 @@
         "classes": [
             {
                 "name": "Gym douce",
-                "start": "9h30",
+                "start": "9h45",
                 "timeGroup": "Matin",
                 "duration": 45,
                 "category": "Etirement / Détente / Renforcement",
-                "time": "9h30-10h15"
+                "time": "9h45-10h15"
             },
             {
                 "name": "Cross Training",
