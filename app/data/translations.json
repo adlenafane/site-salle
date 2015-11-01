@@ -17,7 +17,7 @@
         "activities": "Activités",
         "schedule": "Planning",
         "coaching": "Coaching",
-        "osteopathy": "Ostéopathie",
+        "osteopathy": "Esthétique",
         "contact": "Accès"
     },
     "home": {
@@ -79,20 +79,20 @@
         "footer": "Plus de renseignements et RDV en club"
     },
     "osteopathy": {
-        "title": "Ostéopathie",
-        "subtitle": "Après une bonne séance de sport, pour finir en beauté, rien de tel qu’un long massage pour se relaxer.",
-        "paragraph1": "Votre salle accueille Caroline De Toni, étudiante en ostéopathie en 5ème année à l’école OSTEOBIO de Cachan. Vous pouvez venir la consulter pour :",
+        "title": "Esthétique",
+        "subtitle": "",
+        "paragraph1": "Votre esthéticienne dans votre salle de sport. Profitez de l'espace beauté qui vous accueille: épilation, manucure, beauté des mains et des pieds. Faites une escale détente...",
         "paragraph2": "",
-        "item1": "Pour les douleurs de type nerveux  (décharges électriques, fourmillements, engourdissements, perte de sensibilité) : sciatique, cruralgie (douleur dans la cuisse), névralgie cervico-brachiale (douleur dans les bras)",
-        "item2": "Pour les douleurs du dos, du cou, mais également des articulations des bras et des jambes ;",
-        "item3": "Pour les douleurs tendineuses et musculaires : tendinopathies, contractures...",
-        "item4": "Pour les troubles digestifs chroniques : constipation, diarrhée, reflux...",
-        "item5": "Pour les troubles ORL chroniques  et non allergiques : otites, sinusites, rhinites...",
+        "item1": "",
+        "item2": "",
+        "item3": "",
+        "item4": "",
+        "item5": "",
         "item6": "",
         "item7": "",
         "item8": "",
-        "availability": "Les consultations sont le mercredi de 10h à 13h.",
-        "footer": "Plus de renseignements et RDV en club"
+        "availability": "Ouvert à toutes et à tous.",
+        "footer": "Prise de rdv à l'accueil."
     },
     "access": {
         "title": "Accès",

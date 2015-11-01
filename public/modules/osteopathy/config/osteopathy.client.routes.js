@@ -6,7 +6,7 @@ angular.module('osteopathy').config(['$stateProvider',
 		// Osteopathy state routing
 		$stateProvider.
 		state('osteopathy', {
-			url: '/osteopathie',
+			url: '/esthetique',
 			templateUrl: 'modules/osteopathy/views/osteopathy.client.view.html'
 		});
 	}
