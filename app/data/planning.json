@@ -185,20 +185,20 @@
                 "time": "10h30-11h00"
             },
             {
+                "name": "Zumba",
+                "start": "11h00",
+                "timeGroup": "Midi",
+                "duration": 45,
+                "category": "Cardio dance",
+                "time": "11h00-11h45"
+            },
+            {
                 "name": "Pilates",
                 "start": "12h15",
                 "timeGroup": "Midi",
                 "duration": 45,
                 "category": "Etirement / Détente / Renforcement",
                 "time": "12h15-13h00"
-            },
-            {
-                "name": "Zumba",
-                "start": "13h00",
-                "timeGroup": "Midi",
-                "duration": 45,
-                "category": "Cardio dance",
-                "time": "13h00-13h45"
             },
             {
                 "name": "Body Zen",
@@ -262,11 +262,11 @@
                 "time": "10h30-11h15"
             },
             {
-                "name": "BP Fighting",
+                "name": "Yoga / Relaxation",
                 "start": "12h15",
                 "timeGroup": "Midi",
                 "duration": 60,
-                "category": "Cardio",
+                "category": "Etirement / Détente / Renforcement",
                 "time": "12h15-13h15"
             },
             {
