@@ -124,14 +124,6 @@
                 "time": "12h15-13h00"
             },
             {
-                "name": "BP Fighting",
-                "start": "13h00",
-                "timeGroup": "Midi",
-                "duration": 45,
-                "category": "Cardio",
-                "time": "13h00-13h45"
-            },
-            {
                 "name": "Biking",
                 "start": "18h30",
                 "timeGroup": "Soir",
@@ -231,6 +223,14 @@
                 "duration": 45,
                 "category": "Cardio dance",
                 "time": "20h15-21h00"
+            },
+            {
+                "name": "Biking",
+                "start": "20h15",
+                "timeGroup": "Soir",
+                "duration": 45,
+                "category": "Cardio",
+                "time": "20h15-21h00"
             }
         ]
     },
@@ -262,12 +262,20 @@
                 "time": "10h30-11h15"
             },
             {
-                "name": "Yoga / Relaxation",
+                "name": "Pilates",
+                "start": "11h15",
+                "timeGroup": "Midi",
+                "duration": 45,
+                "category": "Etirement / Détente / Renforcement",
+                "time": "11h15-12h00"
+            },
+            {
+                "name": "Piloxing",
                 "start": "12h15",
                 "timeGroup": "Midi",
-                "duration": 60,
-                "category": "Etirement / Détente / Renforcement",
-                "time": "12h15-13h15"
+                "duration": 45,
+                "category": "Cardio",
+                "time": "12h15-13h00"
             },
             {
                 "name": "Body Sculpt",
@@ -334,17 +342,9 @@
                 "name": "BP Fighting",
                 "start": "18h30",
                 "timeGroup": "Soir",
-                "duration": 105,
+                "duration": 120,
                 "category": "Cardio",
-                "time": "18h30-20h15"
-            },
-            {
-                "name": "Cross Training",
-                "start": "20h15",
-                "timeGroup": "Soir",
-                "duration": 45,
-                "category": "Renfo / Cardio",
-                "time": "20h15-21h45"
+                "time": "18h30-20h30"
             }
         ]
     },
