@@ -71,6 +71,14 @@
                 "time": "18h30-19h00"
             },
             {
+                "name": "Biking",
+                "start": "19h00",
+                "timeGroup": "Soir",
+                "duration": 45,
+                "category": "Cardio",
+                "time": "19h00-19h45"
+            },,
+            {
                 "name": "Step",
                 "start": "19h00",
                 "timeGroup": "Soir",
@@ -209,6 +217,14 @@
                 "time": "18h45-19h30"
             },
             {
+                "name": "C.A.F.",
+                "start": "19h30",
+                "timeGroup": "Soir",
+                "duration": 45,
+                "category": "Renfo",
+                "time": "19h30-20h15"
+            },
+            {
                 "name": "Biking",
                 "start": "19h30",
                 "timeGroup": "Soir",
@@ -254,11 +270,11 @@
                 "time": "10h15-10h30"
             },
             {
-                "name": "Zumba",
+                "name": "Piloxing",
                 "start": "10h30",
                 "timeGroup": "Matin",
                 "duration": 45,
-                "category": "Cardio dance",
+                "category": "Cardio",
                 "time": "10h30-11h15"
             },
             {
@@ -268,14 +284,6 @@
                 "duration": 45,
                 "category": "Etirement / Détente / Renforcement",
                 "time": "11h15-12h00"
-            },
-            {
-                "name": "Piloxing",
-                "start": "12h15",
-                "timeGroup": "Midi",
-                "duration": 45,
-                "category": "Cardio",
-                "time": "12h15-13h00"
             },
             {
                 "name": "Body Sculpt",
@@ -376,7 +384,15 @@
                 "time": "12h00-12h30"
             },
             {
-                "name": "Cardio Fit Boxing",
+                "name": "Biking",
+                "start": "12h30",
+                "timeGroup": "Midi",
+                "duration": 30,
+                "category": "Cardio",
+                "time": "12h30-13h00"
+            },
+            {
+                "name": "Circuit Training",
                 "start": "14h30",
                 "timeGroup": "Soir",
                 "duration": 60,
@@ -384,11 +400,11 @@
                 "time": "14h30-15h30"
             },
             {
-                "name": "Body Zen",
+                "name": "Abdos Fessiers",
                 "start": "15h30",
                 "timeGroup": "Soir",
                 "duration": 30,
-                "category": "Etirement / Détente / Renforcement",
+                "category": "Renfo",
                 "time": "15h30-16h00"
             }
         ]
